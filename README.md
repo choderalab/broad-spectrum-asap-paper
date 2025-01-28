@@ -1,2 +1,2 @@
-# borad-spectrum-asap-paper
-Scripts and input files for structure-based prediction of affinity across the coronavirus family.
+# broad-spectrum-asap-paper
+Contains scripts and input files for the paper on structure-based prediction of affinity across the coronavirus family.
