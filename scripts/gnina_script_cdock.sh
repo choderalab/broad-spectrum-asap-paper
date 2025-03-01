@@ -17,7 +17,6 @@ for i in "${CNN_INDICES[@]}"; do
     sum_cnnaff_sq=0  # Sum of squares for variance calculation
     count=0
     singularity run --nv /module_dir/gnina.sif gnina -r $home_data/${PDB} -l $home_data/${SDF} --exhaustiveness 64 --minimize --log $home_data/$LOGFILE --scoring vina --cnn "crossdock_default2018_${i}" 
-# mv $home_data/$LOGFILE $PDB_DIR
 
     # Check if $LOGFILE was generated
     if [[ -e "${home_data}/$LOGFILE" ]]; then

@@ -1,4 +1,4 @@
-name: spectrav
+name: broad-spectrum
 channels:
   - openeye
   - conda-forge

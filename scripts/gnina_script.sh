@@ -4,7 +4,6 @@ cp $PDB_DIR/${SDF} $home_data
 cp $PDB_DIR/${PDB} $home_data
 
 singularity run --nv /module_dir/gnina.sif gnina -r $home_data/${PDB} -l $home_data/${SDF} --exhaustiveness 64 --minimize --log $home_data/$LOGFILE   
-# mv $home_data/$LOGFILE $PDB_DIR
 
 # Check if $LOGFILE was generated
 if [[ -e "${home_data}/$LOGFILE" ]]; then
