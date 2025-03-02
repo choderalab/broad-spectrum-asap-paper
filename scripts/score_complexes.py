@@ -1,6 +1,7 @@
 from asapdiscovery.docking.scorer import ChemGauss4Scorer, MLModelScorer
 from asapdiscovery.ml.models import ASAPMLModelRegistry
 from asapdiscovery.data.schema.complex import Complex
+from asapdiscovery.simulation.simulate import OpenMMPlatform
 from score import (
     dock_and_score,
     get_ligand_rmsd,
@@ -15,6 +16,7 @@ import re
 import click
 
 import logging
+from typing import Optional
 
 
 @click.command()
@@ -109,6 +111,12 @@ import logging
     help="Whether to minimize the pdb structures before running scoring.",
 )
 @click.option(
+    "--md-openmm-platform",
+    type=str,
+    default="Fastest",
+    help="The OpenMM platform to use for MD minimization. [CPU|CUDA|OpenCL|Reference|Fastest]", 
+)
+@click.option(
     "--ml-score",
     is_flag=True,
     default=False,
@@ -174,19 +182,20 @@ def score_complexes(
     chain_dock: str,
     chain_ref: str,
     lig_resname: str,
-    vina_score=False,
-    vina_box_x=None,
-    vina_box_y=None,
-    vina_box_z=None,
-    docking_vina=False,
-    path_to_grid_prep="./",
-    minimize=False,
-    ml_score=False,
-    bsite_rmsd=False,
-    gnina_score=False,
-    gnina_script=None,
-    home_dir=None,
-    log_level="info",
+    vina_score: bool = False,
+    vina_box_x: Optional[float] = None,
+    vina_box_y: Optional[float] = None,
+    vina_box_z: Optional[float] = None,
+    docking_vina: bool = False,
+    path_to_grid_prep: str = "./",
+    minimize: bool = False,
+    md_openmm_platform:OpenMMPlatform = OpenMMPlatform.Fastest,
+    ml_score: bool = False,
+    bsite_rmsd: bool = False,
+    gnina_score: bool = False,
+    gnina_script: Optional[str] = None,
+    home_dir: Optional[str] = None,
+    log_level: str = "info",
 ):
     # Log level
     if log_level.lower() == "info":
@@ -205,31 +214,33 @@ def score_complexes(
     docking_dir = Path(docking_dir)
 
     all_scores = []
-
     if len(docking_csv):
-        # Match the protein and ligand regex on docking output file
-        logging.info("Reading docking CSV file: %s", docking_csv)
-        docking_csv = Path(docking_csv)
+        try:
+            # Match the protein and ligand regex on docking output file
+            logging.info("Reading docking CSV file: %s", docking_csv)
+            docking_csv = Path(docking_csv)
 
-        df_dock = pd.read_csv(docking_csv)
-        df_dock = pd.read_csv(docking_csv)
-        df_dock["lig-ID"] = df_dock["input"].apply(
-            lambda s: (
-                re.search(ligand_regex, s).group(0)
-                if re.search(ligand_regex, s)
-                else None
+            df_dock = pd.read_csv(docking_csv)
+            df_dock["lig-ID"] = df_dock["input"].apply(
+                lambda s: (
+                    re.search(ligand_regex, s).group(0)
+                    if re.search(ligand_regex, s)
+                    else None
+                )
             )
-        )
-        df_dock["prot-ID"] = df_dock["input"].apply(
-            lambda s: (
-                re.search(protein_regex, s).group(0)
-                if re.search(protein_regex, s)
-                else None
+            df_dock["prot-ID"] = df_dock["input"].apply(
+                lambda s: (
+                    re.search(protein_regex, s).group(0)
+                    if re.search(protein_regex, s)
+                    else None
+                )
             )
-        )
-        df_dock = df_dock[["lig-ID", "prot-ID", "docking-score-POSIT"]]
+            df_dock = df_dock[["lig-ID", "prot-ID", "docking-score-POSIT"]]
+            logging.debug("Docking CSV file processed successfully.")
+        except Exception as e:
+            print("Error %e", e)
+            df_dock = pd.DataFrame({})
 
-    logging.debug("Docking CSV file processed successfully.")
     logging.info("Starting scoring for docking directory %s", docking_dir.name)
     for file_min in docking_dir.glob("*.pdb"):
         # Extracting protein and ligand IDs and pre-calculated scores
@@ -301,7 +312,7 @@ def score_complexes(
             min_folder = docking_dir / "minimized"
             min_folder.mkdir(parents=True, exist_ok=True)
             new_docking_dir = min_folder
-            md_openmm_platform = "CUDA"
+            md_openmm_platform = md_openmm_platform
             try:
                 min_out = f"{min_folder}/{tag}_min.pdb"
                 logging.info("Running MD minimization of %s", tag)
