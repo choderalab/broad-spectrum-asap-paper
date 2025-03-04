@@ -1,0 +1,2842 @@
+<?xml version="1.0"?>
+<!DOCTYPE BlastOutput PUBLIC "-//NCBI//NCBI BlastOutput/EN" "http://www.ncbi.nlm.nih.gov/dtd/NCBI_BlastOutput.dtd">
+<BlastOutput>
+  <BlastOutput_program>blastp</BlastOutput_program>
+  <BlastOutput_version>BLASTP 2.15.0+</BlastOutput_version>
+  <BlastOutput_reference>Stephen F. Altschul, Thomas L. Madden, Alejandro A. Sch&amp;auml;ffer, Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), &quot;Gapped BLAST and PSI-BLAST: a new generation of protein database search programs&quot;, Nucleic Acids Res. 25:3389-3402.</BlastOutput_reference>
+  <BlastOutput_db>refseq_protein</BlastOutput_db>
+  <BlastOutput_query-ID>Query_5425341</BlastOutput_query-ID>
+  <BlastOutput_query-def>SARS-CoV-2-Mpro</BlastOutput_query-def>
+  <BlastOutput_query-len>324</BlastOutput_query-len>
+  <BlastOutput_param>
+    <Parameters>
+      <Parameters_matrix>BLOSUM62</Parameters_matrix>
+      <Parameters_expect>10</Parameters_expect>
+      <Parameters_gap-open>11</Parameters_gap-open>
+      <Parameters_gap-extend>1</Parameters_gap-extend>
+      <Parameters_filter>F</Parameters_filter>
+    </Parameters>
+  </BlastOutput_param>
+<BlastOutput_iterations>
+<Iteration>
+  <Iteration_iter-num>1</Iteration_iter-num>
+  <Iteration_query-ID>Query_5425341</Iteration_query-ID>
+  <Iteration_query-def>SARS-CoV-2-Mpro</Iteration_query-def>
+  <Iteration_query-len>324</Iteration_query-len>
+<Iteration_hits>
+<Hit>
+  <Hit_num>1</Hit_num>
+  <Hit_id>ref|YP_009725295.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [Severe acute respiratory syndrome coronavirus 2]</Hit_def>
+  <Hit_accession>YP_009725295</Hit_accession>
+  <Hit_len>4405</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>652.899</Hsp_bit-score>
+      <Hsp_score>1683</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3264</Hsp_hit-from>
+      <Hsp_hit-to>3569</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>306</Hsp_identity>
+      <Hsp_positive>306</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_hseq>
+      <Hsp_midline>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>2</Hit_num>
+  <Hit_id>ref|YP_009724389.1|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Severe acute respiratory syndrome coronavirus 2]</Hit_def>
+  <Hit_accession>YP_009724389</Hit_accession>
+  <Hit_len>7096</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>650.203</Hsp_bit-score>
+      <Hsp_score>1676</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3264</Hsp_hit-from>
+      <Hsp_hit-to>3569</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>306</Hsp_identity>
+      <Hsp_positive>306</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_hseq>
+      <Hsp_midline>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>3</Hit_num>
+  <Hit_id>ref|YP_009725301.1|</Hit_id>
+  <Hit_def>3C-like proteinase [Severe acute respiratory syndrome coronavirus 2] &gt;ref|YP_009742612.1| 3C-like proteinase [Severe acute respiratory syndrome coronavirus 2]</Hit_def>
+  <Hit_accession>YP_009725301</Hit_accession>
+  <Hit_len>306</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>640.958</Hsp_bit-score>
+      <Hsp_score>1652</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>306</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>306</Hsp_identity>
+      <Hsp_positive>306</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_hseq>
+      <Hsp_midline>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>4</Hit_num>
+  <Hit_id>ref|YP_009944365.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [SARS coronavirus Tor2]</Hit_def>
+  <Hit_accession>YP_009944365</Hit_accession>
+  <Hit_len>4382</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>633.639</Hsp_bit-score>
+      <Hsp_score>1633</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3241</Hsp_hit-from>
+      <Hsp_hit-to>3546</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>294</Hsp_identity>
+      <Hsp_positive>302</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDTVYCPRHVICTAEDMLNPNYEDLLIRKSNHSFLVQAGNVQLRVIGHSMQNCLLRLKVDTSNPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNHTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGKFYGPFVDRQTAQAAGTDTTITLNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCAALKELLQNGMNGRTILGSTILEDEFTPFDVVRQCSGVTFQ</Hsp_hseq>
+      <Hsp_midline>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDD VYCPRHVICT+EDMLNPNYEDLLIRKSNH+FLVQAGNVQLRVIGHSMQNC+L+LKVDT+NPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPN TIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEG FYGPFVDRQTAQAAGTDTTIT+NVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCA+LKELLQNGMNGRTILGS +LEDEFTPFDVVRQCSGVTFQ</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>5</Hit_num>
+  <Hit_id>ref|NP_828849.7|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [SARS coronavirus Tor2]</Hit_def>
+  <Hit_accession>NP_828849</Hit_accession>
+  <Hit_len>7073</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>631.713</Hsp_bit-score>
+      <Hsp_score>1628</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3241</Hsp_hit-from>
+      <Hsp_hit-to>3546</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>294</Hsp_identity>
+      <Hsp_positive>302</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDTVYCPRHVICTAEDMLNPNYEDLLIRKSNHSFLVQAGNVQLRVIGHSMQNCLLRLKVDTSNPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNHTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGKFYGPFVDRQTAQAAGTDTTITLNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCAALKELLQNGMNGRTILGSTILEDEFTPFDVVRQCSGVTFQ</Hsp_hseq>
+      <Hsp_midline>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDD VYCPRHVICT+EDMLNPNYEDLLIRKSNH+FLVQAGNVQLRVIGHSMQNC+L+LKVDT+NPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPN TIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEG FYGPFVDRQTAQAAGTDTTIT+NVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCA+LKELLQNGMNGRTILGS +LEDEFTPFDVVRQCSGVTFQ</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>6</Hit_num>
+  <Hit_id>ref|NP_828863.1|</Hit_id>
+  <Hit_def>nsp5 [SARS coronavirus Tor2] &gt;ref|YP_009944370.1| nsp5 [SARS coronavirus Tor2]</Hit_def>
+  <Hit_accession>NP_828863</Hit_accession>
+  <Hit_len>306</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>623.239</Hsp_bit-score>
+      <Hsp_score>1606</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>306</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>294</Hsp_identity>
+      <Hsp_positive>302</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDTVYCPRHVICTAEDMLNPNYEDLLIRKSNHSFLVQAGNVQLRVIGHSMQNCLLRLKVDTSNPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNHTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGKFYGPFVDRQTAQAAGTDTTITLNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCAALKELLQNGMNGRTILGSTILEDEFTPFDVVRQCSGVTFQ</Hsp_hseq>
+      <Hsp_midline>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDD VYCPRHVICT+EDMLNPNYEDLLIRKSNH+FLVQAGNVQLRVIGHSMQNC+L+LKVDT+NPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPN TIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEG FYGPFVDRQTAQAAGTDTTIT+NVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCA+LKELLQNGMNGRTILGS +LEDEFTPFDVVRQCSGVTFQ</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>7</Hit_num>
+  <Hit_id>ref|YP_010229071.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [Bat coronavirus BM48-31/BGR/2008]</Hit_def>
+  <Hit_accession>YP_010229071</Hit_accession>
+  <Hit_len>4373</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>620.928</Hsp_bit-score>
+      <Hsp_score>1600</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3232</Hsp_hit-from>
+      <Hsp_hit-to>3537</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>288</Hsp_identity>
+      <Hsp_positive>299</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTLEDMLNPNYDDLLIRKSNHNFLVQASNVQLRVIGHTMQNCLLKLKVDIANPKTPKYKFVRIQPGQTFSVLACYNGAPSGVYQCAMRSNHTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITLNVLAWLYAAVINGERWFLNRFTTTLNDFNLVAMKYNYEPLTQDQVDILGPLSAQTGVAVMDMCAALKELLQNGLNGRTILGSTILEDEFTPFDVVRQCSGVTFQ</Hsp_hseq>
+      <Hsp_midline>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICT EDMLNPNY+DLLIRKSNHNFLVQA NVQLRVIGH+MQNC+LKLKVD ANPKTPKYKFVRIQPGQTFSVLACYNG+PSGVYQCAMR N TIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTIT+NVLAWLYAAVING+RWFLNRFTTTLNDFNLVAMKYNYEPLTQD VDILGPLSAQTG+AV+DMCA+LKELLQNG+NGRTILGS +LEDEFTPFDVVRQCSGVTFQ</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>8</Hit_num>
+  <Hit_id>ref|YP_003858583.1|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Bat coronavirus BM48-31/BGR/2008]</Hit_def>
+  <Hit_accession>YP_003858583</Hit_accession>
+  <Hit_len>7064</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>619.387</Hsp_bit-score>
+      <Hsp_score>1596</Hsp_score>
+      <Hsp_evalue>0</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3232</Hsp_hit-from>
+      <Hsp_hit-to>3537</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>288</Hsp_identity>
+      <Hsp_positive>299</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTLEDMLNPNYDDLLIRKSNHNFLVQASNVQLRVIGHTMQNCLLKLKVDIANPKTPKYKFVRIQPGQTFSVLACYNGAPSGVYQCAMRSNHTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITLNVLAWLYAAVINGERWFLNRFTTTLNDFNLVAMKYNYEPLTQDQVDILGPLSAQTGVAVMDMCAALKELLQNGLNGRTILGSTILEDEFTPFDVVRQCSGVTFQ</Hsp_hseq>
+      <Hsp_midline>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICT EDMLNPNY+DLLIRKSNHNFLVQA NVQLRVIGH+MQNC+LKLKVD ANPKTPKYKFVRIQPGQTFSVLACYNG+PSGVYQCAMR N TIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTIT+NVLAWLYAAVING+RWFLNRFTTTLNDFNLVAMKYNYEPLTQD VDILGPLSAQTG+AV+DMCA+LKELLQNG+NGRTILGS +LEDEFTPFDVVRQCSGVTFQ</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>9</Hit_num>
+  <Hit_id>ref|YP_009915659.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [Bat Hp-betacoronavirus/Zhejiang2013]</Hit_def>
+  <Hit_accession>YP_009915659</Hit_accession>
+  <Hit_len>4547</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>454.907</Hsp_bit-score>
+      <Hsp_score>1169</Hsp_score>
+      <Hsp_evalue>5.14495e-142</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3393</Hsp_hit-from>
+      <Hsp_hit-to>3710</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>213</Hsp_identity>
+      <Hsp_positive>250</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>318</Hsp_align-len>
+      <Hsp_qseq>PROCHAINA--BSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>PPSCSLASAVLQSGIRKMSCPTGKVERCMVRVTCGTMTLNGLWLDNTVYCPRHVMCTPEELLAPDYDSILLRKATHSFTVQYGTAYLKVVSYKMTGSVLQLGVDQINPETPKYKFVRAKPGATFSVLACYNGMPAGVYQVAMRPNHTIKGSFLNGSCGSVGYTLGYDRVEFCYMHHMELPTGVHTGTDLEGTFYGDFVDRQTSQSAGSDNTLTLNVLAWLYAAVINGERWFIVPQTCALTDFNTAVLKYGYQSLTEDGVAALDPLVAQTGISVQTMCASLKDLLVHGMRGRCILSSPTLEDEFTPFDIVRQCSGVTLQ</Hsp_hseq>
+      <Hsp_midline>P  C   +A   SG RKM+ P+GKVE CMV+VTCGT TLNGLWLD+ VYCPRHV+CT E++L P+Y+ +L+RK+ H+F VQ G   L+V+ + M   VL+L VD  NP+TPKYKFVR +PG TFSVLACYNG P+GVYQ AMRPN TIKGSFLNGSCGSVG+ + YD V FCYMHHMELPTGVH GTDLEG FYG FVDRQT+Q+AG+D T+T+NVLAWLYAAVING+RWF+   T  L DFN   +KY Y+ LT+D V  L PL AQTGI+V  MCASLK+LL +GM GR IL S  LEDEFTPFD+VRQCSGVT Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>10</Hit_num>
+  <Hit_id>ref|YP_009072438.1|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Bat Hp-betacoronavirus/Zhejiang2013]</Hit_def>
+  <Hit_accession>YP_009072438</Hit_accession>
+  <Hit_len>7247</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>453.366</Hsp_bit-score>
+      <Hsp_score>1165</Hsp_score>
+      <Hsp_evalue>1.65635e-141</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3393</Hsp_hit-from>
+      <Hsp_hit-to>3710</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>213</Hsp_identity>
+      <Hsp_positive>250</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>318</Hsp_align-len>
+      <Hsp_qseq>PROCHAINA--BSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>PPSCSLASAVLQSGIRKMSCPTGKVERCMVRVTCGTMTLNGLWLDNTVYCPRHVMCTPEELLAPDYDSILLRKATHSFTVQYGTAYLKVVSYKMTGSVLQLGVDQINPETPKYKFVRAKPGATFSVLACYNGMPAGVYQVAMRPNHTIKGSFLNGSCGSVGYTLGYDRVEFCYMHHMELPTGVHTGTDLEGTFYGDFVDRQTSQSAGSDNTLTLNVLAWLYAAVINGERWFIVPQTCALTDFNTAVLKYGYQSLTEDGVAALDPLVAQTGISVQTMCASLKDLLVHGMRGRCILSSPTLEDEFTPFDIVRQCSGVTLQ</Hsp_hseq>
+      <Hsp_midline>P  C   +A   SG RKM+ P+GKVE CMV+VTCGT TLNGLWLD+ VYCPRHV+CT E++L P+Y+ +L+RK+ H+F VQ G   L+V+ + M   VL+L VD  NP+TPKYKFVR +PG TFSVLACYNG P+GVYQ AMRPN TIKGSFLNGSCGSVG+ + YD V FCYMHHMELPTGVH GTDLEG FYG FVDRQT+Q+AG+D T+T+NVLAWLYAAVING+RWF+   T  L DFN   +KY Y+ LT+D V  L PL AQTGI+V  MCASLK+LL +GM GR IL S  LEDEFTPFD+VRQCSGVT Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>11</Hit_num>
+  <Hit_id>ref|YP_009924387.1|</Hit_id>
+  <Hit_def>nsp5 [Rousettus bat coronavirus HKU9]</Hit_def>
+  <Hit_accession>YP_009924387</Hit_accession>
+  <Hit_len>306</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>341.273</Hsp_bit-score>
+      <Hsp_score>874</Hsp_score>
+      <Hsp_evalue>1.66474e-113</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>306</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>159</Hsp_identity>
+      <Hsp_positive>214</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>AGLTRMAHPSGLVEPCLVKVNYGSMTLNGIWLDNFVICPRHVMCSRDELANPDYPRLSMRAANYDFHVSQNGHNIRVIGHTMEGSLLKLTVDVNNPKTPAYSFIRVSTGQAMSLLACYDGLPTGVYTCTLRSNGTMRASFLCGSCGSPGFVMNGKEVQFCYLHQLELPNGTHTGTDFSGVFYGPFEDKQVPQLAAPDCTITVNVLAWLYAAVLSGENWFLTKSSISPAEFNNCAVKYMCQSVTSESLQVLQPLAAKTGISVERMLSALKVLLSAGFCGRTIMGSCSLEDEHTPYDIGRQMLGVKLQ</Hsp_hseq>
+      <Hsp_midline>+G  +MA PSG VE C+V+V  G+ TLNG+WLD+ V CPRHV+C+ +++ NP+Y  L +R +N++F V      +RVIGH+M+  +LKL VD  NPKTP Y F+R+  GQ  S+LACY+G P+GVY C +R N T++ SFL GSCGS GF ++   V FCY+H +ELP G H GTD  G FYGPF D+Q  Q A  D TITVNVLAWLYAAV++G+ WFL + + +  +FN  A+KY  + +T + + +L PL+A+TGI+V  M ++LK LL  G  GRTI+GS  LEDE TP+D+ RQ  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>12</Hit_num>
+  <Hit_id>ref|YP_009047217.1|</Hit_id>
+  <Hit_def>nsp5 protein [Middle East respiratory syndrome-related coronavirus] &gt;ref|YP_009047233.1| nsp5 protein [Middle East respiratory syndrome-related coronavirus] &gt;ref|YP_009944285.1| nsp5 [Betacoronavirus England 1] &gt;ref|YP_009944296.1| nsp5 [Betacoronavirus England 1]</Hit_def>
+  <Hit_accession>YP_009047217</Hit_accession>
+  <Hit_len>306</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>322.398</Hsp_bit-score>
+      <Hsp_score>825</Hsp_score>
+      <Hsp_evalue>3.30292e-106</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>306</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>157</Hsp_identity>
+      <Hsp_positive>207</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>310</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQ---AGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNY-EPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLVKMSHPSGDVEACMVQVTCGSMTLNGLWLDNTVWCPRHVMCPADQLSDPNYDALLISMTNHSFSVQKHIGAPANLRVVGHAMQGTLLKLTVDVANPSTPAYTFTTVKPGAAFSVLACYNGRPTGTFTVVMRPNYTIKGSFLCGSCGSVGYTKEGSVINFCYMHQMELANGTHTGSAFDGTMYGAFMDKQVHQVQLTDKYCSVNVVAWLYAAILNGCAWFVKPNRTSVVSFNEWALANQFTEFVGTQSVDM---LAVKTGVAIEQLLYAIQQLY-TGFQGKQILGSTMLEDEFTPEDVNMQIMGVVMQ</Hsp_hseq>
+      <Hsp_midline>SG  KM+ PSG VE CMVQVTCG+ TLNGLWLD+ V+CPRHV+C ++ + +PNY+ LLI  +NH+F VQ        LRV+GH+MQ  +LKL VD ANP TP Y F  ++PG  FSVLACYNG P+G +   MRPN+TIKGSFL GSCGSVG+  +   ++FCYMH MEL  G H G+  +G  YG F+D+Q  Q   TD   +VNV+AWLYAA++NG  WF+    T++  FN  A+   + E +    VD+   L+ +TG+A+  +  ++++L   G  G+ ILGS +LEDEFTP DV  Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>13</Hit_num>
+  <Hit_id>ref|YP_009273004.1|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Rousettus bat coronavirus]</Hit_def>
+  <Hit_accession>YP_009273004</Hit_accession>
+  <Hit_len>6973</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>350.132</Hsp_bit-score>
+      <Hsp_score>897</Hsp_score>
+      <Hsp_evalue>1.42081e-105</Hsp_evalue>
+      <Hsp_query-from>14</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3143</Hsp_hit-from>
+      <Hsp_hit-to>3453</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>161</Hsp_identity>
+      <Hsp_positive>219</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>311</Hsp_align-len>
+      <Hsp_qseq>AINABSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>AATLQAGLAKMAHPSGLVEPCIVKVSYGTMTLNGVWLNNYVLCPRHVLCTRDDLVNPDYQRLSMRAANYDFHVSQNGLNLRVTGHVMEGALLRLTVDATNPKTPAHSFVRVSTGQAISILACYDGIPAGVYTCTLRANGTLRAAFLCGSCGSPGFVMNGKEVQFCYLHQLELPNGTHTGTDMHGAFYGPFEDKQVPQLASPDVTITVNVLAWLYAAVLSGESWFVTKLGITAAEFNTSAVKYMCQSVTEESLQVLQPLAAKTGVSVQRMLSSLKVLLSTGFCGKTIMGSCSLEDEHTPYDIGRQMLGVTLQ</Hsp_hseq>
+      <Hsp_midline>A    +G  KMA PSG VE C+V+V+ GT TLNG+WL++ V CPRHV+CT +D++NP+Y+ L +R +N++F V    + LRV GH M+  +L+L VD  NPKTP + FVR+  GQ  S+LACY+G P+GVY C +R N T++ +FL GSCGS GF ++   V FCY+H +ELP G H GTD+ G FYGPF D+Q  Q A  D TITVNVLAWLYAAV++G+ WF+ +   T  +FN  A+KY  + +T++ + +L PL+A+TG++V  M +SLK LL  G  G+TI+GS  LEDE TP+D+ RQ  GVT Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>14</Hit_num>
+  <Hit_id>ref|YP_009824988.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [Bat coronavirus]</Hit_def>
+  <Hit_accession>YP_009824988</Hit_accession>
+  <Hit_len>4205</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>342.813</Hsp_bit-score>
+      <Hsp_score>878</Hsp_score>
+      <Hsp_evalue>5.05363e-103</Hsp_evalue>
+      <Hsp_query-from>14</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3059</Hsp_hit-from>
+      <Hsp_hit-to>3369</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>162</Hsp_identity>
+      <Hsp_positive>214</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>311</Hsp_align-len>
+      <Hsp_qseq>AINABSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>AASLQGGLAKMAHPSGPVEKCVVKVTYGTMTLNGIWLDDYVLCPRHVLCSRDDLAAPDYPRLCMRAANYDFIVTQQGHPLRVTGHTMEGALLKLTLDARNPNTPAYSFIRVATGQAISLLACYDGNPMGVYTCTMRGNGTLKASFLCGSCGSPGYVMNGKEVQFCYLHQLELPNGTHTGTDMQGVFYGPFEDKQVPQMATPDQIITVNVLAWLYAAVLSGDNWFVVKTGITPAEFNTAAIKHMCQSVSTDTLSTLQPLAAKTGISVERMLASLKLLLATGFCGKTIMGACTLEDEHTPYDIGRQMLGVSLQ</Hsp_hseq>
+      <Hsp_midline>A +   G  KMA PSG VE C+V+VT GT TLNG+WLDD V CPRHV+C+ +D+  P+Y  L +R +N++F+V      LRV GH+M+  +LKL +D  NP TP Y F+R+  GQ  S+LACY+G+P GVY C MR N T+K SFL GSCGS G+ ++   V FCY+H +ELP G H GTD++G FYGPF D+Q  Q A  D  ITVNVLAWLYAAV++GD WF+ +   T  +FN  A+K+  + ++ D +  L PL+A+TGI+V  M ASLK LL  G  G+TI+G+  LEDE TP+D+ RQ  GV+ Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>15</Hit_num>
+  <Hit_id>ref|YP_009944377.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [Rousettus bat coronavirus HKU9]</Hit_def>
+  <Hit_accession>YP_009944377</Hit_accession>
+  <Hit_len>4248</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>342.428</Hsp_bit-score>
+      <Hsp_score>877</Hsp_score>
+      <Hsp_evalue>6.0745e-103</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3092</Hsp_hit-from>
+      <Hsp_hit-to>3409</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>162</Hsp_identity>
+      <Hsp_positive>218</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>318</Hsp_align-len>
+      <Hsp_qseq>PROCHAINA--BSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>PPRCSVASAALQAGLTRMAHPSGLVEPCLVKVNYGSMTLNGIWLDNFVICPRHVMCSRDELANPDYPRLSMRAANYDFHVSQNGHNIRVIGHTMEGSLLKLTVDVNNPKTPAYSFIRVSTGQAMSLLACYDGLPTGVYTCTLRSNGTMRASFLCGSCGSPGFVMNGKEVQFCYLHQLELPNGTHTGTDFSGVFYGPFEDKQVPQLAAPDCTITVNVLAWLYAAVLSGENWFLTKSSISPAEFNNCAVKYMCQSVTSESLQVLQPLAAKTGISVERMLSALKVLLSAGFCGRTIMGSCSLEDEHTPYDIGRQMLGVKLQ</Hsp_hseq>
+      <Hsp_midline>P  C   +A   +G  +MA PSG VE C+V+V  G+ TLNG+WLD+ V CPRHV+C+ +++ NP+Y  L +R +N++F V      +RVIGH+M+  +LKL VD  NPKTP Y F+R+  GQ  S+LACY+G P+GVY C +R N T++ SFL GSCGS GF ++   V FCY+H +ELP G H GTD  G FYGPF D+Q  Q A  D TITVNVLAWLYAAV++G+ WFL + + +  +FN  A+KY  + +T + + +L PL+A+TGI+V  M ++LK LL  G  GRTI+GS  LEDE TP+D+ RQ  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>16</Hit_num>
+  <Hit_id>ref|YP_001039970.1|</Hit_id>
+  <Hit_def>orf1ab polyprotein [Rousettus bat coronavirus HKU9]</Hit_def>
+  <Hit_accession>YP_001039970</Hit_accession>
+  <Hit_len>6930</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>341.658</Hsp_bit-score>
+      <Hsp_score>875</Hsp_score>
+      <Hsp_evalue>1.20956e-102</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3092</Hsp_hit-from>
+      <Hsp_hit-to>3409</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>162</Hsp_identity>
+      <Hsp_positive>218</Hsp_positive>
+      <Hsp_gaps>2</Hsp_gaps>
+      <Hsp_align-len>318</Hsp_align-len>
+      <Hsp_qseq>PROCHAINA--BSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>PPRCSVASAALQAGLTRMAHPSGLVEPCLVKVNYGSMTLNGIWLDNFVICPRHVMCSRDELANPDYPRLSMRAANYDFHVSQNGHNIRVIGHTMEGSLLKLTVDVNNPKTPAYSFIRVSTGQAMSLLACYDGLPTGVYTCTLRSNGTMRASFLCGSCGSPGFVMNGKEVQFCYLHQLELPNGTHTGTDFSGVFYGPFEDKQVPQLAAPDCTITVNVLAWLYAAVLSGENWFLTKSSISPAEFNNCAVKYMCQSVTSESLQVLQPLAAKTGISVERMLSALKVLLSAGFCGRTIMGSCSLEDEHTPYDIGRQMLGVKLQ</Hsp_hseq>
+      <Hsp_midline>P  C   +A   +G  +MA PSG VE C+V+V  G+ TLNG+WLD+ V CPRHV+C+ +++ NP+Y  L +R +N++F V      +RVIGH+M+  +LKL VD  NPKTP Y F+R+  GQ  S+LACY+G P+GVY C +R N T++ SFL GSCGS GF ++   V FCY+H +ELP G H GTD  G FYGPF D+Q  Q A  D TITVNVLAWLYAAV++G+ WFL + + +  +FN  A+KY  + +T + + +L PL+A+TGI+V  M ++LK LL  G  GRTI+GS  LEDE TP+D+ RQ  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>17</Hit_num>
+  <Hit_id>ref|YP_009824989.2|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Bat coronavirus]</Hit_def>
+  <Hit_accession>YP_009824989</Hit_accession>
+  <Hit_len>6877</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>341.273</Hsp_bit-score>
+      <Hsp_score>874</Hsp_score>
+      <Hsp_evalue>1.63099e-102</Hsp_evalue>
+      <Hsp_query-from>14</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3059</Hsp_hit-from>
+      <Hsp_hit-to>3369</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>162</Hsp_identity>
+      <Hsp_positive>214</Hsp_positive>
+      <Hsp_gaps>0</Hsp_gaps>
+      <Hsp_align-len>311</Hsp_align-len>
+      <Hsp_qseq>AINABSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>AASLQGGLAKMAHPSGPVEKCVVKVTYGTMTLNGIWLDDYVLCPRHVLCSRDDLAAPDYPRLCMRAANYDFIVTQQGHPLRVTGHTMEGALLKLTLDARNPNTPAYSFIRVATGQAISLLACYDGNPMGVYTCTMRGNGTLKASFLCGSCGSPGYVMNGKEVQFCYLHQLELPNGTHTGTDMQGVFYGPFEDKQVPQMATPDQIITVNVLAWLYAAVLSGDNWFVVKTGITPAEFNTAAIKHMCQSVSTDTLSTLQPLAAKTGISVERMLASLKLLLATGFCGKTIMGACTLEDEHTPYDIGRQMLGVSLQ</Hsp_hseq>
+      <Hsp_midline>A +   G  KMA PSG VE C+V+VT GT TLNG+WLDD V CPRHV+C+ +D+  P+Y  L +R +N++F+V      LRV GH+M+  +LKL +D  NP TP Y F+R+  GQ  S+LACY+G+P GVY C MR N T+K SFL GSCGS G+ ++   V FCY+H +ELP G H GTD++G FYGPF D+Q  Q A  D  ITVNVLAWLYAAV++GD WF+ +   T  +FN  A+K+  + ++ D +  L PL+A+TGI+V  M ASLK LL  G  G+TI+G+  LEDE TP+D+ RQ  GV+ Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>18</Hit_num>
+  <Hit_id>ref|YP_009944343.1|</Hit_id>
+  <Hit_def>nsp5 [Pipistrellus bat coronavirus HKU5] &gt;ref|YP_009944358.1| nsp5 [Pipistrellus bat coronavirus HKU5]</Hit_def>
+  <Hit_accession>YP_009944343</Hit_accession>
+  <Hit_len>306</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>311.612</Hsp_bit-score>
+      <Hsp_score>797</Hsp_score>
+      <Hsp_evalue>7.10692e-102</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>306</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>155</Hsp_identity>
+      <Hsp_positive>208</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>310</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQ---AGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNY-EPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLVKMAAPSGVVENCMVQVTCGSMTLNGLWLDNYVWCPRHVMCPADQLSDPNYDALLVSKTNLSFIVQKNVGAPANLRVVGHTMVGTLLKLTVESANPQTPAYTFTTVKPGASFSVLACYNGRPTGVFMVNMRQNSTIKGSFLCGSCGSVGYTQEGNVINFCYMHQMELSNGTHTGCAFDGVMYGAFEDRQVHQVQLSDKYCTINIVAWLYAAILNGCNWFVKPNKTGIATFNEWAMSNQFTEFIGTQSVDM---LAHKTGVSVEQLLYAI-QTLHKGFQGKTILGNSMLEDEFTPDDVNMQVMGVVMQ</Hsp_hseq>
+      <Hsp_midline>SG  KMA PSG VE CMVQVTCG+ TLNGLWLD+ V+CPRHV+C ++ + +PNY+ LL+ K+N +F+VQ        LRV+GH+M   +LKL V++ANP+TP Y F  ++PG +FSVLACYNG P+GV+   MR N TIKGSFL GSCGSVG+  + + ++FCYMH MEL  G H G   +G  YG F DRQ  Q   +D   T+N++AWLYAA++NG  WF+    T +  FN  AM   + E +    VD+   L+ +TG++V  +  ++ + L  G  G+TILG+++LEDEFTP DV  Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>19</Hit_num>
+  <Hit_id>ref|YP_009924361.1|</Hit_id>
+  <Hit_def>nsp5 [Rat coronavirus Parker] &gt;ref|YP_009924372.1| nsp5 [Rat coronavirus Parker]</Hit_def>
+  <Hit_accession>YP_009924361</Hit_accession>
+  <Hit_len>303</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>310.842</Hsp_bit-score>
+      <Hsp_score>795</Hsp_score>
+      <Hsp_evalue>1.39435e-101</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>303</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>156</Hsp_identity>
+      <Hsp_positive>201</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIVKMVSPTSKVEPCVVSVTYGNMTLNGLWLDDKVYCPRHVICSSDDMTDPDYPNLLCRVTSSDFCVMSDRMSLTVMSYQMQGSLLVLTVTLQNPNTPKYSFGVVKPGETFTVLAAYNGRPQGAFHVVMRSSHTIKGSFLCGSCGSVGYVLTGDSVRFVYMHQLELSTGCHTGTDLSGNFYGPYRDAQVVQLPVQDYTQTVNVVAWLYAAILNRCNWFVQSDSCSLEEFNVWAMTNGFSSIKADLV--LDALASMTGVTVEQVLAAIKRLY-SGFQGKQILGSCVLEDELTPSDVYQQLSGVKLQ</Hsp_hseq>
+      <Hsp_midline>SG  KM  P+ KVE C+V VT G  TLNGLWLDD VYCPRHVIC+S+DM +P+Y +LL R ++ +F V +  + L V+ + MQ  +L L V   NP TPKY F  ++PG+TF+VLA YNG P G +   MR + TIKGSFL GSCGSVG+ +  D V F YMH +EL TG H GTDL GNFYGP+ D Q  Q    D T TVNV+AWLYAA++N   WF+   + +L +FN+ AM   +  +  D V  L  L++ TG+ V  + A++K L  +G  G+ ILGS +LEDE TP DV +Q SGV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>20</Hit_num>
+  <Hit_id>ref|YP_009915677.1|</Hit_id>
+  <Hit_def>nsp5 [Murine hepatitis virus] &gt;ref|YP_009915692.1| nsp5 [Murine hepatitis virus] &gt;ref|YP_009924335.1| nsp5 [Murine hepatitis virus] &gt;ref|YP_009924346.1| nsp5 [Murine hepatitis virus]</Hit_def>
+  <Hit_accession>YP_009915677</Hit_accession>
+  <Hit_len>303</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>310.457</Hsp_bit-score>
+      <Hsp_score>794</Hsp_score>
+      <Hsp_evalue>1.91276e-101</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>303</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>155</Hsp_identity>
+      <Hsp_positive>199</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIVKMVSPTSKVEPCIVSVTYGNMTLNGLWLDDKVYCPRHVICSSADMTDPDYPNLLCRVTSSDFCVMSGRMSLTVMSYQMQGCQLVLTVTLQNPNTPKYSFGVVKPGETFTVLAAYNGRPQGAFHVTLRSSHTIKGSFLCGSCGSVGYVLTGDSVRFVYMHQLELSTGCHTGTDFSGNFYGPYRDAQVVQLPVQDYTQTVNVVAWLYAAIFNRCNWFVQSDSCSLEEFNVWAMTNGFSSIKADLV--LDALASMTGVTVEQVLAAIKR-LHSGFQGKQILGSCVLEDELTPSDVYQQLAGVKLQ</Hsp_hseq>
+      <Hsp_midline>SG  KM  P+ KVE C+V VT G  TLNGLWLDD VYCPRHVIC+S DM +P+Y +LL R ++ +F V +G + L V+ + MQ C L L V   NP TPKY F  ++PG+TF+VLA YNG P G +   +R + TIKGSFL GSCGSVG+ +  D V F YMH +EL TG H GTD  GNFYGP+ D Q  Q    D T TVNV+AWLYAA+ N   WF+   + +L +FN+ AM   +  +  D V  L  L++ TG+ V  + A++K  L +G  G+ ILGS +LEDE TP DV +Q +GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>21</Hit_num>
+  <Hit_id>ref|YP_009944314.1|</Hit_id>
+  <Hit_def>nsp5 [Tylonycteris bat coronavirus HKU4] &gt;ref|YP_009944329.1| nsp5 [Tylonycteris bat coronavirus HKU4]</Hit_def>
+  <Hit_accession>YP_009944314</Hit_accession>
+  <Hit_len>306</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>310.071</Hsp_bit-score>
+      <Hsp_score>793</Hsp_score>
+      <Hsp_evalue>2.71598e-101</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>306</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>154</Hsp_identity>
+      <Hsp_positive>205</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>310</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQ---AGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNY-EPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLVKMSAPSGAVENCIVQVTCGSMTLNGLWLDNTVWCPRHIMCPADQLTDPNYDALLISKTNHSFIVQKHIGAQANLRVVAHSMVGVLLKLTVDVANPSTPAYTFSTVKPGASFSVLACYNGKPTGVFTVNLRHNSTIKGSFLCGSCGSVGYTENGGVINFVYMHQMELSNGTHTGSSFDGVMYGAFEDKQTHQLQLTDKYCTINVVAWLYAAVLNGCKWFVKPTRVGIVTYNEWALSNQFTEFVGTQSIDM---LAHRTGVSVEQMLAAIQS-LHAGFQGKTILGQSTLEDEFTPDDVNMQVMGVVMQ</Hsp_hseq>
+      <Hsp_midline>SG  KM+ PSG VE C+VQVTCG+ TLNGLWLD+ V+CPRH++C ++ + +PNY+ LLI K+NH+F+VQ        LRV+ HSM   +LKL VD ANP TP Y F  ++PG +FSVLACYNG P+GV+   +R N TIKGSFL GSCGSVG+  +   ++F YMH MEL  G H G+  +G  YG F D+QT Q   TD   T+NV+AWLYAAV+NG +WF+      +  +N  A+   + E +    +D+   L+ +TG++V  M A+++  L  G  G+TILG + LEDEFTP DV  Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>22</Hit_num>
+  <Hit_id>ref|YP_209248.1|</Hit_id>
+  <Hit_def>nsp5 or 3CLpro [Murine hepatitis virus strain JHM]</Hit_def>
+  <Hit_accession>YP_209248</Hit_accession>
+  <Hit_len>303</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>308.145</Hsp_bit-score>
+      <Hsp_score>788</Hsp_score>
+      <Hsp_evalue>1.45254e-100</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>303</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>154</Hsp_identity>
+      <Hsp_positive>199</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIVKMVSPTSKVEPCVVSVTYGNMTLNGLWLDDKVYCPRHVICSSADMTDPDYPNLLCRVTSSDFCVMSDRMSLTVMSYQMQGSLLVLTVTLQNPNTPKYSFGVVKPGETFTVLAAYNGRPQGAFHVVMRSSHTIKGSFLCGSCGSVGYVLTGDSVRFVYMHQLELSTGCHTGTDFSGNFYGPYRDAQVVQLPVQDYTQTVNVVAWLYAAILNRCNWFVQSDSCSLEEFNVWAMTNGFSSIKADLV--LDALASMTGVTVEQVLAAIKR-LHSGFQGKQILGSCVLEDELTPSDVYQQLAGVKLQ</Hsp_hseq>
+      <Hsp_midline>SG  KM  P+ KVE C+V VT G  TLNGLWLDD VYCPRHVIC+S DM +P+Y +LL R ++ +F V +  + L V+ + MQ  +L L V   NP TPKY F  ++PG+TF+VLA YNG P G +   MR + TIKGSFL GSCGSVG+ +  D V F YMH +EL TG H GTD  GNFYGP+ D Q  Q    D T TVNV+AWLYAA++N   WF+   + +L +FN+ AM   +  +  D V  L  L++ TG+ V  + A++K  L +G  G+ ILGS +LEDE TP DV +Q +GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>23</Hit_num>
+  <Hit_id>ref|YP_009924413.1|</Hit_id>
+  <Hit_def>nsp5 [Rabbit coronavirus HKU14] &gt;ref|YP_009944258.1| nsp5 [Rabbit coronavirus HKU14]</Hit_def>
+  <Hit_accession>YP_009924413</Hit_accession>
+  <Hit_len>303</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>307.375</Hsp_bit-score>
+      <Hsp_score>786</Hsp_score>
+      <Hsp_evalue>2.58818e-100</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>303</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>148</Hsp_identity>
+      <Hsp_positive>199</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIVKMVSPTSKVEPCVVSVTYGNMTLNGLWLDDKVYCPRHVICSASDMTNPDYPNLLCRVTSSDFTIMSDRMSLTVMSYQMQGCMLVLTVTLQNPRTPKYTFGVVKPGETFTVLAAYNGRPQGAFHVTMRSSFTIKGSFLCGSCGSVGYVLMGDCVKFVYMHQLELSTGCHTGTDFNGDFYGPYKDAQVVQLPVQDYVQSVNFVAWLYAAILNNCNWFVQSDRCSIEDYNVWAMSNGFSQIKSDLV--VDALASMTGVSLENLLAAIKR-LHKGFQGRQIMGSCAFEDELTPSDVYQQLAGVKLQ</Hsp_hseq>
+      <Hsp_midline>SG  KM  P+ KVE C+V VT G  TLNGLWLDD VYCPRHVIC++ DM NP+Y +LL R ++ +F + +  + L V+ + MQ C+L L V   NP+TPKY F  ++PG+TF+VLA YNG P G +   MR +FTIKGSFL GSCGSVG+ +  DCV F YMH +EL TG H GTD  G+FYGP+ D Q  Q    D   +VN +AWLYAA++N   WF+     ++ D+N+ AM   +  +  D V  +  L++ TG+++ ++ A++K  L  G  GR I+GS   EDE TP DV +Q +GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>24</Hit_num>
+  <Hit_id>ref|YP_009944273.1|</Hit_id>
+  <Hit_def>nsp5 [Human coronavirus HKU1] &gt;ref|YP_459936.1| nsp5 [Human coronavirus HKU1]</Hit_def>
+  <Hit_accession>YP_009944273</Hit_accession>
+  <Hit_len>303</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>303.908</Hsp_bit-score>
+      <Hsp_score>777</Hsp_score>
+      <Hsp_evalue>6.23679e-99</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>303</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>150</Hsp_identity>
+      <Hsp_positive>193</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIVKMVSPTSKIEPCIVSVTYGSMTLNGLWLDDKVYCPRHVICSSSNMNEPDYSALLCRVTLGDFTIMSGRMSLTVVSYQMQGCQLVLTVSLQNPYTPKYTFGNVKPGETFTVLAAYNGRPQGAFHVTMRSSYTIKGSFLCGSCGSVGYVLTGDSVKFVYMHQLELSTGCHTGTDFTGNFYGPYRDAQVVQLPVKDYVQTVNVIAWLYAAILNNCAWFVQNDVCSTEDFNVWAMANGFSQVKADLV--LDALASMTGVSIETLLAAIKRLYM-GFQGRQILGSCTFEDELAPSDVYQQLAGVKLQ</Hsp_hseq>
+      <Hsp_midline>SG  KM  P+ K+E C+V VT G+ TLNGLWLDD VYCPRHVIC+S +M  P+Y  LL R +  +F + +G + L V+ + MQ C L L V   NP TPKY F  ++PG+TF+VLA YNG P G +   MR ++TIKGSFL GSCGSVG+ +  D V F YMH +EL TG H GTD  GNFYGP+ D Q  Q    D   TVNV+AWLYAA++N   WF+     +  DFN+ AM   +  +  D V  L  L++ TG+++  + A++K L   G  GR ILGS   EDE  P DV +Q +GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>25</Hit_num>
+  <Hit_id>ref|YP_009555250.1|</Hit_id>
+  <Hit_def>nsp2 [Human coronavirus OC43] &gt;ref|YP_009924323.1| nsp5 [Human coronavirus OC43]</Hit_def>
+  <Hit_accession>YP_009555250</Hit_accession>
+  <Hit_len>303</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>301.982</Hsp_bit-score>
+      <Hsp_score>772</Hsp_score>
+      <Hsp_evalue>3.88988e-98</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>303</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>147</Hsp_identity>
+      <Hsp_positive>198</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIVKMVNPTSKVEPCVVSVTYGNMTLNGLWLDDKVYCPRHVICSASDMTNPDYTNLLCRVTSSDFTVLFDRLSLTVMSYQMRGCMLVLTVTLQNSRTPKYTFGVVKPGETFTVLAAYNGKPQGAFHVTMRSSYTIKGSFLCGSCGSVGYVIMGDCVKFVYMHQLELSTGCHTGTDFNGDFYGPYKDAQVVQLLIQDYIQSVNFVAWLYAAILNNCNWFVQSDKCSVEDFNVWALSNGFSQVKSDLV--IDALASMTGVSLETLLAAIKR-LKNGFQGRQIMGSCSFEDELTPSDVYQQLAGIKLQ</Hsp_hseq>
+      <Hsp_midline>SG  KM  P+ KVE C+V VT G  TLNGLWLDD VYCPRHVIC++ DM NP+Y +LL R ++ +F V    + L V+ + M+ C+L L V   N +TPKY F  ++PG+TF+VLA YNG P G +   MR ++TIKGSFL GSCGSVG+ I  DCV F YMH +EL TG H GTD  G+FYGP+ D Q  Q    D   +VN +AWLYAA++N   WF+     ++ DFN+ A+   +  +  D V  +  L++ TG+++  + A++K  L+NG  GR I+GS   EDE TP DV +Q +G+  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>26</Hit_num>
+  <Hit_id>ref|YP_009047203.1|</Hit_id>
+  <Hit_def>1A polyprotein [Middle East respiratory syndrome-related coronavirus]</Hit_def>
+  <Hit_accession>YP_009047203</Hit_accession>
+  <Hit_len>4391</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>322.398</Hsp_bit-score>
+      <Hsp_score>825</Hsp_score>
+      <Hsp_evalue>6.81839e-96</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3248</Hsp_hit-from>
+      <Hsp_hit-to>3553</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>157</Hsp_identity>
+      <Hsp_positive>207</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>310</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQ---AGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNY-EPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLVKMSHPSGDVEACMVQVTCGSMTLNGLWLDNTVWCPRHVMCPADQLSDPNYDALLISMTNHSFSVQKHIGAPANLRVVGHAMQGTLLKLTVDVANPSTPAYTFTTVKPGAAFSVLACYNGRPTGTFTVVMRPNYTIKGSFLCGSCGSVGYTKEGSVINFCYMHQMELANGTHTGSAFDGTMYGAFMDKQVHQVQLTDKYCSVNVVAWLYAAILNGCAWFVKPNRTSVVSFNEWALANQFTEFVGTQSVDM---LAVKTGVAIEQLLYAIQQLY-TGFQGKQILGSTMLEDEFTPEDVNMQIMGVVMQ</Hsp_hseq>
+      <Hsp_midline>SG  KM+ PSG VE CMVQVTCG+ TLNGLWLD+ V+CPRHV+C ++ + +PNY+ LLI  +NH+F VQ        LRV+GH+MQ  +LKL VD ANP TP Y F  ++PG  FSVLACYNG P+G +   MRPN+TIKGSFL GSCGSVG+  +   ++FCYMH MEL  G H G+  +G  YG F+D+Q  Q   TD   +VNV+AWLYAA++NG  WF+    T++  FN  A+   + E +    VD+   L+ +TG+A+  +  ++++L   G  G+ ILGS +LEDEFTP DV  Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>27</Hit_num>
+  <Hit_id>ref|YP_007188578.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [Betacoronavirus England 1]</Hit_def>
+  <Hit_accession>YP_007188578</Hit_accession>
+  <Hit_len>4391</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>322.398</Hsp_bit-score>
+      <Hsp_score>825</Hsp_score>
+      <Hsp_evalue>7.50905e-96</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3248</Hsp_hit-from>
+      <Hsp_hit-to>3553</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>157</Hsp_identity>
+      <Hsp_positive>207</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>310</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQ---AGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNY-EPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLVKMSHPSGDVEACMVQVTCGSMTLNGLWLDNTVWCPRHVMCPADQLSDPNYDALLISMTNHSFSVQKHIGAPANLRVVGHAMQGTLLKLTVDVANPSTPAYTFTTVKPGAAFSVLACYNGRPTGTFTVVMRPNYTIKGSFLCGSCGSVGYTKEGSVINFCYMHQMELANGTHTGSAFDGTMYGAFMDKQVHQVQLTDKYCSVNVVAWLYAAILNGCAWFVKPNRTSVVSFNEWALANQFTEFVGTQSVDM---LAVKTGVAIEQLLYAIQQLY-TGFQGKQILGSTMLEDEFTPEDVNMQIMGVVMQ</Hsp_hseq>
+      <Hsp_midline>SG  KM+ PSG VE CMVQVTCG+ TLNGLWLD+ V+CPRHV+C ++ + +PNY+ LLI  +NH+F VQ        LRV+GH+MQ  +LKL VD ANP TP Y F  ++PG  FSVLACYNG P+G +   MRPN+TIKGSFL GSCGSVG+  +   ++FCYMH MEL  G H G+  +G  YG F+D+Q  Q   TD   +VNV+AWLYAA++NG  WF+    T++  FN  A+   + E +    VD+   L+ +TG+A+  +  ++++L   G  G+ ILGS +LEDEFTP DV  Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>28</Hit_num>
+  <Hit_id>ref|YP_007188577.3|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Betacoronavirus England 1]</Hit_def>
+  <Hit_accession>YP_007188577</Hit_accession>
+  <Hit_len>7078</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>321.242</Hsp_bit-score>
+      <Hsp_score>822</Hsp_score>
+      <Hsp_evalue>1.46482e-95</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3248</Hsp_hit-from>
+      <Hsp_hit-to>3553</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>157</Hsp_identity>
+      <Hsp_positive>207</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>310</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQ---AGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNY-EPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLVKMSHPSGDVEACMVQVTCGSMTLNGLWLDNTVWCPRHVMCPADQLSDPNYDALLISMTNHSFSVQKHIGAPANLRVVGHAMQGTLLKLTVDVANPSTPAYTFTTVKPGAAFSVLACYNGRPTGTFTVVMRPNYTIKGSFLCGSCGSVGYTKEGSVINFCYMHQMELANGTHTGSAFDGTMYGAFMDKQVHQVQLTDKYCSVNVVAWLYAAILNGCAWFVKPNRTSVVSFNEWALANQFTEFVGTQSVDM---LAVKTGVAIEQLLYAIQQLY-TGFQGKQILGSTMLEDEFTPEDVNMQIMGVVMQ</Hsp_hseq>
+      <Hsp_midline>SG  KM+ PSG VE CMVQVTCG+ TLNGLWLD+ V+CPRHV+C ++ + +PNY+ LLI  +NH+F VQ        LRV+GH+MQ  +LKL VD ANP TP Y F  ++PG  FSVLACYNG P+G +   MRPN+TIKGSFL GSCGSVG+  +   ++FCYMH MEL  G H G+  +G  YG F+D+Q  Q   TD   +VNV+AWLYAA++NG  WF+    T++  FN  A+   + E +    VD+   L+ +TG+A+  +  ++++L   G  G+ ILGS +LEDEFTP DV  Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>29</Hit_num>
+  <Hit_id>ref|YP_009047202.1|</Hit_id>
+  <Hit_def>1AB polyprotein [Middle East respiratory syndrome-related coronavirus]</Hit_def>
+  <Hit_accession>YP_009047202</Hit_accession>
+  <Hit_len>7078</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>321.242</Hsp_bit-score>
+      <Hsp_score>822</Hsp_score>
+      <Hsp_evalue>1.64462e-95</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3248</Hsp_hit-from>
+      <Hsp_hit-to>3553</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>157</Hsp_identity>
+      <Hsp_positive>207</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>310</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQ---AGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNY-EPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLVKMSHPSGDVEACMVQVTCGSMTLNGLWLDNTVWCPRHVMCPADQLSDPNYDALLISMTNHSFSVQKHIGAPANLRVVGHAMQGTLLKLTVDVANPSTPAYTFTTVKPGAAFSVLACYNGRPTGTFTVVMRPNYTIKGSFLCGSCGSVGYTKEGSVINFCYMHQMELANGTHTGSAFDGTMYGAFMDKQVHQVQLTDKYCSVNVVAWLYAAILNGCAWFVKPNRTSVVSFNEWALANQFTEFVGTQSVDM---LAVKTGVAIEQLLYAIQQLY-TGFQGKQILGSTMLEDEFTPEDVNMQIMGVVMQ</Hsp_hseq>
+      <Hsp_midline>SG  KM+ PSG VE CMVQVTCG+ TLNGLWLD+ V+CPRHV+C ++ + +PNY+ LLI  +NH+F VQ        LRV+GH+MQ  +LKL VD ANP TP Y F  ++PG  FSVLACYNG P+G +   MRPN+TIKGSFL GSCGSVG+  +   ++FCYMH MEL  G H G+  +G  YG F+D+Q  Q   TD   +VNV+AWLYAA++NG  WF+    T++  FN  A+   + E +    VD+   L+ +TG+A+  +  ++++L   G  G+ ILGS +LEDEFTP DV  Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>30</Hit_num>
+  <Hit_id>ref|YP_009361855.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [Bat coronavirus]</Hit_def>
+  <Hit_accession>YP_009361855</Hit_accession>
+  <Hit_len>4388</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>320.472</Hsp_bit-score>
+      <Hsp_score>820</Hsp_score>
+      <Hsp_evalue>3.28604e-95</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3245</Hsp_hit-from>
+      <Hsp_hit-to>3550</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>153</Hsp_identity>
+      <Hsp_positive>207</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>310</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQ---AGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNY-EPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLVRMSHPSGDVEACMVQVTCGSMTLNGLWLDNTVWCPRHVMCPADQLADPNYDALLVSMTNHSFSVNKHIGAPANLRVIGHAMQGTLLKLTVDVANPSTPAYTFTTVKPGASFSVLACYNGRPTGTFTVVMRPNYTIKGSFLCGSCGSVGYTKEGSVINFCYMHQMELANGTHTGSAFDGTMYGAFLDKQVHQVQLTDKYCSTNVVAWLYAAILNGCAWFVKSNRTSIVSFNEWALANQFTEFVGTQSIDM---LAVKTGVAIEQLLYAIQQ-LHTGFQGKQILGSSMLEDEFTPEDVNMQIMGVVMQ</Hsp_hseq>
+      <Hsp_midline>SG  +M+ PSG VE CMVQVTCG+ TLNGLWLD+ V+CPRHV+C ++ + +PNY+ LL+  +NH+F V         LRVIGH+MQ  +LKL VD ANP TP Y F  ++PG +FSVLACYNG P+G +   MRPN+TIKGSFL GSCGSVG+  +   ++FCYMH MEL  G H G+  +G  YG F+D+Q  Q   TD   + NV+AWLYAA++NG  WF+    T++  FN  A+   + E +    +D+   L+ +TG+A+  +  ++++ L  G  G+ ILGS++LEDEFTP DV  Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>31</Hit_num>
+  <Hit_id>ref|YP_009513009.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [Betacoronavirus Erinaceus/VMC/DEU/2012]</Hit_def>
+  <Hit_accession>YP_009513009</Hit_accession>
+  <Hit_len>4454</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>319.316</Hsp_bit-score>
+      <Hsp_score>817</Hsp_score>
+      <Hsp_evalue>8.63094e-95</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3311</Hsp_hit-from>
+      <Hsp_hit-to>3616</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>158</Hsp_identity>
+      <Hsp_positive>202</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>309</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQA---GNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLVKMAHPSGAVEQCIVQVTCGSMTLNGLWLDNIVYCPRHVMCPQDQLVDPNYDALLNSMTNHSFTIQRHGRSTANLRCTGHAMHGTLLKLTVDSANPETPAYTFTTIKQGSSFSVLACYNGRPSGTYTVVMRPNSTIKGSFLCGSCGSVGYVKEGNVINFCYMHQMELSNGTHTGSSFDGNMYGNFQDRQIYQAQLSDKHCTINVVAWLYAAVLNGCNWFVKPNKTGVAAFNEWALSNQFTEFVSTQA--LELLAVKTGVQIEQLLYSIQQ-LNNGFQGNVILGSAMLEDEYTPEDVNMQMMGVVMQ</Hsp_hseq>
+      <Hsp_midline>SG  KMA PSG VE C+VQVTCG+ TLNGLWLD++VYCPRHV+C  + +++PNY+ LL   +NH+F +Q        LR  GH+M   +LKL VD+ANP+TP Y F  I+ G +FSVLACYNG PSG Y   MRPN TIKGSFL GSCGSVG+  + + ++FCYMH MEL  G H G+  +GN YG F DRQ  QA  +D   T+NV+AWLYAAV+NG  WF+    T +  FN  A+   +          L  L+ +TG+ +  +  S+++ L NG  G  ILGSA+LEDE+TP DV  Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>32</Hit_num>
+  <Hit_id>ref|YP_009361856.2|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Bat coronavirus]</Hit_def>
+  <Hit_accession>YP_009361856</Hit_accession>
+  <Hit_len>7076</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>319.316</Hsp_bit-score>
+      <Hsp_score>817</Hsp_score>
+      <Hsp_evalue>8.81365e-95</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3245</Hsp_hit-from>
+      <Hsp_hit-to>3550</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>153</Hsp_identity>
+      <Hsp_positive>207</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>310</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQ---AGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNY-EPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLVRMSHPSGDVEACMVQVTCGSMTLNGLWLDNTVWCPRHVMCPADQLADPNYDALLVSMTNHSFSVNKHIGAPANLRVIGHAMQGTLLKLTVDVANPSTPAYTFTTVKPGASFSVLACYNGRPTGTFTVVMRPNYTIKGSFLCGSCGSVGYTKEGSVINFCYMHQMELANGTHTGSAFDGTMYGAFLDKQVHQVQLTDKYCSTNVVAWLYAAILNGCAWFVKSNRTSIVSFNEWALANQFTEFVGTQSIDM---LAVKTGVAIEQLLYAIQQ-LHTGFQGKQILGSSMLEDEFTPEDVNMQIMGVVMQ</Hsp_hseq>
+      <Hsp_midline>SG  +M+ PSG VE CMVQVTCG+ TLNGLWLD+ V+CPRHV+C ++ + +PNY+ LL+  +NH+F V         LRVIGH+MQ  +LKL VD ANP TP Y F  ++PG +FSVLACYNG P+G +   MRPN+TIKGSFL GSCGSVG+  +   ++FCYMH MEL  G H G+  +G  YG F+D+Q  Q   TD   + NV+AWLYAA++NG  WF+    T++  FN  A+   + E +    +D+   L+ +TG+A+  +  ++++ L  G  G+ ILGS++LEDEFTP DV  Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>33</Hit_num>
+  <Hit_id>ref|YP_009513008.1|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Betacoronavirus Erinaceus/VMC/DEU/2012]</Hit_def>
+  <Hit_accession>YP_009513008</Hit_accession>
+  <Hit_len>7150</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>318.161</Hsp_bit-score>
+      <Hsp_score>814</Hsp_score>
+      <Hsp_evalue>1.80044e-94</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3311</Hsp_hit-from>
+      <Hsp_hit-to>3616</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>158</Hsp_identity>
+      <Hsp_positive>202</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>309</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQA---GNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLVKMAHPSGAVEQCIVQVTCGSMTLNGLWLDNIVYCPRHVMCPQDQLVDPNYDALLNSMTNHSFTIQRHGRSTANLRCTGHAMHGTLLKLTVDSANPETPAYTFTTIKQGSSFSVLACYNGRPSGTYTVVMRPNSTIKGSFLCGSCGSVGYVKEGNVINFCYMHQMELSNGTHTGSSFDGNMYGNFQDRQIYQAQLSDKHCTINVVAWLYAAVLNGCNWFVKPNKTGVAAFNEWALSNQFTEFVSTQA--LELLAVKTGVQIEQLLYSIQQ-LNNGFQGNVILGSAMLEDEYTPEDVNMQMMGVVMQ</Hsp_hseq>
+      <Hsp_midline>SG  KMA PSG VE C+VQVTCG+ TLNGLWLD++VYCPRHV+C  + +++PNY+ LL   +NH+F +Q        LR  GH+M   +LKL VD+ANP+TP Y F  I+ G +FSVLACYNG PSG Y   MRPN TIKGSFL GSCGSVG+  + + ++FCYMH MEL  G H G+  +GN YG F DRQ  QA  +D   T+NV+AWLYAAV+NG  WF+    T +  FN  A+   +          L  L+ +TG+ +  +  S+++ L NG  G  ILGSA+LEDE+TP DV  Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>34</Hit_num>
+  <Hit_id>ref|YP_009944265.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [Rodent coronavirus]</Hit_def>
+  <Hit_accession>YP_009944265</Hit_accession>
+  <Hit_len>4418</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>313.538</Hsp_bit-score>
+      <Hsp_score>802</Hsp_score>
+      <Hsp_evalue>7.58478e-93</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3282</Hsp_hit-from>
+      <Hsp_hit-to>3584</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>155</Hsp_identity>
+      <Hsp_positive>196</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIVKMVNPTSKVEPCMVSVTYGSMTLNGLWLDDKVYCPRHVICSQSDLTNPDYTQLLCRVTSSDFTVMFDRMSLTVMSYQMQGCMLVLTVTLQNPKTPKYTFGVVKPGETFTVLATYNGKPQGAFHVTMRSSFTIKGSFLCGSCGSVGYVMMGDCVKFVYMHQLELSTGCHTGTDFNGDFYGPYKDAQVVQLPIQDYVQTVNFVAWLYAAILNNCNWFVQSDTCCIEDFNMWAMSNGFSQFVPDLV--IDALASMTGVTVEKLLAAIKR-LHNGFHGRQIMGSCSFEDELTPTDVYQQLAGVKLQ</Hsp_hseq>
+      <Hsp_midline>SG  KM  P+ KVE CMV VT G+ TLNGLWLDD VYCPRHVIC+  D+ NP+Y  LL R ++ +F V    + L V+ + MQ C+L L V   NPKTPKY F  ++PG+TF+VLA YNG P G +   MR +FTIKGSFL GSCGSVG+ +  DCV F YMH +EL TG H GTD  G+FYGP+ D Q  Q    D   TVN +AWLYAA++N   WF+   T  + DFN+ AM   +     D V  +  L++ TG+ V  + A++K  L NG +GR I+GS   EDE TP DV +Q +GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>35</Hit_num>
+  <Hit_id>ref|YP_009755832.1|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Rodent coronavirus]</Hit_def>
+  <Hit_accession>YP_009755832</Hit_accession>
+  <Hit_len>7128</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>313.153</Hsp_bit-score>
+      <Hsp_score>801</Hsp_score>
+      <Hsp_evalue>9.67691e-93</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3282</Hsp_hit-from>
+      <Hsp_hit-to>3584</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>155</Hsp_identity>
+      <Hsp_positive>196</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIVKMVNPTSKVEPCMVSVTYGSMTLNGLWLDDKVYCPRHVICSQSDLTNPDYTQLLCRVTSSDFTVMFDRMSLTVMSYQMQGCMLVLTVTLQNPKTPKYTFGVVKPGETFTVLATYNGKPQGAFHVTMRSSFTIKGSFLCGSCGSVGYVMMGDCVKFVYMHQLELSTGCHTGTDFNGDFYGPYKDAQVVQLPIQDYVQTVNFVAWLYAAILNNCNWFVQSDTCCIEDFNMWAMSNGFSQFVPDLV--IDALASMTGVTVEKLLAAIKR-LHNGFHGRQIMGSCSFEDELTPTDVYQQLAGVKLQ</Hsp_hseq>
+      <Hsp_midline>SG  KM  P+ KVE CMV VT G+ TLNGLWLDD VYCPRHVIC+  D+ NP+Y  LL R ++ +F V    + L V+ + MQ C+L L V   NPKTPKY F  ++PG+TF+VLA YNG P G +   MR +FTIKGSFL GSCGSVG+ +  DCV F YMH +EL TG H GTD  G+FYGP+ D Q  Q    D   TVN +AWLYAA++N   WF+   T  + DFN+ AM   +     D V  +  L++ TG+ V  + A++K  L NG +GR I+GS   EDE TP DV +Q +GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>36</Hit_num>
+  <Hit_id>ref|YP_009944337.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [Pipistrellus bat coronavirus HKU5]</Hit_def>
+  <Hit_accession>YP_009944337</Hit_accession>
+  <Hit_len>4481</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>312.383</Hsp_bit-score>
+      <Hsp_score>799</Hsp_score>
+      <Hsp_evalue>1.84389e-92</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3339</Hsp_hit-from>
+      <Hsp_hit-to>3644</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>155</Hsp_identity>
+      <Hsp_positive>208</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>310</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQ---AGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNY-EPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLVKMAAPSGVVENCMVQVTCGSMTLNGLWLDNYVWCPRHVMCPADQLSDPNYDALLVSKTNLSFIVQKNVGAPANLRVVGHTMVGTLLKLTVESANPQTPAYTFTTVKPGASFSVLACYNGRPTGVFMVNMRQNSTIKGSFLCGSCGSVGYTQEGNVINFCYMHQMELSNGTHTGCAFDGVMYGAFEDRQVHQVQLSDKYCTINIVAWLYAAILNGCNWFVKPNKTGIATFNEWAMSNQFTEFIGTQSVDM---LAHKTGVSVEQLLYAI-QTLHKGFQGKTILGNSMLEDEFTPDDVNMQVMGVVMQ</Hsp_hseq>
+      <Hsp_midline>SG  KMA PSG VE CMVQVTCG+ TLNGLWLD+ V+CPRHV+C ++ + +PNY+ LL+ K+N +F+VQ        LRV+GH+M   +LKL V++ANP+TP Y F  ++PG +FSVLACYNG P+GV+   MR N TIKGSFL GSCGSVG+  + + ++FCYMH MEL  G H G   +G  YG F DRQ  Q   +D   T+N++AWLYAA++NG  WF+    T +  FN  AM   + E +    VD+   L+ +TG++V  +  ++ + L  G  G+TILG+++LEDEFTP DV  Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>37</Hit_num>
+  <Hit_id>ref|YP_001039961.1|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Pipistrellus bat coronavirus HKU5]</Hit_def>
+  <Hit_accession>YP_001039961</Hit_accession>
+  <Hit_len>7182</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>311.227</Hsp_bit-score>
+      <Hsp_score>796</Hsp_score>
+      <Hsp_evalue>4.84736e-92</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3339</Hsp_hit-from>
+      <Hsp_hit-to>3644</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>155</Hsp_identity>
+      <Hsp_positive>208</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>310</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQ---AGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNY-EPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLVKMAAPSGVVENCMVQVTCGSMTLNGLWLDNYVWCPRHVMCPADQLSDPNYDALLVSKTNLSFIVQKNVGAPANLRVVGHTMVGTLLKLTVESANPQTPAYTFTTVKPGASFSVLACYNGRPTGVFMVNMRQNSTIKGSFLCGSCGSVGYTQEGNVINFCYMHQMELSNGTHTGCAFDGVMYGAFEDRQVHQVQLSDKYCTINIVAWLYAAILNGCNWFVKPNKTGIATFNEWAMSNQFTEFIGTQSVDM---LAHKTGVSVEQLLYAI-QTLHKGFQGKTILGNSMLEDEFTPDDVNMQVMGVVMQ</Hsp_hseq>
+      <Hsp_midline>SG  KMA PSG VE CMVQVTCG+ TLNGLWLD+ V+CPRHV+C ++ + +PNY+ LL+ K+N +F+VQ        LRV+GH+M   +LKL V++ANP+TP Y F  ++PG +FSVLACYNG P+GV+   MR N TIKGSFL GSCGSVG+  + + ++FCYMH MEL  G H G   +G  YG F DRQ  Q   +D   T+N++AWLYAA++NG  WF+    T +  FN  AM   + E +    VD+   L+ +TG++V  +  ++ + L  G  G+TILG+++LEDEFTP DV  Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>38</Hit_num>
+  <Hit_id>ref|YP_009824979.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [Murine hepatitis virus]</Hit_def>
+  <Hit_accession>YP_009824979</Hit_accession>
+  <Hit_len>4470</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>310.842</Hsp_bit-score>
+      <Hsp_score>795</Hsp_score>
+      <Hsp_evalue>6.65077e-92</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3334</Hsp_hit-from>
+      <Hsp_hit-to>3636</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>155</Hsp_identity>
+      <Hsp_positive>199</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIVKMVSPTSKVEPCIVSVTYGNMTLNGLWLDDKVYCPRHVICSSADMTDPDYPNLLCRVTSSDFCVMSGRMSLTVMSYQMQGCQLVLTVTLQNPNTPKYSFGVVKPGETFTVLAAYNGRPQGAFHVTLRSSHTIKGSFLCGSCGSVGYVLTGDSVRFVYMHQLELSTGCHTGTDFSGNFYGPYRDAQVVQLPVQDYTQTVNVVAWLYAAIFNRCNWFVQSDSCSLEEFNVWAMTNGFSSIKADLV--LDALASMTGVTVEQVLAAIKR-LHSGFQGKQILGSCVLEDELTPSDVYQQLAGVKLQ</Hsp_hseq>
+      <Hsp_midline>SG  KM  P+ KVE C+V VT G  TLNGLWLDD VYCPRHVIC+S DM +P+Y +LL R ++ +F V +G + L V+ + MQ C L L V   NP TPKY F  ++PG+TF+VLA YNG P G +   +R + TIKGSFL GSCGSVG+ +  D V F YMH +EL TG H GTD  GNFYGP+ D Q  Q    D T TVNV+AWLYAA+ N   WF+   + +L +FN+ AM   +  +  D V  L  L++ TG+ V  + A++K  L +G  G+ ILGS +LEDE TP DV +Q +GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>39</Hit_num>
+  <Hit_id>ref|NP_045298.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [Murine hepatitis virus]</Hit_def>
+  <Hit_accession>NP_045298</Hit_accession>
+  <Hit_len>4470</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>310.842</Hsp_bit-score>
+      <Hsp_score>795</Hsp_score>
+      <Hsp_evalue>6.84605e-92</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3334</Hsp_hit-from>
+      <Hsp_hit-to>3636</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>155</Hsp_identity>
+      <Hsp_positive>199</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIVKMVSPTSKVEPCIVSVTYGNMTLNGLWLDDKVYCPRHVICSSADMTDPDYPNLLCRVTSSDFCVMSGRMSLTVMSYQMQGCQLVLTVTLQNPNTPKYSFGVVKPGETFTVLAAYNGRPQGAFHVTLRSSHTIKGSFLCGSCGSVGYVLTGDSVRFVYMHQLELSTGCHTGTDFSGNFYGPYRDAQVVQLPVQDYTQTVNVVAWLYAAIFNRCNWFVQSDSCSLEEFNVWAMTNGFSSIKADLV--LDALASMTGVTVEQVLAAIKR-LHSGFQGKQILGSCVLEDELTPSDVYQQLAGVKLQ</Hsp_hseq>
+      <Hsp_midline>SG  KM  P+ KVE C+V VT G  TLNGLWLDD VYCPRHVIC+S DM +P+Y +LL R ++ +F V +G + L V+ + MQ C L L V   NP TPKY F  ++PG+TF+VLA YNG P G +   +R + TIKGSFL GSCGSVG+ +  D V F YMH +EL TG H GTD  GNFYGP+ D Q  Q    D T TVNV+AWLYAA+ N   WF+   + +L +FN+ AM   +  +  D V  L  L++ TG+ V  + A++K  L +G  G+ ILGS +LEDE TP DV +Q +GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>40</Hit_num>
+  <Hit_id>ref|YP_003029845.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [Rat coronavirus Parker]</Hit_def>
+  <Hit_accession>YP_003029845</Hit_accession>
+  <Hit_len>4464</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>310.457</Hsp_bit-score>
+      <Hsp_score>794</Hsp_score>
+      <Hsp_evalue>1.07723e-91</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3328</Hsp_hit-from>
+      <Hsp_hit-to>3630</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>156</Hsp_identity>
+      <Hsp_positive>201</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIVKMVSPTSKVEPCVVSVTYGNMTLNGLWLDDKVYCPRHVICSSDDMTDPDYPNLLCRVTSSDFCVMSDRMSLTVMSYQMQGSLLVLTVTLQNPNTPKYSFGVVKPGETFTVLAAYNGRPQGAFHVVMRSSHTIKGSFLCGSCGSVGYVLTGDSVRFVYMHQLELSTGCHTGTDLSGNFYGPYRDAQVVQLPVQDYTQTVNVVAWLYAAILNRCNWFVQSDSCSLEEFNVWAMTNGFSSIKADLV--LDALASMTGVTVEQVLAAIKRLY-SGFQGKQILGSCVLEDELTPSDVYQQLSGVKLQ</Hsp_hseq>
+      <Hsp_midline>SG  KM  P+ KVE C+V VT G  TLNGLWLDD VYCPRHVIC+S+DM +P+Y +LL R ++ +F V +  + L V+ + MQ  +L L V   NP TPKY F  ++PG+TF+VLA YNG P G +   MR + TIKGSFL GSCGSVG+ +  D V F YMH +EL TG H GTDL GNFYGP+ D Q  Q    D T TVNV+AWLYAA++N   WF+   + +L +FN+ AM   +  +  D V  L  L++ TG+ V  + A++K L  +G  G+ ILGS +LEDE TP DV +Q SGV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>41</Hit_num>
+  <Hit_id>ref|NP_045299.2|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Murine hepatitis virus]</Hit_def>
+  <Hit_accession>NP_045299</Hit_accession>
+  <Hit_len>7178</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>310.457</Hsp_bit-score>
+      <Hsp_score>794</Hsp_score>
+      <Hsp_evalue>1.07949e-91</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3334</Hsp_hit-from>
+      <Hsp_hit-to>3636</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>155</Hsp_identity>
+      <Hsp_positive>199</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIVKMVSPTSKVEPCIVSVTYGNMTLNGLWLDDKVYCPRHVICSSADMTDPDYPNLLCRVTSSDFCVMSGRMSLTVMSYQMQGCQLVLTVTLQNPNTPKYSFGVVKPGETFTVLAAYNGRPQGAFHVTLRSSHTIKGSFLCGSCGSVGYVLTGDSVRFVYMHQLELSTGCHTGTDFSGNFYGPYRDAQVVQLPVQDYTQTVNVVAWLYAAIFNRCNWFVQSDSCSLEEFNVWAMTNGFSSIKADLV--LDALASMTGVTVEQVLAAIKR-LHSGFQGKQILGSCVLEDELTPSDVYQQLAGVKLQ</Hsp_hseq>
+      <Hsp_midline>SG  KM  P+ KVE C+V VT G  TLNGLWLDD VYCPRHVIC+S DM +P+Y +LL R ++ +F V +G + L V+ + MQ C L L V   NP TPKY F  ++PG+TF+VLA YNG P G +   +R + TIKGSFL GSCGSVG+ +  D V F YMH +EL TG H GTD  GNFYGP+ D Q  Q    D T TVNV+AWLYAA+ N   WF+   + +L +FN+ AM   +  +  D V  L  L++ TG+ V  + A++K  L +G  G+ ILGS +LEDE TP DV +Q +GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>42</Hit_num>
+  <Hit_id>ref|YP_003029844.1|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Rat coronavirus Parker]</Hit_def>
+  <Hit_accession>YP_003029844</Hit_accession>
+  <Hit_len>7172</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>310.457</Hsp_bit-score>
+      <Hsp_score>794</Hsp_score>
+      <Hsp_evalue>1.11115e-91</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3328</Hsp_hit-from>
+      <Hsp_hit-to>3630</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>156</Hsp_identity>
+      <Hsp_positive>201</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIVKMVSPTSKVEPCVVSVTYGNMTLNGLWLDDKVYCPRHVICSSDDMTDPDYPNLLCRVTSSDFCVMSDRMSLTVMSYQMQGSLLVLTVTLQNPNTPKYSFGVVKPGETFTVLAAYNGRPQGAFHVVMRSSHTIKGSFLCGSCGSVGYVLTGDSVRFVYMHQLELSTGCHTGTDLSGNFYGPYRDAQVVQLPVQDYTQTVNVVAWLYAAILNRCNWFVQSDSCSLEEFNVWAMTNGFSSIKADLV--LDALASMTGVTVEQVLAAIKRLY-SGFQGKQILGSCVLEDELTPSDVYQQLSGVKLQ</Hsp_hseq>
+      <Hsp_midline>SG  KM  P+ KVE C+V VT G  TLNGLWLDD VYCPRHVIC+S+DM +P+Y +LL R ++ +F V +  + L V+ + MQ  +L L V   NP TPKY F  ++PG+TF+VLA YNG P G +   MR + TIKGSFL GSCGSVG+ +  D V F YMH +EL TG H GTDL GNFYGP+ D Q  Q    D T TVNV+AWLYAA++N   WF+   + +L +FN+ AM   +  +  D V  L  L++ TG+ V  + A++K L  +G  G+ ILGS +LEDE TP DV +Q SGV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>43</Hit_num>
+  <Hit_id>ref|YP_009824978.1|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Murine hepatitis virus]</Hit_def>
+  <Hit_accession>YP_009824978</Hit_accession>
+  <Hit_len>7178</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>310.457</Hsp_bit-score>
+      <Hsp_score>794</Hsp_score>
+      <Hsp_evalue>1.11119e-91</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3334</Hsp_hit-from>
+      <Hsp_hit-to>3636</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>155</Hsp_identity>
+      <Hsp_positive>199</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIVKMVSPTSKVEPCIVSVTYGNMTLNGLWLDDKVYCPRHVICSSADMTDPDYPNLLCRVTSSDFCVMSGRMSLTVMSYQMQGCQLVLTVTLQNPNTPKYSFGVVKPGETFTVLAAYNGRPQGAFHVTLRSSHTIKGSFLCGSCGSVGYVLTGDSVRFVYMHQLELSTGCHTGTDFSGNFYGPYRDAQVVQLPVQDYTQTVNVVAWLYAAIFNRCNWFVQSDSCSLEEFNVWAMTNGFSSIKADLV--LDALASMTGVTVEQVLAAIKR-LHSGFQGKQILGSCVLEDELTPSDVYQQLAGVKLQ</Hsp_hseq>
+      <Hsp_midline>SG  KM  P+ KVE C+V VT G  TLNGLWLDD VYCPRHVIC+S DM +P+Y +LL R ++ +F V +G + L V+ + MQ C L L V   NP TPKY F  ++PG+TF+VLA YNG P G +   +R + TIKGSFL GSCGSVG+ +  D V F YMH +EL TG H GTD  GNFYGP+ D Q  Q    D T TVNV+AWLYAA+ N   WF+   + +L +FN+ AM   +  +  D V  L  L++ TG+ V  + A++K  L +G  G+ ILGS +LEDE TP DV +Q +GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>44</Hit_num>
+  <Hit_id>ref|YP_009944308.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [Tylonycteris bat coronavirus HKU4]</Hit_def>
+  <Hit_accession>YP_009944308</Hit_accession>
+  <Hit_len>4434</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>309.686</Hsp_bit-score>
+      <Hsp_score>792</Hsp_score>
+      <Hsp_evalue>1.86607e-91</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3292</Hsp_hit-from>
+      <Hsp_hit-to>3597</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>154</Hsp_identity>
+      <Hsp_positive>205</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>310</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQ---AGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNY-EPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLVKMSAPSGAVENCIVQVTCGSMTLNGLWLDNTVWCPRHIMCPADQLTDPNYDALLISKTNHSFIVQKHIGAQANLRVVAHSMVGVLLKLTVDVANPSTPAYTFSTVKPGASFSVLACYNGKPTGVFTVNLRHNSTIKGSFLCGSCGSVGYTENGGVINFVYMHQMELSNGTHTGSSFDGVMYGAFEDKQTHQLQLTDKYCTINVVAWLYAAVLNGCKWFVKPTRVGIVTYNEWALSNQFTEFVGTQSIDM---LAHRTGVSVEQMLAAIQS-LHAGFQGKTILGQSTLEDEFTPDDVNMQVMGVVMQ</Hsp_hseq>
+      <Hsp_midline>SG  KM+ PSG VE C+VQVTCG+ TLNGLWLD+ V+CPRH++C ++ + +PNY+ LLI K+NH+F+VQ        LRV+ HSM   +LKL VD ANP TP Y F  ++PG +FSVLACYNG P+GV+   +R N TIKGSFL GSCGSVG+  +   ++F YMH MEL  G H G+  +G  YG F D+QT Q   TD   T+NV+AWLYAAV+NG +WF+      +  +N  A+   + E +    +D+   L+ +TG++V  M A+++  L  G  G+TILG + LEDEFTP DV  Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>45</Hit_num>
+  <Hit_id>ref|YP_009944253.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [Rabbit coronavirus HKU14]</Hit_def>
+  <Hit_accession>YP_009944253</Hit_accession>
+  <Hit_len>4443</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>308.531</Hsp_bit-score>
+      <Hsp_score>789</Hsp_score>
+      <Hsp_evalue>4.07668e-91</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3307</Hsp_hit-from>
+      <Hsp_hit-to>3609</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>148</Hsp_identity>
+      <Hsp_positive>199</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIVKMVSPTSKVEPCVVSVTYGNMTLNGLWLDDKVYCPRHVICSASDMTNPDYPNLLCRVTSSDFTIMSDRMSLTVMSYQMQGCMLVLTVTLQNPRTPKYTFGVVKPGETFTVLAAYNGRPQGAFHVTMRSSFTIKGSFLCGSCGSVGYVLMGDCVKFVYMHQLELSTGCHTGTDFNGDFYGPYKDAQVVQLPVQDYVQSVNFVAWLYAAILNNCNWFVQSDRCSIEDYNVWAMSNGFSQIKSDLV--VDALASMTGVSLENLLAAIKR-LHKGFQGRQIMGSCAFEDELTPSDVYQQLAGVKLQ</Hsp_hseq>
+      <Hsp_midline>SG  KM  P+ KVE C+V VT G  TLNGLWLDD VYCPRHVIC++ DM NP+Y +LL R ++ +F + +  + L V+ + MQ C+L L V   NP+TPKY F  ++PG+TF+VLA YNG P G +   MR +FTIKGSFL GSCGSVG+ +  DCV F YMH +EL TG H GTD  G+FYGP+ D Q  Q    D   +VN +AWLYAA++N   WF+     ++ D+N+ AM   +  +  D V  +  L++ TG+++ ++ A++K  L  G  GR I+GS   EDE TP DV +Q +GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>46</Hit_num>
+  <Hit_id>ref|YP_005454239.1|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Rabbit coronavirus HKU14]</Hit_def>
+  <Hit_accession>YP_005454239</Hit_accession>
+  <Hit_len>7151</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>308.145</Hsp_bit-score>
+      <Hsp_score>788</Hsp_score>
+      <Hsp_evalue>5.40471e-91</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3307</Hsp_hit-from>
+      <Hsp_hit-to>3609</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>148</Hsp_identity>
+      <Hsp_positive>199</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIVKMVSPTSKVEPCVVSVTYGNMTLNGLWLDDKVYCPRHVICSASDMTNPDYPNLLCRVTSSDFTIMSDRMSLTVMSYQMQGCMLVLTVTLQNPRTPKYTFGVVKPGETFTVLAAYNGRPQGAFHVTMRSSFTIKGSFLCGSCGSVGYVLMGDCVKFVYMHQLELSTGCHTGTDFNGDFYGPYKDAQVVQLPVQDYVQSVNFVAWLYAAILNNCNWFVQSDRCSIEDYNVWAMSNGFSQIKSDLV--VDALASMTGVSLENLLAAIKR-LHKGFQGRQIMGSCAFEDELTPSDVYQQLAGVKLQ</Hsp_hseq>
+      <Hsp_midline>SG  KM  P+ KVE C+V VT G  TLNGLWLDD VYCPRHVIC++ DM NP+Y +LL R ++ +F + +  + L V+ + MQ C+L L V   NP+TPKY F  ++PG+TF+VLA YNG P G +   MR +FTIKGSFL GSCGSVG+ +  DCV F YMH +EL TG H GTD  G+FYGP+ D Q  Q    D   +VN +AWLYAA++N   WF+     ++ D+N+ AM   +  +  D V  +  L++ TG+++ ++ A++K  L  G  GR I+GS   EDE TP DV +Q +GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>47</Hit_num>
+  <Hit_id>ref|YP_001039952.1|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Tylonycteris bat coronavirus HKU4]</Hit_def>
+  <Hit_accession>YP_001039952</Hit_accession>
+  <Hit_len>7119</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>308.145</Hsp_bit-score>
+      <Hsp_score>788</Hsp_score>
+      <Hsp_evalue>6.30567e-91</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3292</Hsp_hit-from>
+      <Hsp_hit-to>3597</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>154</Hsp_identity>
+      <Hsp_positive>205</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>310</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQ---AGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNY-EPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLVKMSAPSGAVENCIVQVTCGSMTLNGLWLDNTVWCPRHIMCPADQLTDPNYDALLISKTNHSFIVQKHIGAQANLRVVAHSMVGVLLKLTVDVANPSTPAYTFSTVKPGASFSVLACYNGKPTGVFTVNLRHNSTIKGSFLCGSCGSVGYTENGGVINFVYMHQMELSNGTHTGSSFDGVMYGAFEDKQTHQLQLTDKYCTINVVAWLYAAVLNGCKWFVKPTRVGIVTYNEWALSNQFTEFVGTQSIDM---LAHRTGVSVEQMLAAIQS-LHAGFQGKTILGQSTLEDEFTPDDVNMQVMGVVMQ</Hsp_hseq>
+      <Hsp_midline>SG  KM+ PSG VE C+VQVTCG+ TLNGLWLD+ V+CPRH++C ++ + +PNY+ LLI K+NH+F+VQ        LRV+ HSM   +LKL VD ANP TP Y F  ++PG +FSVLACYNG P+GV+   +R N TIKGSFL GSCGSVG+  +   ++F YMH MEL  G H G+  +G  YG F D+QT Q   TD   T+NV+AWLYAAV+NG +WF+      +  +N  A+   + E +    +D+   L+ +TG++V  M A+++  L  G  G+TILG + LEDEFTP DV  Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>48</Hit_num>
+  <Hit_id>ref|YP_209230.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [Murine hepatitis virus strain JHM]</Hit_def>
+  <Hit_accession>YP_209230</Hit_accession>
+  <Hit_len>4474</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>307.76</Hsp_bit-score>
+      <Hsp_score>787</Hsp_score>
+      <Hsp_evalue>8.7382e-91</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3337</Hsp_hit-from>
+      <Hsp_hit-to>3639</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>154</Hsp_identity>
+      <Hsp_positive>199</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIVKMVSPTSKVEPCVVSVTYGNMTLNGLWLDDKVYCPRHVICSSADMTDPDYPNLLCRVTSSDFCVMSDRMSLTVMSYQMQGSLLVLTVTLQNPNTPKYSFGVVKPGETFTVLAAYNGRPQGAFHVVMRSSHTIKGSFLCGSCGSVGYVLTGDSVRFVYMHQLELSTGCHTGTDFSGNFYGPYRDAQVVQLPVQDYTQTVNVVAWLYAAILNRCNWFVQSDSCSLEEFNVWAMTNGFSSIKADLV--LDALASMTGVTVEQVLAAIKR-LHSGFQGKQILGSCVLEDELTPSDVYQQLAGVKLQ</Hsp_hseq>
+      <Hsp_midline>SG  KM  P+ KVE C+V VT G  TLNGLWLDD VYCPRHVIC+S DM +P+Y +LL R ++ +F V +  + L V+ + MQ  +L L V   NP TPKY F  ++PG+TF+VLA YNG P G +   MR + TIKGSFL GSCGSVG+ +  D V F YMH +EL TG H GTD  GNFYGP+ D Q  Q    D T TVNV+AWLYAA++N   WF+   + +L +FN+ AM   +  +  D V  L  L++ TG+ V  + A++K  L +G  G+ ILGS +LEDE TP DV +Q +GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>49</Hit_num>
+  <Hit_id>ref|YP_209229.2|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Murine hepatitis virus strain JHM]</Hit_def>
+  <Hit_accession>YP_209229</Hit_accession>
+  <Hit_len>7180</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>306.99</Hsp_bit-score>
+      <Hsp_score>785</Hsp_score>
+      <Hsp_evalue>1.54686e-90</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3337</Hsp_hit-from>
+      <Hsp_hit-to>3639</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>154</Hsp_identity>
+      <Hsp_positive>199</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIVKMVSPTSKVEPCVVSVTYGNMTLNGLWLDDKVYCPRHVICSSADMTDPDYPNLLCRVTSSDFCVMSDRMSLTVMSYQMQGSLLVLTVTLQNPNTPKYSFGVVKPGETFTVLAAYNGRPQGAFHVVMRSSHTIKGSFLCGSCGSVGYVLTGDSVRFVYMHQLELSTGCHTGTDFSGNFYGPYRDAQVVQLPVQDYTQTVNVVAWLYAAILNRCNWFVQSDSCSLEEFNVWAMTNGFSSIKADLV--LDALASMTGVTVEQVLAAIKR-LHSGFQGKQILGSCVLEDELTPSDVYQQLAGVKLQ</Hsp_hseq>
+      <Hsp_midline>SG  KM  P+ KVE C+V VT G  TLNGLWLDD VYCPRHVIC+S DM +P+Y +LL R ++ +F V +  + L V+ + MQ  +L L V   NP TPKY F  ++PG+TF+VLA YNG P G +   MR + TIKGSFL GSCGSVG+ +  D V F YMH +EL TG H GTD  GNFYGP+ D Q  Q    D T TVNV+AWLYAA++N   WF+   + +L +FN+ AM   +  +  D V  L  L++ TG+ V  + A++K  L +G  G+ ILGS +LEDE TP DV +Q +GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>50</Hit_num>
+  <Hit_id>ref|YP_009944267.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [Betacoronavirus HKU24]</Hit_def>
+  <Hit_accession>YP_009944267</Hit_accession>
+  <Hit_len>4430</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>305.064</Hsp_bit-score>
+      <Hsp_score>780</Hsp_score>
+      <Hsp_evalue>7.36105e-90</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3294</Hsp_hit-from>
+      <Hsp_hit-to>3596</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>151</Hsp_identity>
+      <Hsp_positive>196</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIAKIVCPTSKVEPCIVSVTYGNMTLNGLWLDNKVYCPRHVICAANDMVDPDYEALLCRVTSTDFVVMFDRMSLTVMSYQMQGAMLILTVTLQNTKTPKYTFGNVKPGETFTVLAAYNGKPQGAFHVTMRSSFTIKGSFLCGSCGSVGYVLMGDCVKFVYMHQLELSTGCHTGTDFNGNFYGPYRDAQVVQLPIQDYVQSVNFVAWLYAAILNNCNWFIQSDICSVEDYNVWAMANGFSQFTMDLV--IDALASMTGVPVEKCLAAIKR-LNNGFQGRQILGSCVFEDELTPSDVYQQLAGVKLQ</Hsp_hseq>
+      <Hsp_midline>SG  K+  P+ KVE C+V VT G  TLNGLWLD+ VYCPRHVIC + DM++P+YE LL R ++ +F+V    + L V+ + MQ  +L L V   N KTPKY F  ++PG+TF+VLA YNG P G +   MR +FTIKGSFL GSCGSVG+ +  DCV F YMH +EL TG H GTD  GNFYGP+ D Q  Q    D   +VN +AWLYAA++N   WF+     ++ D+N+ AM   +   T D V  +  L++ TG+ V    A++K  L NG  GR ILGS + EDE TP DV +Q +GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>51</Hit_num>
+  <Hit_id>ref|YP_009113022.1|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Betacoronavirus HKU24]</Hit_def>
+  <Hit_accession>YP_009113022</Hit_accession>
+  <Hit_len>7141</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>304.679</Hsp_bit-score>
+      <Hsp_score>779</Hsp_score>
+      <Hsp_evalue>8.77776e-90</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3294</Hsp_hit-from>
+      <Hsp_hit-to>3596</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>151</Hsp_identity>
+      <Hsp_positive>196</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIAKIVCPTSKVEPCIVSVTYGNMTLNGLWLDNKVYCPRHVICAANDMVDPDYEALLCRVTSTDFVVMFDRMSLTVMSYQMQGAMLILTVTLQNTKTPKYTFGNVKPGETFTVLAAYNGKPQGAFHVTMRSSFTIKGSFLCGSCGSVGYVLMGDCVKFVYMHQLELSTGCHTGTDFNGNFYGPYRDAQVVQLPIQDYVQSVNFVAWLYAAILNNCNWFIQSDICSVEDYNVWAMANGFSQFTMDLV--IDALASMTGVPVEKCLAAIKR-LNNGFQGRQILGSCVFEDELTPSDVYQQLAGVKLQ</Hsp_hseq>
+      <Hsp_midline>SG  K+  P+ KVE C+V VT G  TLNGLWLD+ VYCPRHVIC + DM++P+YE LL R ++ +F+V    + L V+ + MQ  +L L V   N KTPKY F  ++PG+TF+VLA YNG P G +   MR +FTIKGSFL GSCGSVG+ +  DCV F YMH +EL TG H GTD  GNFYGP+ D Q  Q    D   +VN +AWLYAA++N   WF+     ++ D+N+ AM   +   T D V  +  L++ TG+ V    A++K  L NG  GR ILGS + EDE TP DV +Q +GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>52</Hit_num>
+  <Hit_id>ref|NP_150074.1|</Hit_id>
+  <Hit_def>orf1a polyprotein [Bovine coronavirus]</Hit_def>
+  <Hit_accession>NP_150074</Hit_accession>
+  <Hit_len>4383</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>303.908</Hsp_bit-score>
+      <Hsp_score>777</Hsp_score>
+      <Hsp_evalue>1.8931e-89</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3247</Hsp_hit-from>
+      <Hsp_hit-to>3549</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>147</Hsp_identity>
+      <Hsp_positive>198</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIVKMVNPTSKVEPCIVSVTYGNMTLNGLWLDDKVYCPRHVICSASDMTNPDYTNLLCRVTSSDFTVLFDRLSLTVMSYQMQGCMLVLTVTLQNSRTPKYTFGVVKPGETFTVLAAYNGKPQGAFHVTMRSSYTIKGSFLCGSCGSVGYVLMGDCVKFVYMHQLELSTGCHTGTDFNGDFYGPYKDAQVVQLPVQDYIQSVNFVAWLYAAILNNCNWFVQSDKCSVEDFNVWALSNGFSQVKSDLV--IDALASMTGVSLETLLAAIKR-LKNGFQGRQIMGSCSFEDELTPSDVYQQLAGIKLQ</Hsp_hseq>
+      <Hsp_midline>SG  KM  P+ KVE C+V VT G  TLNGLWLDD VYCPRHVIC++ DM NP+Y +LL R ++ +F V    + L V+ + MQ C+L L V   N +TPKY F  ++PG+TF+VLA YNG P G +   MR ++TIKGSFL GSCGSVG+ +  DCV F YMH +EL TG H GTD  G+FYGP+ D Q  Q    D   +VN +AWLYAA++N   WF+     ++ DFN+ A+   +  +  D V  +  L++ TG+++  + A++K  L+NG  GR I+GS   EDE TP DV +Q +G+  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>53</Hit_num>
+  <Hit_id>ref|NP_150073.3|</Hit_id>
+  <Hit_def>orf1ab polyprotein [Bovine coronavirus]</Hit_def>
+  <Hit_accession>NP_150073</Hit_accession>
+  <Hit_len>7094</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>303.138</Hsp_bit-score>
+      <Hsp_score>775</Hsp_score>
+      <Hsp_evalue>2.93011e-89</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3247</Hsp_hit-from>
+      <Hsp_hit-to>3549</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>147</Hsp_identity>
+      <Hsp_positive>198</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIVKMVNPTSKVEPCIVSVTYGNMTLNGLWLDDKVYCPRHVICSASDMTNPDYTNLLCRVTSSDFTVLFDRLSLTVMSYQMQGCMLVLTVTLQNSRTPKYTFGVVKPGETFTVLAAYNGKPQGAFHVTMRSSYTIKGSFLCGSCGSVGYVLMGDCVKFVYMHQLELSTGCHTGTDFNGDFYGPYKDAQVVQLPVQDYIQSVNFVAWLYAAILNNCNWFVQSDKCSVEDFNVWALSNGFSQVKSDLV--IDALASMTGVSLETLLAAIKR-LKNGFQGRQIMGSCSFEDELTPSDVYQQLAGIKLQ</Hsp_hseq>
+      <Hsp_midline>SG  KM  P+ KVE C+V VT G  TLNGLWLDD VYCPRHVIC++ DM NP+Y +LL R ++ +F V    + L V+ + MQ C+L L V   N +TPKY F  ++PG+TF+VLA YNG P G +   MR ++TIKGSFL GSCGSVG+ +  DCV F YMH +EL TG H GTD  G+FYGP+ D Q  Q    D   +VN +AWLYAA++N   WF+     ++ DFN+ A+   +  +  D V  +  L++ TG+++  + A++K  L+NG  GR I+GS   EDE TP DV +Q +G+  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>54</Hit_num>
+  <Hit_id>ref|YP_009924317.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [Human coronavirus OC43]</Hit_def>
+  <Hit_accession>YP_009924317</Hit_accession>
+  <Hit_len>4383</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>302.753</Hsp_bit-score>
+      <Hsp_score>774</Hsp_score>
+      <Hsp_evalue>4.13483e-89</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3247</Hsp_hit-from>
+      <Hsp_hit-to>3549</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>147</Hsp_identity>
+      <Hsp_positive>198</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIVKMVNPTSKVEPCVVSVTYGNMTLNGLWLDDKVYCPRHVICSASDMTNPDYTNLLCRVTSSDFTVLFDRLSLTVMSYQMRGCMLVLTVTLQNSRTPKYTFGVVKPGETFTVLAAYNGKPQGAFHVTMRSSYTIKGSFLCGSCGSVGYVIMGDCVKFVYMHQLELSTGCHTGTDFNGDFYGPYKDAQVVQLLIQDYIQSVNFVAWLYAAILNNCNWFVQSDKCSVEDFNVWALSNGFSQVKSDLV--IDALASMTGVSLETLLAAIKR-LKNGFQGRQIMGSCSFEDELTPSDVYQQLAGIKLQ</Hsp_hseq>
+      <Hsp_midline>SG  KM  P+ KVE C+V VT G  TLNGLWLDD VYCPRHVIC++ DM NP+Y +LL R ++ +F V    + L V+ + M+ C+L L V   N +TPKY F  ++PG+TF+VLA YNG P G +   MR ++TIKGSFL GSCGSVG+ I  DCV F YMH +EL TG H GTD  G+FYGP+ D Q  Q    D   +VN +AWLYAA++N   WF+     ++ DFN+ A+   +  +  D V  +  L++ TG+++  + A++K  L+NG  GR I+GS   EDE TP DV +Q +G+  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>55</Hit_num>
+  <Hit_id>ref|YP_009944268.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [Human coronavirus HKU1]</Hit_def>
+  <Hit_accession>YP_009944268</Hit_accession>
+  <Hit_len>4471</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>302.753</Hsp_bit-score>
+      <Hsp_score>774</Hsp_score>
+      <Hsp_evalue>5.11809e-89</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3335</Hsp_hit-from>
+      <Hsp_hit-to>3637</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>150</Hsp_identity>
+      <Hsp_positive>193</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIVKMVSPTSKIEPCIVSVTYGSMTLNGLWLDDKVYCPRHVICSSSNMNEPDYSALLCRVTLGDFTIMSGRMSLTVVSYQMQGCQLVLTVSLQNPYTPKYTFGNVKPGETFTVLAAYNGRPQGAFHVTMRSSYTIKGSFLCGSCGSVGYVLTGDSVKFVYMHQLELSTGCHTGTDFTGNFYGPYRDAQVVQLPVKDYVQTVNVIAWLYAAILNNCAWFVQNDVCSTEDFNVWAMANGFSQVKADLV--LDALASMTGVSIETLLAAIKRLYM-GFQGRQILGSCTFEDELAPSDVYQQLAGVKLQ</Hsp_hseq>
+      <Hsp_midline>SG  KM  P+ K+E C+V VT G+ TLNGLWLDD VYCPRHVIC+S +M  P+Y  LL R +  +F + +G + L V+ + MQ C L L V   NP TPKY F  ++PG+TF+VLA YNG P G +   MR ++TIKGSFL GSCGSVG+ +  D V F YMH +EL TG H GTD  GNFYGP+ D Q  Q    D   TVNV+AWLYAA++N   WF+     +  DFN+ AM   +  +  D V  L  L++ TG+++  + A++K L   G  GR ILGS   EDE  P DV +Q +GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>56</Hit_num>
+  <Hit_id>ref|YP_009555238.1|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Human coronavirus OC43]</Hit_def>
+  <Hit_accession>YP_009555238</Hit_accession>
+  <Hit_len>7095</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>302.368</Hsp_bit-score>
+      <Hsp_score>773</Hsp_score>
+      <Hsp_evalue>5.98205e-89</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3247</Hsp_hit-from>
+      <Hsp_hit-to>3549</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>147</Hsp_identity>
+      <Hsp_positive>198</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIVKMVNPTSKVEPCVVSVTYGNMTLNGLWLDDKVYCPRHVICSASDMTNPDYTNLLCRVTSSDFTVLFDRLSLTVMSYQMRGCMLVLTVTLQNSRTPKYTFGVVKPGETFTVLAAYNGKPQGAFHVTMRSSYTIKGSFLCGSCGSVGYVIMGDCVKFVYMHQLELSTGCHTGTDFNGDFYGPYKDAQVVQLLIQDYIQSVNFVAWLYAAILNNCNWFVQSDKCSVEDFNVWALSNGFSQVKSDLV--IDALASMTGVSLETLLAAIKR-LKNGFQGRQIMGSCSFEDELTPSDVYQQLAGIKLQ</Hsp_hseq>
+      <Hsp_midline>SG  KM  P+ KVE C+V VT G  TLNGLWLDD VYCPRHVIC++ DM NP+Y +LL R ++ +F V    + L V+ + M+ C+L L V   N +TPKY F  ++PG+TF+VLA YNG P G +   MR ++TIKGSFL GSCGSVG+ I  DCV F YMH +EL TG H GTD  G+FYGP+ D Q  Q    D   +VN +AWLYAA++N   WF+     ++ DFN+ A+   +  +  D V  +  L++ TG+++  + A++K  L+NG  GR I+GS   EDE TP DV +Q +G+  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>57</Hit_num>
+  <Hit_id>ref|YP_173236.1|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Human coronavirus HKU1]</Hit_def>
+  <Hit_accession>YP_173236</Hit_accession>
+  <Hit_len>7182</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>302.368</Hsp_bit-score>
+      <Hsp_score>773</Hsp_score>
+      <Hsp_evalue>6.5273e-89</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3335</Hsp_hit-from>
+      <Hsp_hit-to>3637</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>150</Hsp_identity>
+      <Hsp_positive>193</Hsp_positive>
+      <Hsp_gaps>3</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGIVKMVSPTSKIEPCIVSVTYGSMTLNGLWLDDKVYCPRHVICSSSNMNEPDYSALLCRVTLGDFTIMSGRMSLTVVSYQMQGCQLVLTVSLQNPYTPKYTFGNVKPGETFTVLAAYNGRPQGAFHVTMRSSYTIKGSFLCGSCGSVGYVLTGDSVKFVYMHQLELSTGCHTGTDFTGNFYGPYRDAQVVQLPVKDYVQTVNVIAWLYAAILNNCAWFVQNDVCSTEDFNVWAMANGFSQVKADLV--LDALASMTGVSIETLLAAIKRLYM-GFQGRQILGSCTFEDELAPSDVYQQLAGVKLQ</Hsp_hseq>
+      <Hsp_midline>SG  KM  P+ K+E C+V VT G+ TLNGLWLDD VYCPRHVIC+S +M  P+Y  LL R +  +F + +G + L V+ + MQ C L L V   NP TPKY F  ++PG+TF+VLA YNG P G +   MR ++TIKGSFL GSCGSVG+ +  D V F YMH +EL TG H GTD  GNFYGP+ D Q  Q    D   TVNV+AWLYAA++N   WF+     +  DFN+ AM   +  +  D V  L  L++ TG+++  + A++K L   G  GR ILGS   EDE  P DV +Q +GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>58</Hit_num>
+  <Hit_id>ref|NP_839959.1|</Hit_id>
+  <Hit_def>putative coronavirus nsp2 (3CL-PRO) [Porcine epidemic diarrhea virus]</Hit_def>
+  <Hit_accession>NP_839959</Hit_accession>
+  <Hit_len>302</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>268.085</Hsp_bit-score>
+      <Hsp_score>684</Hsp_score>
+      <Hsp_evalue>7.43139e-85</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>302</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>138</Hsp_identity>
+      <Hsp_positive>198</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>307</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSE-DMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>AGLRKMAQPSGVVEKCIVRVCYGNMALNGLWLGDIVMCPRHVIASSTTSTIDYDYALSVLRL--HNFSISSGNVFLGVVSATMRGALLQIKVNQNNVHTPKYTYRTVRPGESFNILACYDGAAAGVYGVNMRSNYTIRGSFINGACGSPGYNINNGTVEFCYLHQLELGSGCHVGSDLDGVMYGGYEDQPTLQVEGASSLFTENVLAFLYAALINGSTWWLSSSRIAVDRFNEWAVHNGMT--TVGNTDCFSILAAKTGVDVQRLLASIQSLHKN-FGGKQILGHTSLTDEFTTGEVVRQMYGVNLQ</Hsp_hseq>
+      <Hsp_midline>+G RKMA PSG VE C+V+V  G   LNGLWL D+V CPRHVI +S    ++ +Y   ++R   HNF + +GNV L V+  +M+  +L++KV+  N  TPKY +  ++PG++F++LACY+G+ +GVY   MR N+TI+GSF+NG+CGS G+NI+   V FCY+H +EL +G H G+DL+G  YG + D+ T Q  G  +  T NVLA+LYAA+ING  W+L+     ++ FN  A+       T  + D    L+A+TG+ V  + AS++ L +N   G+ ILG   L DEFT  +VVRQ  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>59</Hit_num>
+  <Hit_id>ref|YP_001351683.1|</Hit_id>
+  <Hit_def>ORF1 polyprotein [Scotophilus bat coronavirus 512]</Hit_def>
+  <Hit_accession>YP_001351683</Hit_accession>
+  <Hit_len>6793</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>274.248</Hsp_bit-score>
+      <Hsp_score>700</Hsp_score>
+      <Hsp_evalue>4.17031e-79</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3003</Hsp_hit-from>
+      <Hsp_hit-to>3314</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>141</Hsp_identity>
+      <Hsp_positive>207</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>317</Hsp_align-len>
+      <Hsp_qseq>PROCHAINABSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICT-SEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>PTVSYNSTLQAGLRKMAQPSGIVEGCIVRVSYGNLTLNGLWLGDTVICPRHVIASNTTNVIDYDHAMSLVRL--HNFSISSGNMFLGVISASMRGTLLHIKVNQSNVNTPNYTYKVLKPGDSFNILACYDGSAAGVYGVNMRTNYTIRGSFISGACGSPGYNINNGVVEFCYMHHLELGSGCHVGSDMDGTMYGKYEDQPTLQIEGASNLVTENVCSWLYGALINGDRWWLSSVSVGVDTYNEWALRNGMTALK--NVDCFSLLVAKTGVDVGRLLASIQKLHGN-FGGKSILGCTSLCDEFTLSEVVKQMYGVTLQ</Hsp_hseq>
+      <Hsp_midline>P   +     +G RKMA PSG VEGC+V+V+ G  TLNGLWL D V CPRHVI + + ++++ ++   L+R   HNF + +GN+ L VI  SM+  +L +KV+ +N  TP Y +  ++PG +F++LACY+GS +GVY   MR N+TI+GSF++G+CGS G+NI+   V FCYMHH+EL +G H G+D++G  YG + D+ T Q  G    +T NV +WLY A+INGDRW+L+  +  ++ +N  A++     L   +VD    L A+TG+ V  + AS+++L  N   G++ILG   L DEFT  +VV+Q  GVT Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>60</Hit_num>
+  <Hit_id>ref|YP_009019181.1|</Hit_id>
+  <Hit_def>orf1a polyprotein [Mink coronavirus strain WD1127]</Hit_def>
+  <Hit_accession>YP_009019181</Hit_accession>
+  <Hit_len>4018</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>269.24</Hsp_bit-score>
+      <Hsp_score>687</Hsp_score>
+      <Hsp_evalue>2.21638e-77</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2879</Hsp_hit-from>
+      <Hsp_hit-to>3180</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>146</Hsp_identity>
+      <Hsp_positive>189</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLRKIAQPSGIVEPCVVRVAYGNTVLNGLWLGDEVICPRHVI-ASDTTKTINYESDLLGVRLHNFSVSKGNDFLGVIGCSYRGVNLVIKVSQVNTQTPKHKFRTVKAGDSFNILACYDGKPNGVYGVNMRTQGTIRGSFINGTCGSPGYVLEGDTVHFVYMHHLELGNGSHVGSDFNGVMYGGYEDQPSLQLEGANVMSTDNVVAFLYAAIINGERWFINSGYTSLETFNNWARSNGYTELAS--IDVFSMLAAKTSINVERLLDAIMR-LSTGLGGRTILGYGSLSDEFTPTEVVRQMFGVNLQ</Hsp_hseq>
+      <Hsp_midline>SG RK+A PSG VE C+V+V  G T LNGLWL D V CPRHVI  S+     NYE  L+    HNF V  GN  L VIG S +   L +KV   N +TPK+KF  ++ G +F++LACY+G P+GVY   MR   TI+GSF+NG+CGS G+ ++ D V F YMHH+EL  G H G+D  G  YG + D+ + Q  G +   T NV+A+LYAA+ING+RWF+N   T+L  FN  A    Y  L    +D+   L+A+T I V  +  ++   L  G+ GRTILG   L DEFTP +VVRQ  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>61</Hit_num>
+  <Hit_id>ref|YP_009019180.1|</Hit_id>
+  <Hit_def>orf1ab polyprotein [Mink coronavirus strain WD1127]</Hit_def>
+  <Hit_accession>YP_009019180</Hit_accession>
+  <Hit_len>6682</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>268.47</Hsp_bit-score>
+      <Hsp_score>685</Hsp_score>
+      <Hsp_evalue>4.01455e-77</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2879</Hsp_hit-from>
+      <Hsp_hit-to>3180</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>146</Hsp_identity>
+      <Hsp_positive>189</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLRKIAQPSGIVEPCVVRVAYGNTVLNGLWLGDEVICPRHVI-ASDTTKTINYESDLLGVRLHNFSVSKGNDFLGVIGCSYRGVNLVIKVSQVNTQTPKHKFRTVKAGDSFNILACYDGKPNGVYGVNMRTQGTIRGSFINGTCGSPGYVLEGDTVHFVYMHHLELGNGSHVGSDFNGVMYGGYEDQPSLQLEGANVMSTDNVVAFLYAAIINGERWFINSGYTSLETFNNWARSNGYTELAS--IDVFSMLAAKTSINVERLLDAIMR-LSTGLGGRTILGYGSLSDEFTPTEVVRQMFGVNLQ</Hsp_hseq>
+      <Hsp_midline>SG RK+A PSG VE C+V+V  G T LNGLWL D V CPRHVI  S+     NYE  L+    HNF V  GN  L VIG S +   L +KV   N +TPK+KF  ++ G +F++LACY+G P+GVY   MR   TI+GSF+NG+CGS G+ ++ D V F YMHH+EL  G H G+D  G  YG + D+ + Q  G +   T NV+A+LYAA+ING+RWF+N   T+L  FN  A    Y  L    +D+   L+A+T I V  +  ++   L  G+ GRTILG   L DEFTP +VVRQ  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>62</Hit_num>
+  <Hit_id>ref|YP_010799342.1|</Hit_id>
+  <Hit_def>polyprotein [Bat alphacoronavirus]</Hit_def>
+  <Hit_accession>YP_010799342</Hit_accession>
+  <Hit_len>6754</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>265.774</Hsp_bit-score>
+      <Hsp_score>678</Hsp_score>
+      <Hsp_evalue>3.71908e-76</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2962</Hsp_hit-from>
+      <Hsp_hit-to>3273</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>142</Hsp_identity>
+      <Hsp_positive>198</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>316</Hsp_align-len>
+      <Hsp_qseq>PROCHAINABSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>PTVSYNSTLQAGLRKMAQPSGIVERCMVRVSYGNMTLNGLWLGDVVICPRHVIASNTNNV-IDYEKELSLVRLHNFSVSYGNMFLGVVGVTMRGALLHIKVNQANVNTPSYTYRTLRPGESFNILACYDGGASGVYGVNMRTNYTIRGSFISGACGSPGYNLSGGVVEFCYMHQLELGSGCHVGCDLDGAMYGGYEDQPTLQIEGASSLITENVLAFLYGALINGCRWWLSASRLSVEKFNEWAVHNGMTIV--GNVDTYSILAAKTGVDVPRMLASIQS-LQRNFGGKQIMGYTSLTDEFTTAEVIKQMFGVNLQ</Hsp_hseq>
+      <Hsp_midline>P   +     +G RKMA PSG VE CMV+V+ G  TLNGLWL DVV CPRHVI ++ + +  +YE  L     HNF V  GN+ L V+G +M+  +L +KV+ AN  TP Y +  ++PG++F++LACY+G  SGVY   MR N+TI+GSF++G+CGS G+N+    V FCYMH +EL +G H G DL+G  YG + D+ T Q  G  + IT NVLA+LY A+ING RW+L+    ++  FN  A+      +   +VD    L+A+TG+ V  M AS++  LQ    G+ I+G   L DEFT  +V++Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>63</Hit_num>
+  <Hit_id>ref|NP_598309.2|</Hit_id>
+  <Hit_def>Pol1 [Porcine epidemic diarrhea virus]</Hit_def>
+  <Hit_accession>NP_598309</Hit_accession>
+  <Hit_len>6781</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>264.233</Hsp_bit-score>
+      <Hsp_score>674</Hsp_score>
+      <Hsp_evalue>1.30151e-75</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2988</Hsp_hit-from>
+      <Hsp_hit-to>3299</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>139</Hsp_identity>
+      <Hsp_positive>200</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>317</Hsp_align-len>
+      <Hsp_qseq>PROCHAINABSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSE-DMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>PTVSYNSTLQAGLRKMAQPSGVVEKCIVRVCYGNMALNGLWLGDIVMCPRHVIASSTTSTIDYDYALSVLRL--HNFSISSGNVFLGVVSATMRGALLQIKVNQNNVHTPKYTYRTVRPGESFNILACYDGAAAGVYGVNMRSNYTIRGSFINGACGSPGYNINNGTVEFCYLHQLELGSGCHVGSDLDGVMYGGYEDQPTLQVEGASSLFTENVLAFLYAALINGSTWWLSSSRIAVDRFNEWAVHNGMT--TVGNTDCFSILAAKTGVDVQRLLASIQSLHKN-FGGKQILGHTSLTDEFTTGEVVRQMYGVNLQ</Hsp_hseq>
+      <Hsp_midline>P   +     +G RKMA PSG VE C+V+V  G   LNGLWL D+V CPRHVI +S    ++ +Y   ++R   HNF + +GNV L V+  +M+  +L++KV+  N  TPKY +  ++PG++F++LACY+G+ +GVY   MR N+TI+GSF+NG+CGS G+NI+   V FCY+H +EL +G H G+DL+G  YG + D+ T Q  G  +  T NVLA+LYAA+ING  W+L+     ++ FN  A+       T  + D    L+A+TG+ V  + AS++ L +N   G+ ILG   L DEFT  +VVRQ  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>64</Hit_num>
+  <Hit_id>ref|YP_010037467.1|</Hit_id>
+  <Hit_def>polyprotein 1ab [Alphacoronavirus sp.]</Hit_def>
+  <Hit_accession>YP_010037467</Hit_accession>
+  <Hit_len>6769</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>263.077</Hsp_bit-score>
+      <Hsp_score>671</Hsp_score>
+      <Hsp_evalue>3.3454e-75</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2989</Hsp_hit-from>
+      <Hsp_hit-to>3290</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>139</Hsp_identity>
+      <Hsp_positive>196</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLRKMAQPSGIVEKCIVRVCYGNTTLNGLWLGDLVICPRHVIAANTNAV-IDYDHALSVVRLHNFSVSCGNMYLGVIGVTMRGALLHIKVGQVNVNTPKFTYRTLRPGESFNILACYDGEASGVFGVNMRPNGTIRGSFINGACGSPGYNVVKGVVEFCYVHQLELGSGCHVGSDLDGLIYGGYEDQPTLQIEGANNLVTENVVSFLYGALINGSNWWLSADRLSLDAFNEWAQHNGMTPIY--NVDGFSILAAKTSVDVQRVLASIR-VLQKSFGGRQIMGFTSLTDEFTMSEVVKQMFGVTLQ</Hsp_hseq>
+      <Hsp_midline>SG RKMA PSG VE C+V+V  G TTLNGLWL D+V CPRHVI  + + +  +Y+  L     HNF V  GN+ L VIG +M+  +L +KV   N  TPK+ +  ++PG++F++LACY+G  SGV+   MRPN TI+GSF+NG+CGS G+N+    V FCY+H +EL +G H G+DL+G  YG + D+ T Q  G +  +T NV+++LY A+ING  W+L+    +L+ FN  A      P+   +VD    L+A+T + V  + AS++ +LQ    GR I+G   L DEFT  +VV+Q  GVT Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>65</Hit_num>
+  <Hit_id>ref|NP_835346.1|</Hit_id>
+  <Hit_def>putative coronavirus nsp2 (3CL-PRO) [Human coronavirus 229E]</Hit_def>
+  <Hit_accession>NP_835346</Hit_accession>
+  <Hit_len>302</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>243.432</Hsp_bit-score>
+      <Hsp_score>620</Hsp_score>
+      <Hsp_evalue>3.63101e-75</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>302</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>126</Hsp_identity>
+      <Hsp_positive>188</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>307</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICT-SEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>AGLRKMAQPSGFVEKCVVRVCYGNTVLNGLWLGDIVYCPRHVIASNTTSAIDYDHEYSIMRL--HNFSIISGTAFLGVVGATMHGVTLKIKVSQTNMHTPRHSFRTLKSGEGFNILACYDGCAQGVFGVNMRTNWTIRGSFINGACGSPGYNLKNGEVEFVYMHQIELGSGSHVGSSFDGVMYGGFEDQPNLQVESANQMLTVNVVAFLYAAILNGCTWWLKGEKLFVEHYNEWAQANGFTAMNGE--DAFSILAAKTGVCVERLLHAI-QVLNNGFGGKQILGYSSLNDEFSINEVVKQMFGVNLQ</Hsp_hseq>
+      <Hsp_midline>+G RKMA PSG VE C+V+V  G T LNGLWL D+VYCPRHVI + +   ++ ++E  ++R   HNF + +G   L V+G +M    LK+KV   N  TP++ F  ++ G+ F++LACY+G   GV+   MR N+TI+GSF+NG+CGS G+N+    V F YMH +EL +G H G+  +G  YG F D+   Q    +  +TVNV+A+LYAA++NG  W+L      +  +N  A    +  +  +  D    L+A+TG+ V  +  ++ ++L NG  G+ ILG + L DEF+  +VV+Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>66</Hit_num>
+  <Hit_id>ref|YP_009256196.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [Ferret coronavirus]</Hit_def>
+  <Hit_accession>YP_009256196</Hit_accession>
+  <Hit_len>3958</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>261.151</Hsp_bit-score>
+      <Hsp_score>666</Hsp_score>
+      <Hsp_evalue>1.42169e-74</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2819</Hsp_hit-from>
+      <Hsp_hit-to>3120</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>142</Hsp_identity>
+      <Hsp_positive>192</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>307</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNP-NYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLRKIAQPSGVVEPCIVRVAYGSTVLNGLWLGDEVICPRHVI--ASDTSKPINYDTELLGVRLHNFSISKGNDFLGVIGCSYRGVNLIIKVSQNNTLTPKHKFKTVKAGESFNILACYDGKPNGVYGVNMRTQGTIKGSFINGTCGSPGYVLDGDIVNFVYMHHLELGNGSHVGSNLEGAMYGGYEDQPSMQLEGVNVMSTDNVVAFLYAALINGERWFVSNAAVALETYNNWAIANGFTELSS--ADSFSMLSAKTGVSVEKLLDAVMR-LSTSLGGKTILGYGSLSDEFTTTEVVRQMFGVNLQ</Hsp_hseq>
+      <Hsp_midline>SG RK+A PSG VE C+V+V  G+T LNGLWL D V CPRHVI  + D   P NY+  L+    HNF +  GN  L VIG S +   L +KV   N  TPK+KF  ++ G++F++LACY+G P+GVY   MR   TIKGSF+NG+CGS G+ +D D V+F YMHH+EL  G H G++LEG  YG + D+ + Q  G +   T NV+A+LYAA+ING+RWF++     L  +N  A+   +  L+    D    LSA+TG++V  +  ++   L   + G+TILG   L DEFT  +VVRQ  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>67</Hit_num>
+  <Hit_id>ref|YP_001718611.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [Miniopterus bat coronavirus HKU8]</Hit_def>
+  <Hit_accession>YP_001718611</Hit_accession>
+  <Hit_len>4231</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>260.381</Hsp_bit-score>
+      <Hsp_score>664</Hsp_score>
+      <Hsp_evalue>2.289e-74</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3101</Hsp_hit-from>
+      <Hsp_hit-to>3412</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>135</Hsp_identity>
+      <Hsp_positive>201</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>317</Hsp_align-len>
+      <Hsp_qseq>PROCHAINABSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSE-DMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>PSVSYNSTLQSGLKKMAQPSGIVEKCVVRVCYGNMTLNGLWLGDIVVCPRHVMASSTTNTIDYEYEYSMMRL--HNFSVSVGNVFLGVNGVTMEGVNLHIKVNQSNPHTPKHTFRTLKPGDSFNILACYDGTPAGVYGITMRPNYTIRGSFINGACGSPGYNVVNGNVEFCYLHQLELGSGCHVGSNFDGIMYGNFQDQPSLQIEGADQLVTPNVVAFLYGALLNGVNWFVSPERLSVEAFNEWAHNNGFTDMSG--AECFTMLAAKTGVDVQRVLASIQKIAKS-FGGRNILGFTSLTDEFTAAEVIKQMYGVNLQ</Hsp_hseq>
+      <Hsp_midline>P   +     SG +KMA PSG VE C+V+V  G  TLNGLWL D+V CPRHV+ +S  + ++  YE  ++R   HNF V  GNV L V G +M+   L +KV+ +NP TPK+ F  ++PG +F++LACY+G+P+GVY   MRPN+TI+GSF+NG+CGS G+N+    V FCY+H +EL +G H G++ +G  YG F D+ + Q  G D  +T NV+A+LY A++NG  WF++    ++  FN  A    +  ++    +    L+A+TG+ V  + AS++++ ++   GR ILG   L DEFT  +V++Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>68</Hit_num>
+  <Hit_id>ref|YP_009256195.1|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Ferret coronavirus]</Hit_def>
+  <Hit_accession>YP_009256195</Hit_accession>
+  <Hit_len>6622</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>260.381</Hsp_bit-score>
+      <Hsp_score>664</Hsp_score>
+      <Hsp_evalue>2.47913e-74</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2819</Hsp_hit-from>
+      <Hsp_hit-to>3120</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>142</Hsp_identity>
+      <Hsp_positive>192</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>307</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNP-NYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLRKIAQPSGVVEPCIVRVAYGSTVLNGLWLGDEVICPRHVI--ASDTSKPINYDTELLGVRLHNFSISKGNDFLGVIGCSYRGVNLIIKVSQNNTLTPKHKFKTVKAGESFNILACYDGKPNGVYGVNMRTQGTIKGSFINGTCGSPGYVLDGDIVNFVYMHHLELGNGSHVGSNLEGAMYGGYEDQPSMQLEGVNVMSTDNVVAFLYAALINGERWFVSNAAVALETYNNWAIANGFTELSS--ADSFSMLSAKTGVSVEKLLDAVMR-LSTSLGGKTILGYGSLSDEFTTTEVVRQMFGVNLQ</Hsp_hseq>
+      <Hsp_midline>SG RK+A PSG VE C+V+V  G+T LNGLWL D V CPRHVI  + D   P NY+  L+    HNF +  GN  L VIG S +   L +KV   N  TPK+KF  ++ G++F++LACY+G P+GVY   MR   TIKGSF+NG+CGS G+ +D D V+F YMHH+EL  G H G++LEG  YG + D+ + Q  G +   T NV+A+LYAA+ING+RWF++     L  +N  A+   +  L+    D    LSA+TG++V  +  ++   L   + G+TILG   L DEFT  +VVRQ  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>69</Hit_num>
+  <Hit_id>ref|YP_001718610.1|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Miniopterus bat coronavirus HKU8]</Hit_def>
+  <Hit_accession>YP_001718610</Hit_accession>
+  <Hit_len>6896</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>260.381</Hsp_bit-score>
+      <Hsp_score>664</Hsp_score>
+      <Hsp_evalue>2.9247e-74</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3101</Hsp_hit-from>
+      <Hsp_hit-to>3412</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>135</Hsp_identity>
+      <Hsp_positive>201</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>317</Hsp_align-len>
+      <Hsp_qseq>PROCHAINABSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSE-DMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>PSVSYNSTLQSGLKKMAQPSGIVEKCVVRVCYGNMTLNGLWLGDIVVCPRHVMASSTTNTIDYEYEYSMMRL--HNFSVSVGNVFLGVNGVTMEGVNLHIKVNQSNPHTPKHTFRTLKPGDSFNILACYDGTPAGVYGITMRPNYTIRGSFINGACGSPGYNVVNGNVEFCYLHQLELGSGCHVGSNFDGIMYGNFQDQPSLQIEGADQLVTPNVVAFLYGALLNGVNWFVSPERLSVEAFNEWAHNNGFTDMSG--AECFTMLAAKTGVDVQRVLASIQKIAKS-FGGRNILGFTSLTDEFTAAEVIKQMYGVNLQ</Hsp_hseq>
+      <Hsp_midline>P   +     SG +KMA PSG VE C+V+V  G  TLNGLWL D+V CPRHV+ +S  + ++  YE  ++R   HNF V  GNV L V G +M+   L +KV+ +NP TPK+ F  ++PG +F++LACY+G+P+GVY   MRPN+TI+GSF+NG+CGS G+N+    V FCY+H +EL +G H G++ +G  YG F D+ + Q  G D  +T NV+A+LY A++NG  WF++    ++  FN  A    +  ++    +    L+A+TG+ V  + AS++++ ++   GR ILG   L DEFT  +V++Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>70</Hit_num>
+  <Hit_id>ref|YP_010799729.1|</Hit_id>
+  <Hit_def>polyprotein 1ab [Alphacoronavirus sp.]</Hit_def>
+  <Hit_accession>YP_010799729</Hit_accession>
+  <Hit_len>6768</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>259.996</Hsp_bit-score>
+      <Hsp_score>663</Hsp_score>
+      <Hsp_evalue>3.34463e-74</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2977</Hsp_hit-from>
+      <Hsp_hit-to>3288</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>136</Hsp_identity>
+      <Hsp_positive>204</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>317</Hsp_align-len>
+      <Hsp_qseq>PROCHAINABSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDM-LNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>PTVSYNSTLQSGLRKMAQPSGIVEKCVVRVSYGNMTLNGLWLGDTVICPRHVIASSTTTTIDYEHEASVMRL--HNFSISVGSMFLGVVGVTMHGCNLRIKVNQSNVNTPKYVFKTIKPGDSFNILACYDGTPAGVYGVNLRTNNTVRGSFINGACGSPGYNLVNGVVEFVYLHQLELGSGCHVGSNIDGVMYGGFEDQPTLQVEGSSNLVTVNVIAFLYGALLNGVNWWLTQERVTSDAYNEWAVQNGFTTVST--LDCFTILAAKTGVDVNRVLAAVQR-LQKGFGGKSILGFTSLSDEFTVTEVVQQMYGVTLQ</Hsp_hseq>
+      <Hsp_midline>P   +     SG RKMA PSG VE C+V+V+ G  TLNGLWL D V CPRHVI +S    ++  +E  ++R   HNF +  G++ L V+G +M  C L++KV+ +N  TPKY F  I+PG +F++LACY+G+P+GVY   +R N T++GSF+NG+CGS G+N+    V F Y+H +EL +G H G++++G  YG F D+ T Q  G+   +TVNV+A+LY A++NG  W+L +   T + +N  A++  +  ++   +D    L+A+TG+ V  + A+++  LQ G  G++ILG   L DEFT  +VV+Q  GVT Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>71</Hit_num>
+  <Hit_id>ref|YP_008439216.1|</Hit_id>
+  <Hit_def>3C-like proteinase nsp5 [Bat coronavirus CDPHE15/USA/2006]</Hit_def>
+  <Hit_accession>YP_008439216</Hit_accession>
+  <Hit_len>303</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>240.736</Hsp_bit-score>
+      <Hsp_score>613</Hsp_score>
+      <Hsp_evalue>4.11101e-74</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>303</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>128</Hsp_identity>
+      <Hsp_positive>185</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>307</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTP-KYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>AGLKKMAQPSGVVERCIVRVSYGNMVLNGLWLGDTVYCPRHVLAASTTT-HIDYEHALAIMRLHNFSISYGNTFLGVVGCSTKGALLLIKVGQNNVHTPGSYTFRTLKPGDSFNILACYDGTATGVYGVNLRTNHTIRGSFINGACGSPGFNIHGSTVEFCYLHQLELGSGCHVGSDMNGAMYGGYEDQPSFQIEGVSNLVSENVVAFLYGALLNGCNWWLDQCGVTVEAYNDWAHSNGCTSLSS--TDCFTILAAKTGVEVSRVLAAIQRLNVN-FGGKAILGYTSLTDEFTVGEIIKQMFGVNLQ</Hsp_hseq>
+      <Hsp_midline>+G +KMA PSG VE C+V+V+ G   LNGLWL D VYCPRHV+  S    + +YE  L     HNF +  GN  L V+G S +  +L +KV   N  TP  Y F  ++PG +F++LACY+G+ +GVY   +R N TI+GSF+NG+CGS GFNI    V FCY+H +EL +G H G+D+ G  YG + D+ + Q  G    ++ NV+A+LY A++NG  W+L++   T+  +N  A       L+    D    L+A+TG+ V  + A+++ L  N   G+ ILG   L DEFT  ++++Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>72</Hit_num>
+  <Hit_id>ref|YP_006908641.2|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Rousettus bat coronavirus HKU10]</Hit_def>
+  <Hit_accession>YP_006908641</Hit_accession>
+  <Hit_len>6780</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>259.61</Hsp_bit-score>
+      <Hsp_score>662</Hsp_score>
+      <Hsp_evalue>4.50882e-74</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2987</Hsp_hit-from>
+      <Hsp_hit-to>3298</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>138</Hsp_identity>
+      <Hsp_positive>195</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>316</Hsp_align-len>
+      <Hsp_qseq>PROCHAINABSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>PTISYNSTLQSGLRKMAQPSGVVEKCVVRVCYGNMALNGLWLGDVVICPRHVIASNTNAL-IDYEHEISVMRLHNFSVSVGNVFLGVVSATMKGANLHIKVNQTNVNTPEHSFKTIKQGESFNILACYDGMPSGVYGVTMRNNYTIRGSFITGACGSPGYNVTNGKVEFCYLHQLELGSGCHVGSNLEGVMYGCYEDQPTLQIEGVNHLVTPNVIAFLYGALLNGITWWLNSDKVSVESFNEWALNNGFT--TCGNLDCFNMLSAKTGVDVQRLLAAVQR-LHNSFGGKNILGYTTLTDEFTVGEVIKQMYGVTLQ</Hsp_hseq>
+      <Hsp_midline>P   +     SG RKMA PSG VE C+V+V  G   LNGLWL DVV CPRHVI ++ + L  +YE  +     HNF V  GNV L V+  +M+   L +KV+  N  TP++ F  I+ G++F++LACY+G PSGVY   MR N+TI+GSF+ G+CGS G+N+    V FCY+H +EL +G H G++LEG  YG + D+ T Q  G +  +T NV+A+LY A++NG  W+LN    ++  FN  A+   +   T  ++D    LSA+TG+ V  + A+++  L N   G+ ILG   L DEFT  +V++Q  GVT Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>73</Hit_num>
+  <Hit_id>ref|YP_001718604.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [Bat coronavirus 1A]</Hit_def>
+  <Hit_accession>YP_001718604</Hit_accession>
+  <Hit_len>4268</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>258.07</Hsp_bit-score>
+      <Hsp_score>658</Hsp_score>
+      <Hsp_evalue>1.63408e-73</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3138</Hsp_hit-from>
+      <Hsp_hit-to>3449</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>137</Hsp_identity>
+      <Hsp_positive>197</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>317</Hsp_align-len>
+      <Hsp_qseq>PROCHAINABSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTS-EDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>PSISYNSTLQAGLRKFAQPSGVIEHCIVRVSYGNMVLNGLWLGDEVICPRHVIASSINSAIDYDHEYTMMRL--HNFSVSSGNLFIGVVSAKMRGASLVIKVNQNNPHTPKHVFKTLRAGDAFNILACYDGVPSGVYGTILRHNKTIRGSFINGACGSPGFNINGDTVEFVYLHQLELGSGCHVGSNMEGVMYGGFDDQPSLQIEGADCLVTVNVIAFLYGAILNGCTWFLSNERVSAEVFNGWAHDNNFTDVGS--FDCFNILAAKTGVDVQRILASIQKLAK-GFGGRNIIGYASLTDEFTVSEVVKQMYGVSLQ</Hsp_hseq>
+      <Hsp_midline>P   +     +G RK A PSG +E C+V+V+ G   LNGLWL D V CPRHVI +S    ++ ++E  ++R   HNF V +GN+ + V+   M+   L +KV+  NP TPK+ F  ++ G  F++LACY+G PSGVY   +R N TI+GSF+NG+CGS GFNI+ D V F Y+H +EL +G H G+++EG  YG F D+ + Q  G D  +TVNV+A+LY A++NG  WFL+    +   FN  A   N+  +     D    L+A+TG+ V  + AS+++L + G  GR I+G A L DEFT  +VV+Q  GV+ Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>74</Hit_num>
+  <Hit_id>ref|YP_001718603.1|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Bat coronavirus 1A]</Hit_def>
+  <Hit_accession>YP_001718603</Hit_accession>
+  <Hit_len>6932</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>256.914</Hsp_bit-score>
+      <Hsp_score>655</Hsp_score>
+      <Hsp_evalue>3.57939e-73</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>3138</Hsp_hit-from>
+      <Hsp_hit-to>3449</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>137</Hsp_identity>
+      <Hsp_positive>197</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>317</Hsp_align-len>
+      <Hsp_qseq>PROCHAINABSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTS-EDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>PSISYNSTLQAGLRKFAQPSGVIEHCIVRVSYGNMVLNGLWLGDEVICPRHVIASSINSAIDYDHEYTMMRL--HNFSVSSGNLFIGVVSAKMRGASLVIKVNQNNPHTPKHVFKTLRAGDAFNILACYDGVPSGVYGTILRHNKTIRGSFINGACGSPGFNINGDTVEFVYLHQLELGSGCHVGSNMEGVMYGGFDDQPSLQIEGADCLVTVNVIAFLYGAILNGCTWFLSNERVSAEVFNGWAHDNNFTDVGS--FDCFNILAAKTGVDVQRILASIQKLAK-GFGGRNIIGYASLTDEFTVSEVVKQMYGVSLQ</Hsp_hseq>
+      <Hsp_midline>P   +     +G RK A PSG +E C+V+V+ G   LNGLWL D V CPRHVI +S    ++ ++E  ++R   HNF V +GN+ + V+   M+   L +KV+  NP TPK+ F  ++ G  F++LACY+G PSGVY   +R N TI+GSF+NG+CGS GFNI+ D V F Y+H +EL +G H G+++EG  YG F D+ + Q  G D  +TVNV+A+LY A++NG  WFL+    +   FN  A   N+  +     D    L+A+TG+ V  + AS+++L + G  GR I+G A L DEFT  +VV+Q  GV+ Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>75</Hit_num>
+  <Hit_id>ref|YP_009200734.1|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [BtRf-AlphaCoV/YN2012]</Hit_def>
+  <Hit_accession>YP_009200734</Hit_accession>
+  <Hit_len>6716</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>256.914</Hsp_bit-score>
+      <Hsp_score>655</Hsp_score>
+      <Hsp_evalue>4.46174e-73</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2931</Hsp_hit-from>
+      <Hsp_hit-to>3232</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>138</Hsp_identity>
+      <Hsp_positive>191</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>AGLKKMAQPSGLVEPCVVRVSYGNTVLNGVWLDDKVYCPRHVL-ASDTTVTIDYDAAYHSMRLHNFSISKGNVFLGVVGAVMQGANLVITVSQANVNTPSYSFRTLKAGECFNILACYDGTPAGVYGVNLRSTHTIKGSFVNGACGSPGFVMNGHKVEFVYMHQIELGNASHVGSDMFGNIYGGFDDQPSIQLEGVATLITENVIAFLYAALINGERWWCSNERCTIDSFNEWALGNGFTNLVTG--DGFSMLAAKTGIDVCQILSAIQR-LATGLGGKTILGYASLTDEYTLSEVVRQMYGVNIQ</Hsp_hseq>
+      <Hsp_midline>+G +KMA PSG VE C+V+V+ G T LNG+WLDD VYCPRHV+  S+  +  +Y+        HNF +  GNV L V+G  MQ   L + V  AN  TP Y F  ++ G+ F++LACY+G+P+GVY   +R   TIKGSF+NG+CGS GF ++   V F YMH +EL    H G+D+ GN YG F D+ + Q  G  T IT NV+A+LYAA+ING+RW+ +    T++ FN  A+   +  L     D    L+A+TGI V  + ++++  L  G+ G+TILG A L DE+T  +VVRQ  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>76</Hit_num>
+  <Hit_id>ref|YP_001552235.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [Rhinolophus bat coronavirus HKU2]</Hit_def>
+  <Hit_accession>YP_001552235</Hit_accession>
+  <Hit_len>4059</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>256.144</Hsp_bit-score>
+      <Hsp_score>653</Hsp_score>
+      <Hsp_evalue>6.71122e-73</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2942</Hsp_hit-from>
+      <Hsp_hit-to>3243</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>136</Hsp_identity>
+      <Hsp_positive>192</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>AGLKKMAQPSGLVEPCVVRVSYGNTVLNGVWLDDKVYCPRHVL-ASDTTVTIDYDAVYHSMRLHNFSISKGNVFLGVVGAVMQGANLVITVSQANVNTPSYSFRTLKAGECFNILACYDGTPAGVYGVNLRSTHTIKGSFVNGACGSPGFVMNGYKVEFVYMHQIELGNASHVGSDMFGNIYGGFEDQPSIQLEGVATLITENVVAFLYAALINGERWWCSNERCTIDSFNEWALGNGFTNLVSG--DGFSMLAAKTGVDVCQLLSAIQR-LATGLGGKTILGYASVTDEYTLSEVVRQMYGVNIQ</Hsp_hseq>
+      <Hsp_midline>+G +KMA PSG VE C+V+V+ G T LNG+WLDD VYCPRHV+  S+  +  +Y+ +      HNF +  GNV L V+G  MQ   L + V  AN  TP Y F  ++ G+ F++LACY+G+P+GVY   +R   TIKGSF+NG+CGS GF ++   V F YMH +EL    H G+D+ GN YG F D+ + Q  G  T IT NV+A+LYAA+ING+RW+ +    T++ FN  A+   +  L     D    L+A+TG+ V  + ++++  L  G+ G+TILG A + DE+T  +VVRQ  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>77</Hit_num>
+  <Hit_id>ref|YP_009755889.1|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Alphacoronavirus Bat-CoV/P.kuhlii/Italy/3398-19/2015]</Hit_def>
+  <Hit_accession>YP_009755889</Hit_accession>
+  <Hit_len>6631</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>256.144</Hsp_bit-score>
+      <Hsp_score>653</Hsp_score>
+      <Hsp_evalue>8.42099e-73</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2842</Hsp_hit-from>
+      <Hsp_hit-to>3153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>136</Hsp_identity>
+      <Hsp_positive>187</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>316</Hsp_align-len>
+      <Hsp_qseq>PROCHAINABSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>PTISYNSTLQAGLRKMAQPSGIVEQCIVRVSYGNMVLNGVWLGDEVICPRHVIAESTTTL-IDYDKAFSLIRLHNFSVSVGNIFLGVLSAKMRGALLYIKVNQSNVNTPNYSFKVLKPGDSFNILTCYEGVPSGVYGVTMRTNYTIRGSFINGACGSPGYNVNNGNVEFCYFHQLELGSGCHVGCDSNGQMYGGFEDQPTLQIEGANRLHTPNVLAFLYGALLNGCNWWLTSDRMNLEAFNDWATSNDFTPVTS--IDTYTILSAKTGVDVQRLLAAITRLTK-GFGGKKVLGYSSLNDEFTIAEVIRQMYGVSIQ</Hsp_hseq>
+      <Hsp_midline>P   +     +G RKMA PSG VE C+V+V+ G   LNG+WL D V CPRHVI  S   L  +Y+        HNF V  GN+ L V+   M+  +L +KV+ +N  TP Y F  ++PG +F++L CY G PSGVY   MR N+TI+GSF+NG+CGS G+N++   V FCY H +EL +G H G D  G  YG F D+ T Q  G +   T NVLA+LY A++NG  W+L      L  FN  A   ++ P+T   +D    LSA+TG+ V  + A++  L + G  G+ +LG + L DEFT  +V+RQ  GV+ Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>78</Hit_num>
+  <Hit_id>ref|YP_001552234.1|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Rhinolophus bat coronavirus HKU2]</Hit_def>
+  <Hit_accession>YP_001552234</Hit_accession>
+  <Hit_len>6727</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>255.373</Hsp_bit-score>
+      <Hsp_score>651</Hsp_score>
+      <Hsp_evalue>1.21492e-72</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2942</Hsp_hit-from>
+      <Hsp_hit-to>3243</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>136</Hsp_identity>
+      <Hsp_positive>192</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>AGLKKMAQPSGLVEPCVVRVSYGNTVLNGVWLDDKVYCPRHVL-ASDTTVTIDYDAVYHSMRLHNFSISKGNVFLGVVGAVMQGANLVITVSQANVNTPSYSFRTLKAGECFNILACYDGTPAGVYGVNLRSTHTIKGSFVNGACGSPGFVMNGYKVEFVYMHQIELGNASHVGSDMFGNIYGGFEDQPSIQLEGVATLITENVVAFLYAALINGERWWCSNERCTIDSFNEWALGNGFTNLVSG--DGFSMLAAKTGVDVCQLLSAIQR-LATGLGGKTILGYASVTDEYTLSEVVRQMYGVNIQ</Hsp_hseq>
+      <Hsp_midline>+G +KMA PSG VE C+V+V+ G T LNG+WLDD VYCPRHV+  S+  +  +Y+ +      HNF +  GNV L V+G  MQ   L + V  AN  TP Y F  ++ G+ F++LACY+G+P+GVY   +R   TIKGSF+NG+CGS GF ++   V F YMH +EL    H G+D+ GN YG F D+ + Q  G  T IT NV+A+LYAA+ING+RW+ +    T++ FN  A+   +  L     D    L+A+TG+ V  + ++++  L  G+ G+TILG A + DE+T  +VVRQ  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>79</Hit_num>
+  <Hit_id>ref|YP_004070193.2|</Hit_id>
+  <Hit_def>polyprotein ab [Feline infectious peritonitis virus]</Hit_def>
+  <Hit_accession>YP_004070193</Hit_accession>
+  <Hit_len>6709</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>254.988</Hsp_bit-score>
+      <Hsp_score>650</Hsp_score>
+      <Hsp_evalue>1.96625e-72</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2904</Hsp_hit-from>
+      <Hsp_hit-to>3205</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>135</Hsp_identity>
+      <Hsp_positive>183</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLRKMAQPSGVVEPCIVRVAYGNNVLNGLWLGDEVICPRHVIASDTSRV-INYENELSSVRLHNFSIAKNNAFLGVVSAKYKGVNLVLKVNQVNPNTPEHKFKSVRPGESFNILACYEGCPGSVYGVNMRSQGTIKGSFIAGTCGSVGYVLENGTLYFVYMHHLELGNGSHVGSNLEGEMYGGYEDQPSMQLEGTNVMSSDNVVAFLYAALINGERWFVTNTSMTLESYNAWAKTNSFTEIVS--TDAFNMLAAKTGYSVEKLLECIVR-LNKGFGGRTILSYGSLCDEFTPTEVIRQMYGVNLQ</Hsp_hseq>
+      <Hsp_midline>SG RKMA PSG VE C+V+V  G   LNGLWL D V CPRHVI +    +  NYE+ L     HNF +   N  L V+    +   L LKV+  NP TP++KF  ++PG++F++LACY G P  VY   MR   TIKGSF+ G+CGSVG+ ++   + F YMHH+EL  G H G++LEG  YG + D+ + Q  GT+   + NV+A+LYAA+ING+RWF+   + TL  +N  A   ++  +     D    L+A+TG +V  +   +   L  G  GRTIL    L DEFTP +V+RQ  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>80</Hit_num>
+  <Hit_id>ref|NP_058423.1|</Hit_id>
+  <Hit_def>replicase [Transmissible gastroenteritis virus]</Hit_def>
+  <Hit_accession>NP_058423</Hit_accession>
+  <Hit_len>4017</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>254.603</Hsp_bit-score>
+      <Hsp_score>649</Hsp_score>
+      <Hsp_evalue>2.36833e-72</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2879</Hsp_hit-from>
+      <Hsp_hit-to>3180</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>137</Hsp_identity>
+      <Hsp_positive>185</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLRKMAQPSGLVEPCIVRVSYGNNVLNGLWLGDEVICPRHVI-ASDTTRVINYENEMSSVRLHNFSVSKNNVFLGVVSARYKGVNLVLKVNQVNPNTPEHKFKSIKAGESFNILACYEGCPGSVYGVNMRSQGTIKGSFIAGTCGSVGYVLENGILYFVYMHHLELGNGSHVGSNFEGEMYGGYEDQPSMQLEGTNVMSSDNVVAFLYAALINGERWFVTNTSMSLESYNTWAKTNSFTELSS--TDAFSMLAAKTGQSVEKLLDSIVR-LNKGFGGRTILSYGSLCDEFTPTEVIRQMYGVNLQ</Hsp_hseq>
+      <Hsp_midline>SG RKMA PSG VE C+V+V+ G   LNGLWL D V CPRHVI  S+     NYE+ +     HNF V   NV L V+    +   L LKV+  NP TP++KF  I+ G++F++LACY G P  VY   MR   TIKGSF+ G+CGSVG+ ++   + F YMHH+EL  G H G++ EG  YG + D+ + Q  GT+   + NV+A+LYAA+ING+RWF+   + +L  +N  A   ++  L+    D    L+A+TG +V  +  S+   L  G  GRTIL    L DEFTP +V+RQ  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>81</Hit_num>
+  <Hit_id>ref|YP_010799723.1|</Hit_id>
+  <Hit_def>polyprotein 1ab [Alphacoronavirus sp.]</Hit_def>
+  <Hit_accession>YP_010799723</Hit_accession>
+  <Hit_len>6451</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>254.603</Hsp_bit-score>
+      <Hsp_score>649</Hsp_score>
+      <Hsp_evalue>2.80371e-72</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2668</Hsp_hit-from>
+      <Hsp_hit-to>2979</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>135</Hsp_identity>
+      <Hsp_positive>191</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>316</Hsp_align-len>
+      <Hsp_qseq>PROCHAINABSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>PTISYNSTLQAGLRKMAQPSGVVEKCVVRVSYGNMVLNGLWLGDQVFCPRHVVAESTTSA-IDYEKAYSLIRLHNFSIAVGTAFLGVVGVQMKGTMLVIKVNQSNMNTPKYSFRTLKPGDSFNILACYEGTPSGVYGVTLRSNHTIRGSFINGACGSPGYNITSNGVEFCYLHQLELGSGCHVGSDLNGVMYGGFEDQPSLQIEGASRLYTANVVAFLYGALLNGCNWWLTSEQVTVDAFNDWSNSNDFTQLTA--VETLNVLTAKTGVSVQRVLAAIQR-LSKGFGGNKILGFSSLTDEFTVGEVLKQMYGVNIQ</Hsp_hseq>
+      <Hsp_midline>P   +     +G RKMA PSG VE C+V+V+ G   LNGLWL D V+CPRHV+  S      +YE        HNF +  G   L V+G  M+  +L +KV+ +N  TPKY F  ++PG +F++LACY G+PSGVY   +R N TI+GSF+NG+CGS G+NI  + V FCY+H +EL +G H G+DL G  YG F D+ + Q  G     T NV+A+LY A++NG  W+L     T++ FN  +   ++  LT   V+ L  L+A+TG++V  + A+++  L  G  G  ILG + L DEFT  +V++Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>82</Hit_num>
+  <Hit_id>ref|NP_058422.1|</Hit_id>
+  <Hit_def>replicase [Transmissible gastroenteritis virus]</Hit_def>
+  <Hit_accession>NP_058422</Hit_accession>
+  <Hit_len>6685</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>254.218</Hsp_bit-score>
+      <Hsp_score>648</Hsp_score>
+      <Hsp_evalue>3.57189e-72</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2879</Hsp_hit-from>
+      <Hsp_hit-to>3180</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>137</Hsp_identity>
+      <Hsp_positive>185</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLRKMAQPSGLVEPCIVRVSYGNNVLNGLWLGDEVICPRHVI-ASDTTRVINYENEMSSVRLHNFSVSKNNVFLGVVSARYKGVNLVLKVNQVNPNTPEHKFKSIKAGESFNILACYEGCPGSVYGVNMRSQGTIKGSFIAGTCGSVGYVLENGILYFVYMHHLELGNGSHVGSNFEGEMYGGYEDQPSMQLEGTNVMSSDNVVAFLYAALINGERWFVTNTSMSLESYNTWAKTNSFTELSS--TDAFSMLAAKTGQSVEKLLDSIVR-LNKGFGGRTILSYGSLCDEFTPTEVIRQMYGVNLQ</Hsp_hseq>
+      <Hsp_midline>SG RKMA PSG VE C+V+V+ G   LNGLWL D V CPRHVI  S+     NYE+ +     HNF V   NV L V+    +   L LKV+  NP TP++KF  I+ G++F++LACY G P  VY   MR   TIKGSF+ G+CGSVG+ ++   + F YMHH+EL  G H G++ EG  YG + D+ + Q  GT+   + NV+A+LYAA+ING+RWF+   + +L  +N  A   ++  L+    D    L+A+TG +V  +  S+   L  G  GRTIL    L DEFTP +V+RQ  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>83</Hit_num>
+  <Hit_id>ref|YP_009328934.1|</Hit_id>
+  <Hit_def>ORF1a protein [NL63-related bat coronavirus]</Hit_def>
+  <Hit_accession>YP_009328934</Hit_accession>
+  <Hit_len>4086</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>253.447</Hsp_bit-score>
+      <Hsp_score>646</Hsp_score>
+      <Hsp_evalue>5.48018e-72</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2956</Hsp_hit-from>
+      <Hsp_hit-to>3268</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>138</Hsp_identity>
+      <Hsp_positive>195</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>317</Hsp_align-len>
+      <Hsp_qseq>PROCHAINABSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYD-CVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>PTVSYNSTLQAGLKKMAQPSGCVERCVVRVCYGNTVLNGVWLGDVVTCPRHVIAPSTTSL-IDYEHAYSTMRLHNFSISYNGVFLGVVGATMHGSVLRIKVSQSNVHTPKHVFKTLKPGDSFNILACYEGVASGVFGVNLRTNSTIKGSFINGACGSPGYNVKSDGTVEFCYLHQIELGSGAHVGSDFSGSIYGCFDDRPSLQVEGANLMLSDNVIAFMYAALLNGCRWWLRPERTNVDVFNDWAVANGYTSVSS--VDCYSILAAKTGVSVEQILAAIQRLC-DGFGGKTILGYPSLCDEFTLAEVVKQMYGVNLQ</Hsp_hseq>
+      <Hsp_midline>P   +     +G +KMA PSG VE C+V+V  G T LNG+WL DVV CPRHVI  S   L  +YE        HNF +    V L V+G +M   VL++KV  +N  TPK+ F  ++PG +F++LACY G  SGV+   +R N TIKGSF+NG+CGS G+N+  D  V FCY+H +EL +G H G+D  G+ YG F DR + Q  G +  ++ NV+A++YAA++NG RW+L    T ++ FN  A+   Y  ++   VD    L+A+TG++V  + A+++ L  +G  G+TILG   L DEFT  +VV+Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>84</Hit_num>
+  <Hit_id>ref|YP_009328933.1|</Hit_id>
+  <Hit_def>ORF1ab protein [NL63-related bat coronavirus]</Hit_def>
+  <Hit_accession>YP_009328933</Hit_accession>
+  <Hit_len>6758</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>253.447</Hsp_bit-score>
+      <Hsp_score>646</Hsp_score>
+      <Hsp_evalue>5.95317e-72</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2956</Hsp_hit-from>
+      <Hsp_hit-to>3268</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>138</Hsp_identity>
+      <Hsp_positive>195</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>317</Hsp_align-len>
+      <Hsp_qseq>PROCHAINABSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYD-CVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>PTVSYNSTLQAGLKKMAQPSGCVERCVVRVCYGNTVLNGVWLGDVVTCPRHVIAPSTTSL-IDYEHAYSTMRLHNFSISYNGVFLGVVGATMHGSVLRIKVSQSNVHTPKHVFKTLKPGDSFNILACYEGVASGVFGVNLRTNSTIKGSFINGACGSPGYNVKSDGTVEFCYLHQIELGSGAHVGSDFSGSIYGCFDDRPSLQVEGANLMLSDNVIAFMYAALLNGCRWWLRPERTNVDVFNDWAVANGYTSVSS--VDCYSILAAKTGVSVEQILAAIQRLC-DGFGGKTILGYPSLCDEFTLAEVVKQMYGVNLQ</Hsp_hseq>
+      <Hsp_midline>P   +     +G +KMA PSG VE C+V+V  G T LNG+WL DVV CPRHVI  S   L  +YE        HNF +    V L V+G +M   VL++KV  +N  TPK+ F  ++PG +F++LACY G  SGV+   +R N TIKGSF+NG+CGS G+N+  D  V FCY+H +EL +G H G+D  G+ YG F DR + Q  G +  ++ NV+A++YAA++NG RW+L    T ++ FN  A+   Y  ++   VD    L+A+TG++V  + A+++ L  +G  G+TILG   L DEFT  +VV+Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>85</Hit_num>
+  <Hit_id>ref|YP_009199240.1|</Hit_id>
+  <Hit_def>replicase polyprotein 1a [Swine enteric coronavirus]</Hit_def>
+  <Hit_accession>YP_009199240</Hit_accession>
+  <Hit_len>4015</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>253.062</Hsp_bit-score>
+      <Hsp_score>645</Hsp_score>
+      <Hsp_evalue>9.03201e-72</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2877</Hsp_hit-from>
+      <Hsp_hit-to>3178</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>136</Hsp_identity>
+      <Hsp_positive>184</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLRKMAQPSGLVEPCIVRVSYGNNVLNGLWLGDEVICPRHVI-ASDTTRVINYENEMSSVRLHNFSVSKHNVFLGVVSARCKGVNLVLKVNQVNPNTPEHKFKSVKAGESFNILACYEGCPGSVYGVNMRSQGTIKGSFIAGTCGSVGYVLENGILYFVYMHHLELGNGSHVGANFEGEMYGGYEDQPSMQLEGTNVMSSDNVVAFLYAALINGERWFITNTSMSLESYNTWAKTNSFTELSS--TDAFSMLAAKTGQSVEKLLDSIVR-LNKGFGGRTILSYGSLCDEFTPTEVIRQMYGVNLQ</Hsp_hseq>
+      <Hsp_midline>SG RKMA PSG VE C+V+V+ G   LNGLWL D V CPRHVI  S+     NYE+ +     HNF V   NV L V+    +   L LKV+  NP TP++KF  ++ G++F++LACY G P  VY   MR   TIKGSF+ G+CGSVG+ ++   + F YMHH+EL  G H G + EG  YG + D+ + Q  GT+   + NV+A+LYAA+ING+RWF+   + +L  +N  A   ++  L+    D    L+A+TG +V  +  S+   L  G  GRTIL    L DEFTP +V+RQ  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>86</Hit_num>
+  <Hit_id>ref|YP_009199608.1|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [BtMr-AlphaCoV/SAX2011]</Hit_def>
+  <Hit_accession>YP_009199608</Hit_accession>
+  <Hit_len>6662</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>253.062</Hsp_bit-score>
+      <Hsp_score>645</Hsp_score>
+      <Hsp_evalue>9.17738e-72</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2871</Hsp_hit-from>
+      <Hsp_hit-to>3172</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>131</Hsp_identity>
+      <Hsp_positive>191</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>306</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGLKKMAQPSGIVEPCVVRVSYNSTVLNGLWLGDTVYCPRHIIASNTNAV-IDYDHAYTVMRLHNFSISAGNIYLGVVSATMHGANLHIKVNQSNVHTPVHSFRTVKPGEMFNILACYDGTPAGVYSVNLRTNHTIKGSFINGACGSPGYNIVNGTVEFVYMHQIELGSGCHVGSSFDGKIYGNYEDQPTLQIEGSANLVTDNVVAFLYGALLNGITWWLSPSRITVEAFNEWASVSGYTPLQS--ADGYSILAAKTGVEVERILSSIQK-HANGFGGRNVLGYSALTDDFTLSEVVKQMFGVNLQ</Hsp_hseq>
+      <Hsp_midline>SG +KMA PSG VE C+V+V+  +T LNGLWL D VYCPRH+I ++ + +  +Y+        HNF + AGN+ L V+  +M    L +KV+ +N  TP + F  ++PG+ F++LACY+G+P+GVY   +R N TIKGSF+NG+CGS G+NI    V F YMH +EL +G H G+  +G  YG + D+ T Q  G+   +T NV+A+LY A++NG  W+L+    T+  FN  A    Y PL     D    L+A+TG+ V  + +S+++   NG  GR +LG + L D+FT  +VV+Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>87</Hit_num>
+  <Hit_id>ref|YP_010229075.1|</Hit_id>
+  <Hit_def>ORF1a polyprotein [Human coronavirus NL63]</Hit_def>
+  <Hit_accession>YP_010229075</Hit_accession>
+  <Hit_len>4060</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>251.136</Hsp_bit-score>
+      <Hsp_score>640</Hsp_score>
+      <Hsp_evalue>3.83193e-71</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2930</Hsp_hit-from>
+      <Hsp_hit-to>3242</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>137</Hsp_identity>
+      <Hsp_positive>194</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>317</Hsp_align-len>
+      <Hsp_qseq>PROCHAINABSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYD-CVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>PTISYNSTLQSGLKKMAQPSGCVERCVVRVCYGSTVLNGVWLGDTVTCPRHVIAPSTTVL-IDYDHAYSTMRLHNFSVSHNGVFLGVVGVTMHGSVLRIKVSQSNVHTPKHVFKTLKPGDSFNILACYEGIASGVFGVNLRTNFTIKGSFINGACGSPGYNVRNDGTVEFCYLHQIELGSGAHVGSDFTGSVYGNFDDQPSLQVESANLMLSDNVVAFLYAALLNGCRWWLCSTRVNVDGFNEWAMANGYTSVSS--VECYSILAAKTGVSVEQLLASIQH-LHEGFGGKNILGYSSLCDEFTLAEVVKQMYGVNLQ</Hsp_hseq>
+      <Hsp_midline>P   +     SG +KMA PSG VE C+V+V  G+T LNG+WL D V CPRHVI  S  +L  +Y+        HNF V    V L V+G +M   VL++KV  +N  TPK+ F  ++PG +F++LACY G  SGV+   +R NFTIKGSF+NG+CGS G+N+  D  V FCY+H +EL +G H G+D  G+ YG F D+ + Q    +  ++ NV+A+LYAA++NG RW+L      ++ FN  AM   Y  ++   V+    L+A+TG++V  + AS++  L  G  G+ ILG + L DEFT  +VV+Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>88</Hit_num>
+  <Hit_id>ref|YP_010037473.1|</Hit_id>
+  <Hit_def>orf1ab polyprotein [Hipposideros pomona bat coronavirus CHB25]</Hit_def>
+  <Hit_accession>YP_010037473</Hit_accession>
+  <Hit_len>6719</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>251.136</Hsp_bit-score>
+      <Hsp_score>640</Hsp_score>
+      <Hsp_evalue>4.28553e-71</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2927</Hsp_hit-from>
+      <Hsp_hit-to>3238</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>135</Hsp_identity>
+      <Hsp_positive>199</Hsp_positive>
+      <Hsp_gaps>8</Hsp_gaps>
+      <Hsp_align-len>318</Hsp_align-len>
+      <Hsp_qseq>PROCHAINABSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSED-MLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQ-DHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>PTISYNSTLQAGLRKMAQPSGIVERCVVRVCYGSMSLNGLWLGDTVICPRHVIASNTNAVIDYDYENSVMRL--HNFSVSVGNVFLGVVSVSMKGANLHIKVNQSNVNTPEHSFKTLKAGDSFNILACYDGVPSGVYGVTMRTNGVIRGSFITGACGSPGYNVNKGKVEFCYLHQLELGSGCHVGSNLEGVMYGGFEDQPTFQIEGANQLVTINVLAFLYGALLNGINWWLTSDKVSVDTFNSWATANGF---TQCGSLDCFNMLAAKTGVDVQRLLAAVQR-LHVSFGGKNILGFTTLTDEFTIGEVIKQMYGVTLQ</Hsp_hseq>
+      <Hsp_midline>P   +     +G RKMA PSG VE C+V+V  G+ +LNGLWL D V CPRHVI ++ + +++ +YE+ ++R   HNF V  GNV L V+  SM+   L +KV+ +N  TP++ F  ++ G +F++LACY+G PSGVY   MR N  I+GSF+ G+CGS G+N++   V FCY+H +EL +G H G++LEG  YG F D+ T Q  G +  +T+NVLA+LY A++NG  W+L     +++ FN  A    +   TQ   +D    L+A+TG+ V  + A+++  L     G+ ILG   L DEFT  +V++Q  GVT Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>89</Hit_num>
+  <Hit_id>ref|YP_003766.2|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Human coronavirus NL63]</Hit_def>
+  <Hit_accession>YP_003766</Hit_accession>
+  <Hit_len>6729</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>251.136</Hsp_bit-score>
+      <Hsp_score>640</Hsp_score>
+      <Hsp_evalue>4.45407e-71</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2930</Hsp_hit-from>
+      <Hsp_hit-to>3242</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>137</Hsp_identity>
+      <Hsp_positive>194</Hsp_positive>
+      <Hsp_gaps>5</Hsp_gaps>
+      <Hsp_align-len>317</Hsp_align-len>
+      <Hsp_qseq>PROCHAINABSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYD-CVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>PTISYNSTLQSGLKKMAQPSGCVERCVVRVCYGSTVLNGVWLGDTVTCPRHVIAPSTTVL-IDYDHAYSTMRLHNFSVSHNGVFLGVVGVTMHGSVLRIKVSQSNVHTPKHVFKTLKPGDSFNILACYEGIASGVFGVNLRTNFTIKGSFINGACGSPGYNVRNDGTVEFCYLHQIELGSGAHVGSDFTGSVYGNFDDQPSLQVESANLMLSDNVVAFLYAALLNGCRWWLCSTRVNVDGFNEWAMANGYTSVSS--VECYSILAAKTGVSVEQLLASIQH-LHEGFGGKNILGYSSLCDEFTLAEVVKQMYGVNLQ</Hsp_hseq>
+      <Hsp_midline>P   +     SG +KMA PSG VE C+V+V  G+T LNG+WL D V CPRHVI  S  +L  +Y+        HNF V    V L V+G +M   VL++KV  +N  TPK+ F  ++PG +F++LACY G  SGV+   +R NFTIKGSF+NG+CGS G+N+  D  V FCY+H +EL +G H G+D  G+ YG F D+ + Q    +  ++ NV+A+LYAA++NG RW+L      ++ FN  AM   Y  ++   V+    L+A+TG++V  + AS++  L  G  G+ ILG + L DEFT  +VV+Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>90</Hit_num>
+  <Hit_id>ref|YP_009201729.1|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [BtNv-AlphaCoV/SC2013]</Hit_def>
+  <Hit_accession>YP_009201729</Hit_accession>
+  <Hit_len>6598</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>249.98</Hsp_bit-score>
+      <Hsp_score>637</Hsp_score>
+      <Hsp_evalue>9.16373e-71</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2806</Hsp_hit-from>
+      <Hsp_hit-to>3117</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>136</Hsp_identity>
+      <Hsp_positive>188</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>316</Hsp_align-len>
+      <Hsp_qseq>PROCHAINABSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>PTISYNSTLQAGLRKMAQPSGMVEKCIVRVAYGNMVLNGVWLGDEVYCPRHVIAENTTTL-IDYDKAFSLIRLHNFSVSVGNVFLGVVSCRMRGALLCIKVNQANVNTPNYTFKTLKPGDSFNILACYEGVASGVYGVTLRNNSTVRGSFINGACGSPGYNLVGNTVEFCYFHQLELGSGCHVGSDANGVMYGNFDDQPTLQIEGASRLYTANVVSFLYGALLNGCNWWLTSDRLTLEAFNDWATSNDFTTLSS--VDMYTILSAKTGVDVARVLAAIQKLAK-GFGGNKILGYSSLTDEFTAGEVIKQMYGVTLQ</Hsp_hseq>
+      <Hsp_midline>P   +     +G RKMA PSG VE C+V+V  G   LNG+WL D VYCPRHVI  +   L  +Y+        HNF V  GNV L V+   M+  +L +KV+ AN  TP Y F  ++PG +F++LACY G  SGVY   +R N T++GSF+NG+CGS G+N+  + V FCY H +EL +G H G+D  G  YG F D+ T Q  G     T NV+++LY A++NG  W+L     TL  FN  A   ++  L+   VD+   LSA+TG+ V  + A++++L + G  G  ILG + L DEFT  +V++Q  GVT Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>91</Hit_num>
+  <Hit_id>ref|YP_009380519.1|</Hit_id>
+  <Hit_def>orf1a polyprotein [Coronavirus AcCoV-JC34]</Hit_def>
+  <Hit_accession>YP_009380519</Hit_accession>
+  <Hit_len>3974</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>249.21</Hsp_bit-score>
+      <Hsp_score>635</Hsp_score>
+      <Hsp_evalue>2.06358e-70</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2852</Hsp_hit-from>
+      <Hsp_hit-to>3153</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>129</Hsp_identity>
+      <Hsp_positive>191</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>307</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICT-SEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGFRKIAQPSGLVEPCIVRVTYHNSYLNGVWLGDQVYAPRHVIASDTTRVVDYETEQNLVR--SHNFSISRGNSFLTVKGFRFEGCNVVINVAEVNPLTPEYKFDTLKPGDNFNILACYDGIPSGVYGVTLRYNSTIKGSFVNGTCGSPGYVVSNGVIKFCYLHQMELGSGAHVGSDFTGKMYGGYQDQAKVQIEGANRLITENVVAFFYAALFNGERWWCSKSSTCITNFNSWAAENNFTQLAA--TDVFNLVASKTGVSVEQILAAIIT-YSKGFGHRTLLGYASINDEYTITEVMQQMFGVQLQ</Hsp_hseq>
+      <Hsp_midline>SGFRK+A PSG VE C+V+VT   + LNG+WL D VY PRHVI + +  +++   E  L+R  +HNF +  GN  L V G   + C + + V   NP TP+YKF  ++PG  F++LACY+G PSGVY   +R N TIKGSF+NG+CGS G+ +    + FCY+H MEL +G H G+D  G  YG + D+   Q  G +  IT NV+A+ YAA+ NG+RW+ ++ +T + +FN  A + N+  L     D+   ++++TG++V  + A++      G   RT+LG A + DE+T  +V++Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>92</Hit_num>
+  <Hit_id>ref|NP_740623.1|</Hit_id>
+  <Hit_def>coronavirus nsp2 (3CL-Pro) [Infectious bronchitis virus]</Hit_def>
+  <Hit_accession>NP_740623</Hit_accession>
+  <Hit_len>307</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>229.95</Hsp_bit-score>
+      <Hsp_score>585</Hsp_score>
+      <Hsp_evalue>7.20954e-70</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>307</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>131</Hsp_identity>
+      <Hsp_positive>179</Hsp_positive>
+      <Hsp_gaps>21</Hsp_gaps>
+      <Hsp_align-len>317</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICT-SEDMLNPNYEDLLIRKSNHNFLVQAGN-VQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGD-------RWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELL--QNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGFKKLVSPSSAVEKCIVSVSYRGNNLNGLWLGDTIYCPRHVLGKFSGDQWN----DVLNLANNHEFEVTTQHGVTLNVVSRRLKGAVLILQTAVANAETPKYKFIKANCGDSFTIACAYGGTVVGLYPVTMRSNGTIRASFLAGACGSVGFNIEKGVVNFFYMHHLELPNALHTGTDLMGEFYGGYVDEEVAQRVPPDNLVTNNIVAWLYAAIISVKESSFSLPKW-LESTTVSVDDYNKWAGDNGFTPFSTSTA--ITKLSAITGV---DVCKLLRTIMVKNSQWGGDPILGQYNFEDELTPESVFNQIGGVRLQ</Hsp_hseq>
+      <Hsp_midline>SGF+K+  PS  VE C+V V+     LNGLWL D +YCPRHV+   S D  N    D+L   +NH F V   + V L V+   ++  VL L+   AN +TPKYKF++   G +F++   Y G+  G+Y   MR N TI+ SFL G+CGSVGFNI+   V+F YMHH+ELP  +H GTDL G FYG +VD + AQ    D  +T N++AWLYAA+I+         +W L   T +++D+N  A    + P +      +  LSA TG+   D+C  L+ ++   +   G  ILG    EDE TP  V  Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>93</Hit_num>
+  <Hit_id>ref|YP_010037559.1|</Hit_id>
+  <Hit_def>orf1ab polyprotein [Tylonycteris bat coronavirus HKU33]</Hit_def>
+  <Hit_accession>YP_010037559</Hit_accession>
+  <Hit_len>6591</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>247.284</Hsp_bit-score>
+      <Hsp_score>630</Hsp_score>
+      <Hsp_evalue>9.50983e-70</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2808</Hsp_hit-from>
+      <Hsp_hit-to>3119</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>134</Hsp_identity>
+      <Hsp_positive>188</Hsp_positive>
+      <Hsp_gaps>4</Hsp_gaps>
+      <Hsp_align-len>316</Hsp_align-len>
+      <Hsp_qseq>PROCHAINABSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>PTVSYNSTLQSGLRKMAQPSGLIEKCVVRVSYGNMVLNGLWIGDQVICPRHVIAENTTTV-IDYDKAYSLVRLHNFSVVVGNVMLGVVSVAMRGTLLYIKVNQTNVNTPKHTFKVLKPGDSFNILACYEGVASGVYGVTLRNNHTIRGSFINGACGSPGYNLTNGGVEFCYIHQLELGSGCHVGSDINGIMYGGFEDQPTLQVEGASKLFTSNVIAFLYGALLNGCNWWLTSDRVNVDAFNDWACSNDFTTIST--VDMYTILSAKTGVDVQRILAAIQR-LSKGFGGNKILGYASLTDEFTVGEVVKQMYGVTLQ</Hsp_hseq>
+      <Hsp_midline>P   +     SG RKMA PSG +E C+V+V+ G   LNGLW+ D V CPRHVI  +   +  +Y+        HNF V  GNV L V+  +M+  +L +KV+  N  TPK+ F  ++PG +F++LACY G  SGVY   +R N TI+GSF+NG+CGS G+N+    V FCY+H +EL +G H G+D+ G  YG F D+ T Q  G     T NV+A+LY A++NG  W+L      ++ FN  A   ++  ++   VD+   LSA+TG+ V  + A+++  L  G  G  ILG A L DEFT  +VV+Q  GVT Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>94</Hit_num>
+  <Hit_id>ref|YP_001941178.1|</Hit_id>
+  <Hit_def>NSP5 [Turkey coronavirus]</Hit_def>
+  <Hit_accession>YP_001941178</Hit_accession>
+  <Hit_len>307</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>228.794</Hsp_bit-score>
+      <Hsp_score>582</Hsp_score>
+      <Hsp_evalue>2.12724e-69</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>307</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>128</Hsp_identity>
+      <Hsp_positive>175</Hsp_positive>
+      <Hsp_gaps>19</Hsp_gaps>
+      <Hsp_align-len>316</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGN-VQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGD-------RWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELL--QNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>AGFKKLVCPSSAVENCIVSVSYRGNNLNGLWLGDAIYCPRHVL---GKFSGDQWSDVLNLANNHEFEVVTQNGVTLNVVSRRLRGAVLILQTAVANADTPNYKFVKANCGDSFTIACSYGGTVVGLYPVTMRPNGTIRASFLAGACGSVGFNIEKGVVTFVYMHHLELPNALHTGTDLFGDFYGDYVDEEVAQRVPPDNLVTNNIVAWLYAAIISVKESSFSLPKW-LESTTVSVEDYNKWAGDNGFTPFSTSTA--ITKLSAITGV---DVCKLLRTIMVKSSQWGSDPILGQYNFEDELTPESVFNQVGGVRLQ</Hsp_hseq>
+      <Hsp_midline>+GF+K+  PS  VE C+V V+     LNGLWL D +YCPRHV+          + D+L   +NH F V   N V L V+   ++  VL L+   AN  TP YKFV+   G +F++   Y G+  G+Y   MRPN TI+ SFL G+CGSVGFNI+   V+F YMHH+ELP  +H GTDL G+FYG +VD + AQ    D  +T N++AWLYAA+I+         +W L   T ++ D+N  A    + P +      +  LSA TG+   D+C  L+ ++   +      ILG    EDE TP  V  Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>95</Hit_num>
+  <Hit_id>ref|YP_001876436.1|</Hit_id>
+  <Hit_def>ORF 1a polyprotein [Beluga whale coronavirus SW1]</Hit_def>
+  <Hit_accession>YP_001876436</Hit_accession>
+  <Hit_len>3964</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>245.358</Hsp_bit-score>
+      <Hsp_score>625</Hsp_score>
+      <Hsp_evalue>3.4982e-69</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2760</Hsp_hit-from>
+      <Hsp_hit-to>3062</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>129</Hsp_identity>
+      <Hsp_positive>183</Hsp_positive>
+      <Hsp_gaps>9</Hsp_gaps>
+      <Hsp_align-len>309</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLN---RFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>AGIKKMVAPSSAVEQCVVSVVHGNTQLNGLWLNDYVLCPRHILG---KYTGEQWRDALINANNFDFHILYKGMELQVVGRELVGALLKLKVSMVNANTPKYKFAKARIGDNFSIACAYNGHVSGLYTVTLRENGTLKGSFMSGSCGSVGYNVTNEGVEFVYMHHLELPGCVHGGSDLHGIFYGGYVDEEVLQRIPPAPANSRNIVAWLYAAVYNNCDWFVKYGPKQVMSVEDFNEWASGYGFTKF-EYHL-AFDVFSAATGVSVEQMLAAIKE-LADGWNYAPVLGSFHLDDEYSPEMIMQQTSGIVLQ</Hsp_hseq>
+      <Hsp_midline>+G +KM  PS  VE C+V V  G T LNGLWL+D V CPRH++          + D LI  +N +F +    ++L+V+G  +   +LKLKV   N  TPKYKF + + G  FS+   YNG  SG+Y   +R N T+KGSF++GSCGSVG+N+  + V F YMHH+ELP  VH G+DL G FYG +VD +  Q        + N++AWLYAAV N   WF+    +   ++ DFN  A  Y +    + H+      SA TG++V  M A++KE L +G N   +LGS  L+DE++P  +++Q SG+  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>96</Hit_num>
+  <Hit_id>ref|YP_009336483.1|</Hit_id>
+  <Hit_def>ORF1ab polyprotein [Lucheng Rn rat coronavirus]</Hit_def>
+  <Hit_accession>YP_009336483</Hit_accession>
+  <Hit_len>6749</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>245.358</Hsp_bit-score>
+      <Hsp_score>625</Hsp_score>
+      <Hsp_evalue>3.80759e-69</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2956</Hsp_hit-from>
+      <Hsp_hit-to>3257</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>128</Hsp_identity>
+      <Hsp_positive>192</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>307</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTS-EDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>SGFKKIAQPSGLVEPCVVKVTYLNSYLNGVWLGDQVYAPRHVIASDVTKIVDYDTEQNLVR--SHNFSISRGNSYLTVKGFRFEGCNVVISVVEVNPFTPEHKFDTLKPGDNFNILACYDGIPSGVYGVTLRHNSTIKGSFVNGTCGSPGYVISNGVIKFCYLHQMELGSGAHVGSDFNGKMYGGYQDQARIQVEGANKLITENVIAFFYAALLNGERWWCSKDSVCVTNFNSWAADNHYTMLST--TDVFNLVASKTGVSVEQVLAAIISYAK-GFGHRTILGYASINDEYTITEVMQQMFGVQLQ</Hsp_hseq>
+      <Hsp_midline>SGF+K+A PSG VE C+V+VT   + LNG+WL D VY PRHVI +    +++ + E  L+R  +HNF +  GN  L V G   + C + + V   NP TP++KF  ++PG  F++LACY+G PSGVY   +R N TIKGSF+NG+CGS G+ I    + FCY+H MEL +G H G+D  G  YG + D+   Q  G +  IT NV+A+ YAA++NG+RW+ ++ +  + +FN  A   +Y  L+    D+   ++++TG++V  + A++    + G   RTILG A + DE+T  +V++Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>97</Hit_num>
+  <Hit_id>ref|YP_009755914.1|</Hit_id>
+  <Hit_def>nsp5 [Canada goose coronavirus]</Hit_def>
+  <Hit_accession>YP_009755914</Hit_accession>
+  <Hit_len>307</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>227.639</Hsp_bit-score>
+      <Hsp_score>579</Hsp_score>
+      <Hsp_evalue>5.00019e-69</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>1</Hsp_hit-from>
+      <Hsp_hit-to>307</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>128</Hsp_identity>
+      <Hsp_positive>177</Hsp_positive>
+      <Hsp_gaps>19</Hsp_gaps>
+      <Hsp_align-len>316</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQ-LRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGD-------RWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNG--MNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>AGFKKLVAPSSGIENVLVMVRFKGNVLNGIWLNDLIYCPRHVIGKYS---GDDWQNALHMANNFDFEVISNKIGGLSVIERRMQGALLVLRVNQSNKNTPKFKFVKAHDGDTFTIACSYNGVIAGLYPCTLRANGTIKGSFGLGSCGSIGYNLVNGIYELCYMHHLELPGAIHAGTDLSGNFYGDFVDEEKAQFVKPDPLIANNVVAWLYAAIINYRESHYCYPKW-LESSSVSLEEFNAWAKDNGFTSFIDGPV--FQKLASITGV---ELGRVLRTILTKHACWGNDPILGSFSFDDEITPFSVVEQCGGVVLQ</Hsp_hseq>
+      <Hsp_midline>+GF+K+  PS  +E  +V V      LNG+WL+D++YCPRHVI         ++++ L   +N +F V +  +  L VI   MQ  +L L+V+ +N  TPK+KFV+   G TF++   YNG  +G+Y C +R N TIKGSF  GSCGS+G+N+       CYMHH+ELP  +HAGTDL GNFYG FVD + AQ    D  I  NV+AWLYAA+IN         +W L   + +L +FN  A    +       V     L++ TG+   ++   L+ +L          ILGS   +DE TPF VV QC GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>98</Hit_num>
+  <Hit_id>ref|YP_001876435.1|</Hit_id>
+  <Hit_def>ORF 1ab polyprotein [Beluga whale coronavirus SW1]</Hit_def>
+  <Hit_accession>YP_001876435</Hit_accession>
+  <Hit_len>6663</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>244.588</Hsp_bit-score>
+      <Hsp_score>623</Hsp_score>
+      <Hsp_evalue>7.83438e-69</Hsp_evalue>
+      <Hsp_query-from>19</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2760</Hsp_hit-from>
+      <Hsp_hit-to>3062</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>129</Hsp_identity>
+      <Hsp_positive>183</Hsp_positive>
+      <Hsp_gaps>9</Hsp_gaps>
+      <Hsp_align-len>309</Hsp_align-len>
+      <Hsp_qseq>SGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICTSEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLN---RFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>AGIKKMVAPSSAVEQCVVSVVHGNTQLNGLWLNDYVLCPRHILGK---YTGEQWRDALINANNFDFHILYKGMELQVVGRELVGALLKLKVSMVNANTPKYKFAKARIGDNFSIACAYNGHVSGLYTVTLRENGTLKGSFMSGSCGSVGYNVTNEGVEFVYMHHLELPGCVHGGSDLHGIFYGGYVDEEVLQRIPPAPANSRNIVAWLYAAVYNNCDWFVKYGPKQVMSVEDFNEWASGYGFTKF-EYHL-AFDVFSAATGVSVEQMLAAIKE-LADGWNYAPVLGSFHLDDEYSPEMIMQQTSGIVLQ</Hsp_hseq>
+      <Hsp_midline>+G +KM  PS  VE C+V V  G T LNGLWL+D V CPRH++          + D LI  +N +F +    ++L+V+G  +   +LKLKV   N  TPKYKF + + G  FS+   YNG  SG+Y   +R N T+KGSF++GSCGSVG+N+  + V F YMHH+ELP  VH G+DL G FYG +VD +  Q        + N++AWLYAAV N   WF+    +   ++ DFN  A  Y +    + H+      SA TG++V  M A++KE L +G N   +LGS  L+DE++P  +++Q SG+  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>99</Hit_num>
+  <Hit_id>ref|YP_009194638.1|</Hit_id>
+  <Hit_def>polyprotein ORF1a [Camel alphacoronavirus]</Hit_def>
+  <Hit_accession>YP_009194638</Hit_accession>
+  <Hit_len>4090</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>241.891</Hsp_bit-score>
+      <Hsp_score>616</Hsp_score>
+      <Hsp_evalue>6.23351e-68</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2961</Hsp_hit-from>
+      <Hsp_hit-to>3272</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>127</Hsp_identity>
+      <Hsp_positive>190</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>317</Hsp_align-len>
+      <Hsp_qseq>PROCHAINABSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICT-SEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>PTVSYGSTLQAGLRKMAQPSGIVEKCVVRVCYGNTVLNGLWLGDIVYCPRHVIASNTTAAIDYDHEYSIMRL--HNFSINSGTAFLGVVGATMHGATLKIKVSQTNMHTPRHSFKTLKSGEGFNILACYDGCAQGVFGVNMRTNWTIRGSFINGACGSPGYNLKNGEVEFVYMHQIELGSGSHVGSSFDGVMYGGFEDQPNLQVESANQMLTVNVVAFLYAAILNGCIWWLKGDKLSVEHYNEWAQANGFTAMNGE--DAFSILAAKTGVCVERLLHAI-QVLNNGFGGKNILGYSSLNDEFNINEVVKQMFGVNLQ</Hsp_hseq>
+      <Hsp_midline>P   +     +G RKMA PSG VE C+V+V  G T LNGLWL D+VYCPRHVI + +   ++ ++E  ++R   HNF + +G   L V+G +M    LK+KV   N  TP++ F  ++ G+ F++LACY+G   GV+   MR N+TI+GSF+NG+CGS G+N+    V F YMH +EL +G H G+  +G  YG F D+   Q    +  +TVNV+A+LYAA++NG  W+L     ++  +N  A    +  +  +  D    L+A+TG+ V  +  ++ ++L NG  G+ ILG + L DEF   +VV+Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+<Hit>
+  <Hit_num>100</Hit_num>
+  <Hit_id>ref|NP_073550.1|</Hit_id>
+  <Hit_def>replicase polyprotein 1a [Human coronavirus 229E]</Hit_def>
+  <Hit_accession>NP_073550</Hit_accession>
+  <Hit_len>4085</Hit_len>
+  <Hit_hsps>
+    <Hsp>
+      <Hsp_num>1</Hsp_num>
+      <Hsp_bit-score>241.121</Hsp_bit-score>
+      <Hsp_score>614</Hsp_score>
+      <Hsp_evalue>1.14301e-67</Hsp_evalue>
+      <Hsp_query-from>9</Hsp_query-from>
+      <Hsp_query-to>324</Hsp_query-to>
+      <Hsp_hit-from>2956</Hsp_hit-from>
+      <Hsp_hit-to>3267</Hsp_hit-to>
+      <Hsp_query-frame>0</Hsp_query-frame>
+      <Hsp_hit-frame>0</Hsp_hit-frame>
+      <Hsp_identity>127</Hsp_identity>
+      <Hsp_positive>190</Hsp_positive>
+      <Hsp_gaps>6</Hsp_gaps>
+      <Hsp_align-len>317</Hsp_align-len>
+      <Hsp_qseq>PROCHAINABSGFRKMAFPSGKVEGCMVQVTCGTTTLNGLWLDDVVYCPRHVICT-SEDMLNPNYEDLLIRKSNHNFLVQAGNVQLRVIGHSMQNCVLKLKVDTANPKTPKYKFVRIQPGQTFSVLACYNGSPSGVYQCAMRPNFTIKGSFLNGSCGSVGFNIDYDCVSFCYMHHMELPTGVHAGTDLEGNFYGPFVDRQTAQAAGTDTTITVNVLAWLYAAVINGDRWFLNRFTTTLNDFNLVAMKYNYEPLTQDHVDILGPLSAQTGIAVLDMCASLKELLQNGMNGRTILGSALLEDEFTPFDVVRQCSGVTFQ</Hsp_qseq>
+      <Hsp_hseq>PTVSYGSTLQAGLRKMAQPSGFVEKCVVRVCYGNTVLNGLWLGDIVYCPRHVIASNTTSAIDYDHEYSIMRL--HNFSIISGTAFLGVVGATMHGVTLKIKVSQTNMHTPRHSFRTLKSGEGFNILACYDGCAQGVFGVNMRTNWTIRGSFINGACGSPGYNLKNGEVEFVYMHQIELGSGSHVGSSFDGVMYGGFEDQPNLQVESANQMLTVNVVAFLYAAILNGCTWWLKGEKLFVEHYNEWAQANGFTAMNGE--DAFSILAAKTGVCVERLLHAI-QVLNNGFGGKQILGYSSLNDEFSINEVVKQMFGVNLQ</Hsp_hseq>
+      <Hsp_midline>P   +     +G RKMA PSG VE C+V+V  G T LNGLWL D+VYCPRHVI + +   ++ ++E  ++R   HNF + +G   L V+G +M    LK+KV   N  TP++ F  ++ G+ F++LACY+G   GV+   MR N+TI+GSF+NG+CGS G+N+    V F YMH +EL +G H G+  +G  YG F D+   Q    +  +TVNV+A+LYAA++NG  W+L      +  +N  A    +  +  +  D    L+A+TG+ V  +  ++ ++L NG  G+ ILG + L DEF+  +VV+Q  GV  Q</Hsp_midline>
+    </Hsp>
+  </Hit_hsps>
+</Hit>
+</Iteration_hits>
+  <Iteration_stat>
+    <Statistics>
+      <Statistics_db-num>309994348</Statistics_db-num>
+      <Statistics_db-len>119896716850</Statistics_db-len>
+      <Statistics_hsp-len>0</Statistics_hsp-len>
+      <Statistics_eff-space>0</Statistics_eff-space>
+      <Statistics_kappa>0.041</Statistics_kappa>
+      <Statistics_lambda>0.267</Statistics_lambda>
+      <Statistics_entropy>0.14</Statistics_entropy>
+    </Statistics>
+  </Iteration_stat>
+  <Iteration_message>One or more O characters replaced by X for alignment score calculations at positions 5, 10</Iteration_message>
+</Iteration>
+</BlastOutput_iterations>
+</BlastOutput>

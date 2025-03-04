@@ -1,0 +1,62 @@
+name: broad-spectrum
+channels:
+  - openeye
+  - conda-forge
+  - defaults
+dependencies:
+  # Base depends
+  - python >=3.10,<3.12
+  - pip
+
+  # Testing
+  - pytest
+  - pytest-cov
+  - pytest-xdist
+  - codecov
+  - pytest-console-scripts
+  - pytest-timeout
+  - requests-mock
+  - mock
+
+  # cli
+  - click
+
+  # Others
+  - asapdiscovery
+  - appdirs
+  - mdanalysis
+  - openeye-toolkits # may need  <2023.2.3 for lilac GLIBC
+  - openmmforcefields >= 0.13.0
+  - pandas
+  - pebble
+  - pydantic >=1.10.8,<2.0.0a0
+  - rdkit
+  - seaborn
+  - panel
+  - plotmol
+  - semver
+  - mafft
+  - scipy >=1.13.1
+  - biopython
+  - numpy
+
+  # md
+  - openmm
+  - openmmforcefields
+  - mdtraj
+  - cudatoolkit
+
+  # viz
+  - imageio
+  - pymol-open-source
+  - plotly
+
+  # scoring
+  - vina  
+  - adfr-suite
+
+
+    # Pip-only installs
+  #- pip:
+  #  - codecov
+
