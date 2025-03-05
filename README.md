@@ -4,7 +4,7 @@ Structure-based prediction of affinity across viral families.
 ## Intro
 The rapid emergence of viruses with pandemic and epidemic potential presents a continuous threat for public health worldwide. With the typical drug discovery pipeline taking an average of 6 years to     reach the pre-clinical stage, there is an urgent need for new strategies to design broad-spectrum antivirals that can target multiple viral family members and variants of concern. We present a structure-based computational pipeline designed to identify and evaluate broad-spectrum inhibitors across viral family members for a given target.
 
-Publication: (Link here when it exists) 
+Publication: _In progress_ 
 
 ## Contributors
 - Maria A. Castellanos
