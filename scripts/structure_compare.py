@@ -2,7 +2,8 @@ import MDAnalysis as mda
 import numpy as np
 from scipy.spatial.distance import cdist
 from Bio import pairwise2
-from lddt import lddt
+from scripts.lddt import lddt
+from pathlib import Path
 from asapdiscovery.spectrum.calculate_rmsd import rmsd_alignment
 from asapdiscovery.spectrum.blast import pdb_to_seq
 
@@ -288,3 +289,54 @@ def calculate_pddt(pred_protein, ref_protein, print_alignment=False):
         pred_coords, ref_coords, true_points_mask=true_points, per_residue=True
     )
     return p_res_lddt[0], ref_mask
+
+def get_bsite(pdb_label, pdb_ref, pdb_dir, chain_mob, chain_ref, lig_mob, lig_ref):
+    from MDAnalysis.lib.util import convert_aa_code
+    pdb_dir = Path(pdb_dir)
+    pdb = list(pdb_dir.glob(f"{pdb_label}*.pdb"))
+    if len(pdb) == 0:
+        print(f"PDB wasn't found for label {pdb_label}")
+        return None, None
+    u_ref = mda.Universe(pdb_ref)
+    u = mda.Universe(pdb[0])
+    res_ref = u_ref.select_atoms(f"protein and chainid {chain_ref} and not name H* and around 4.5 resname {lig_ref} and not resname ACE and not resname NME and not resname NMA").residues
+    res_mob = u.select_atoms(f"protein and chainid {chain_mob} and not name H* and around 4.5 resname {lig_mob} and not resname ACE and not resname NME and not resname NMA").residues
+    bs_ref = []
+    bs_mob = []
+    ref_len , mob_len = len(res_ref), len(res_mob)
+    seq_len = max(ref_len, mob_len)
+    for i in range(seq_len):
+        ref = convert_aa_code(res_ref[i].resname) if i < ref_len else '-'
+        mob = convert_aa_code(res_mob[i].resname) if i < mob_len else '-'
+        bs_ref.append(ref)
+        bs_mob.append(mob)
+    return bs_ref, bs_mob
+
+def calculate_bsite_score(aligned_sequences, 
+                          pdb_ref, 
+                          pdb_dir,  
+                          chain_mob='A', 
+                          chain_ref='A', 
+                          lig_mob='LIG', 
+                          lig_ref='LIG', 
+                          ref_idx=0,):
+    from Bio import pairwise2
+    num_alignments = len(aligned_sequences)
+    scores = []
+    ids = []
+    for s in range(num_alignments):
+        id_comp = aligned_sequences[s].id.split("|")[1].split(".")
+        label = f"{id_comp[0]}_{id_comp[1]}"
+        bs_ref, bs_mob = get_bsite(label, pdb_ref, pdb_dir, chain_mob, chain_ref, lig_mob, lig_ref)
+        if bs_ref is None:
+            continue
+        seq_ref = "".join(bs_ref)
+        seq_mob = "".join(bs_mob)
+        align_score = pairwise2.align.globalms(seq_ref, seq_mob, 2, -1, -1, -.5, score_only=True,)   
+        if s == ref_idx:
+            max_score = align_score
+        id_score = (align_score / max_score) * 100 
+        scores.append(id_score)
+        ids.append(label)
+
+    return ids, scores
