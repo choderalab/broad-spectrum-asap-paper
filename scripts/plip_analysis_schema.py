@@ -78,10 +78,12 @@ class ProteinLigandInteraction(BaseModel):
     protein_atom_type: AtomType = Field('none', description="Type of the protein atom involved in the interaction.")
     ligand_charge: FormalCharge = Field('neutral', description="Formal charge of the ligand involved in the interaction.")
     protein_charge: FormalCharge = Field('neutral', description="Formal charge of the protein involved in the interaction.")
+    protein_atom_number: int = Field(None,
+                                     description="Atom number of the protein involved in the interaction. Optional, can be None if not applicable.")
+    ligand_atom_number: int = Field(None, description= "Atom number of the ligand involved in the interaction. Optional, can be None if not applicable.")
 
     def to_json_dict(self) -> dict:
         return {k: v.value if k in [self.interaction_type, self.protein_residue_type] else v for k, v in self.dict().items()}
-
 
 
 def plip_constructor(plip: PLInteraction) -> list[ProteinLigandInteraction]:
@@ -106,31 +108,30 @@ def plip_constructor(plip: PLInteraction) -> list[ProteinLigandInteraction]:
         ligand_atom_type = AtomType.NONE
         ligand_charge = FormalCharge.Neutral
         protein_charge = FormalCharge.Neutral
+        protein_atom_number = None
+        ligand_atom_number = None
+
+
 
         if interaction_type == 'hbond':
-            if interaction.protisdon:
-                output_interaction_type = InteractionType.HydrogenBondAcceptor
-                protein_atom_type = AtomType(interaction.dtype[0])
-                ligand_atom_type = AtomType(interaction.atype[0])
-
-            else:
-                output_interaction_type = InteractionType.HydrogenBondDonor
-                protein_atom_type = AtomType(interaction.atype[0])
-                ligand_atom_type = AtomType(interaction.dtype[0])
+            output_interaction_type = InteractionType.HydrogenBondAcceptor if interaction.protisdon else InteractionType.HydrogenBondDonor
+            protein_atom_type = AtomType(interaction.dtype[0] if interaction.protisdon else interaction.atype[0])
+            ligand_atom_type = AtomType(interaction.atype[0] if interaction.protisdon else interaction.dtype[0])
+            protein_atom_number = interaction.a_orig_idx if interaction.protisdon else interaction.d_orig_idx
+            ligand_atom_number = interaction.d_orig_idx if interaction.protisdon else interaction.a_orig_idx
 
         elif interaction_type == 'halogenbond':
+            # We assume that halogen bonds are always ligand-donor protein-acceptor
             output_interaction_type = InteractionType.HalogenBond
             protein_atom_type = AtomType(interaction.acctype[0])
             ligand_atom_type = AtomType(interaction.donortype[0])
+            protein_atom_number = interaction.acc_orig_idx
+            ligand_atom_number = interaction.don_orig_idx
 
         elif interaction_type == 'saltbridge':
             output_interaction_type = InteractionType.SaltBridge
-            if interaction.protispos:
-                ligand_charge = FormalCharge.Negative
-                protein_charge = FormalCharge.Positive
-            else:
-                ligand_charge = FormalCharge.Positive
-                protein_charge = FormalCharge.Negative
+            ligand_charge = FormalCharge.Negative if interaction.protispos else FormalCharge.Positive
+            protein_charge = FormalCharge.Positive if interaction.protispos else FormalCharge.Negative
 
         elif interaction_type == 'hydroph_interaction':
             output_interaction_type = InteractionType.HydrophobicInteraction
@@ -191,109 +192,6 @@ def collect_duplicates(plints: list[ProteinLigandInteraction]) -> list[ProteinLi
     return list(obj_dict.values())
 
 
-def visualize_in_pymol(pdb_file: str | Path, mol: PDBComplex, binding_site: str, outpath: str | Path):
-    """
-    Copied from plip.visualization.visualize.visualize_in_pymol
-    Visualizes the PDBComplex in PyMOL, showing the binding site and interactions.
-
-    Parameters
-    ----------
-    pdb_file : str | Path
-        The path to the PDB file to be loaded in PyMOL.
-    mol : PDBComplex
-        The PDBComplex object containing the analyzed structure.
-    binding_site : str
-        The binding site identifier (e.g., "A_123" for chain A, residue 123).
-    outpath : str | Path
-        The path where the PyMOL session will be saved. Should include the .pse extension.
-    """
-    from plip.basic.remote import VisualizerData
-    from plip.visualization.pymol import PyMOLVisualizer
-    from plip.basic.supplemental import start_pymol
-    from pymol import cmd
-    viz_data = VisualizerData(mol, binding_site)
-    viz = PyMOLVisualizer(viz_data)
-
-    pdbid = viz_data.pdbid
-    lig_members = viz_data.lig_members
-    chain = viz_data.chain
-
-    ligname = viz.ligname
-    hetid = viz_data.hetid
-
-    metal_ids = viz_data.metal_ids
-    metal_ids_str = '+'.join([str(i) for i in metal_ids])
-
-    ########################
-    # Basic visualizations #
-    ########################
-
-    start_pymol(run=True, options='-pcq')
-    viz.set_initial_representations()
-
-    cmd.load(pdb_file)
-    # cmd.frame(config.MODEL)
-    current_name = cmd.get_object_list(selection='(all)')[0]
-
-    print(f'setting current_name to {current_name} and PDB-ID to {pdbid}')
-    cmd.set_name(current_name, pdbid)
-    cmd.hide('everything', 'all')
-    # if config.PEPTIDES:
-    #     cmd.select(ligname, 'chain %s and not resn HOH' % plcomplex.chain)
-    # else:
-    cmd.select(ligname, 'resn %s and chain %s and resi %s*' % (hetid, chain, viz_data.position))
-    print(f'selecting ligand for PDBID {pdbid} and ligand name {ligname}')
-    print(f'resn {hetid} and chain {chain} and resi {viz_data.position}')
-
-    # Visualize and color metal ions if there are any
-    if not len(metal_ids) == 0:
-        viz.select_by_ids(ligname, metal_ids, selection_exists=True)
-        cmd.show('spheres', 'id %s and %s' % (metal_ids_str, pdbid))
-
-    # Additionally, select all members of composite ligands
-    if len(lig_members) > 1:
-        for member in lig_members:
-            resid, chain, resnr = member[0], member[1], str(member[2])
-            cmd.select(ligname, '%s or (resn %s and chain %s and resi %s)' % (ligname, resid, chain, resnr))
-
-    cmd.show('sticks', ligname)
-    cmd.color('myblue')
-    cmd.color('myorange', ligname)
-    cmd.util.cnc('all')
-    if not len(metal_ids) == 0:
-        cmd.color('hotpink', 'id %s' % metal_ids_str)
-        cmd.hide('sticks', 'id %s' % metal_ids_str)
-        cmd.set('sphere_scale', 0.3, ligname)
-    cmd.deselect()
-
-    print("Setting initial representations complete. Now visualizing interactions...")
-    viz.make_initial_selections()
-
-    viz.show_hydrophobic()  # Hydrophobic Contacts
-    viz.show_hbonds()  # Hydrogen Bonds
-    viz.show_halogen()  # Halogen Bonds
-    viz.show_stacking()  # pi-Stacking Interactions
-    viz.show_cationpi()  # pi-Cation Interactions
-    viz.show_sbridges()  # Salt Bridges
-    viz.show_wbridges()  # Water Bridges
-    viz.show_metal()  # Metal Coordination
-
-    viz.refinements()
-
-    viz.zoom_to_ligand()
-
-    viz.selections_cleanup()
-
-    viz.selections_group()
-    viz.additional_cleanup()
-    print(f"Saving session to {outpath}")
-    cmd.save(outpath)
-
-    print("Deleting Session")
-    cmd.delete('all')
-
-    cmd.quit()
-
 class PLIntReport(BaseModel):
     """
     Class to store a report of PLIP interactions
@@ -310,8 +208,7 @@ class PLIntReport(BaseModel):
     interactions: list[ProteinLigandInteraction] = Field( ..., description="List of Protein-Ligand Interaction objects found in the structure.")
 
     @classmethod
-    def from_complex_path(cls, complex_path: str | Path, ligand_id="UNK", create_pymol_session=False,
-                          pymol_session_path: str | Path = None) -> "PLIntReport":
+    def from_complex_path(cls, complex_path: str | Path, ligand_id="UNK") -> "PLIntReport":
         """
         Create a PLIntReport from a PDBComplex object loaded from a file path.
 
@@ -321,20 +218,11 @@ class PLIntReport(BaseModel):
             The path to the PDB file containing the protein-ligand complex.
         ligand_id : str, optional
             The identifier of the ligand in the complex (default is "UNK").
-        create_pymol_session : bool, optional
-            Whether to create a PyMOL session visualizing the interactions (default is False).
-        pymol_session_path : str | Path, optional
-            The path where the PyMOL session will be saved. Should include the .pse extension. Required if create_pymol_session is True.
 
         Returns
         -------
         PLIntReport
             An instance of PLIntReport containing the structure path and a list of ProteinLigandInteraction objects.
-
-        Raises
-        ------
-        ValueError
-            If create_pymol_session is True and pymol_session_path is not provided.
         """
         my_mol = PDBComplex()
         my_mol.load_pdb(str(complex_path))
@@ -354,11 +242,6 @@ class PLIntReport(BaseModel):
             interactions = collect_duplicates(plip_constructor(raw_plip_report))
         else:
             interactions = []
-
-        if create_pymol_session:
-            if not pymol_session_path:
-                raise ValueError("Output directory must be specified to create a pymol session")
-            visualize_in_pymol(complex_path, my_mol, binding_site, pymol_session_path)
 
         return cls(structure=str(complex_path), interactions=interactions)
 
