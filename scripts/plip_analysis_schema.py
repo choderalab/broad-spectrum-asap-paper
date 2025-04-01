@@ -235,15 +235,15 @@ def visualize_in_pymol(pdb_file: str | Path, mol: PDBComplex, binding_site: str,
     # cmd.frame(config.MODEL)
     current_name = cmd.get_object_list(selection='(all)')[0]
 
-    # logger.debug(f'setting current_name to {current_name} and PDB-ID to {pdbid}')
+    print(f'setting current_name to {current_name} and PDB-ID to {pdbid}')
     cmd.set_name(current_name, pdbid)
     cmd.hide('everything', 'all')
     # if config.PEPTIDES:
     #     cmd.select(ligname, 'chain %s and not resn HOH' % plcomplex.chain)
     # else:
     cmd.select(ligname, 'resn %s and chain %s and resi %s*' % (hetid, chain, viz_data.position))
-    # logger.debug(f'selecting ligand for PDBID {pdbid} and ligand name {ligname}')
-    # logger.debug(f'resn {hetid} and chain {chain} and resi {viz_data.position}')
+    print(f'selecting ligand for PDBID {pdbid} and ligand name {ligname}')
+    print(f'resn {hetid} and chain {chain} and resi {viz_data.position}')
 
     # Visualize and color metal ions if there are any
     if not len(metal_ids) == 0:
@@ -266,6 +266,7 @@ def visualize_in_pymol(pdb_file: str | Path, mol: PDBComplex, binding_site: str,
         cmd.set('sphere_scale', 0.3, ligname)
     cmd.deselect()
 
+    print("Setting initial representations complete. Now visualizing interactions...")
     viz.make_initial_selections()
 
     viz.show_hydrophobic()  # Hydrophobic Contacts
@@ -285,21 +286,13 @@ def visualize_in_pymol(pdb_file: str | Path, mol: PDBComplex, binding_site: str,
 
     viz.selections_group()
     viz.additional_cleanup()
-
-    cmd.set_view("0.790048063, 0.453209877, -0.412817836, \
-        0.451398253, -0.885698199, -0.108479470, \
-        -0.414800942, -0.100639485, -0.904327989, \
-        -0.000238426, 0.001031738, -48.357181549, \
-        -0.659594536, 96.026756287, 16.970699310, \
-        25.949367523, 70.827865601, -20.000000000")
-    viz.save_picture(outpath.parent, outpath.stem)
-
-    # filename = '%s_%s' % (pdbid.upper(), "_".join([hetid, viz_data.chain, viz_data.position]))
     print(f"Saving session to {outpath}")
     cmd.save(outpath)
 
     print("Deleting Session")
     cmd.delete('all')
+
+    cmd.quit()
 
 class PLIntReport(BaseModel):
     """
@@ -313,23 +306,35 @@ class PLIntReport(BaseModel):
         A list of ProteinLigandInteraction objects representing the interactions found in the structure.
 
     """
-    structure: str = Field(..., description="Path to the PDB structure file.")
-    interactions: list[ProteinLigandInteraction]
+    structure: str = Field(None, description="Path to the PDB structure file.")
+    interactions: list[ProteinLigandInteraction] = Field( ..., description="List of Protein-Ligand Interaction objects found in the structure.")
 
     @classmethod
-    def from_complex_path(cls, complex_path: str | Path, ligand_id="UNK", create_pymol_session=False, pymol_session_path: str | Path = None, ) -> "PLIntReport":
+    def from_complex_path(cls, complex_path: str | Path, ligand_id="UNK", create_pymol_session=False,
+                          pymol_session_path: str | Path = None) -> "PLIntReport":
         """
         Create a PLIntReport from a PDBComplex object loaded from a file path.
+
         Parameters
         ----------
-        complex_path
-        ligand_id
-        create_pymol_session
-        pymol_session_path
+        complex_path : str | Path
+            The path to the PDB file containing the protein-ligand complex.
+        ligand_id : str, optional
+            The identifier of the ligand in the complex (default is "UNK").
+        create_pymol_session : bool, optional
+            Whether to create a PyMOL session visualizing the interactions (default is False).
+        pymol_session_path : str | Path, optional
+            The path where the PyMOL session will be saved. Should include the .pse extension. Required if create_pymol_session is True.
 
         Returns
         -------
+        PLIntReport
+            An instance of PLIntReport containing the structure path and a list of ProteinLigandInteraction objects.
 
+        Raises
+        ------
+        ValueError
+            If create_pymol_session is True and pymol_session_path is not provided.
         """
         my_mol = PDBComplex()
         my_mol.load_pdb(str(complex_path))
@@ -347,7 +352,6 @@ class PLIntReport(BaseModel):
         if binding_site:
             raw_plip_report = my_mol.interaction_sets[binding_site]
             interactions = collect_duplicates(plip_constructor(raw_plip_report))
-
         else:
             interactions = []
 
@@ -359,14 +363,35 @@ class PLIntReport(BaseModel):
         return cls(structure=str(complex_path), interactions=interactions)
 
     def to_csv(self, path: str | Path):
+        """
+        Save the interactions to a CSV file.
+
+        Parameters
+        ----------
+        path : str | Path
+            The path where the CSV file will be saved.
+        """
         df = pd.DataFrame.from_records([json.loads(interaction.json()) for interaction in self.interactions])
         df.to_csv(path, index=False)
 
     @classmethod
-    def from_csv(cls, path: str | Path):
-        df = pd.read_csv(path)
+    def from_csv(cls, plint_report: str | Path, pdb_file: str | Path = None) -> "PLIntReport":
+        """
+        Create a PLIntReport from a CSV file.
+
+        Parameters
+        ----------
+        plint_report : str | Path
+            The path to the CSV file containing the interactions.
+
+        Returns
+        -------
+        PLIntReport
+            An instance of PLIntReport containing the structure path and a list of ProteinLigandInteraction objects.
+        """
+        df = pd.read_csv(plint_report)
         interactions = [ProteinLigandInteraction(**row) for _, row in df.iterrows()]
-        return PLIntReport(structure=path.stem, interactions=interactions)
+        return PLIntReport(structure=pdb_file, interactions=interactions)
 
 
 class FingerprintLevel(Enum):
@@ -387,10 +412,35 @@ class FingerprintLevel(Enum):
 
 def calculate_fingerprint(plint_report: PLIntReport, level: FingerprintLevel) -> dict:
     """
-    Calculate a fingerprint of the interactions in a PLIntReport
-    :param plint_report:
-    :param level:
-    :return: dict
+    Calculate a fingerprint of the protein-ligand interactions based on the specified level of detail.
+
+    Parameters
+    ----------
+    plint_report : PLIntReport
+        A report containing a list of protein-ligand interactions.
+    level : FingerprintLevel
+        The level of detail for the fingerprint. Options include:
+        - ByTotalInteractions: Returns total count of interactions
+        - ByInteractionType: Groups by type (hydrogen bond, salt bridge, etc.)
+        - ByInteractionTypeAndResidueType: Groups by type and residue (e.g., HBond_ALA)
+        - ByInteractionTypeAndAtomTypes: Groups by type and atom types involved
+        - ByInteractionTypeAndResidueTypeAndBBorSC: Groups by type, residue and backbone/sidechain
+        - ByInteractionTypeAndResidueTypeAndNumber: Groups by type, residue and residue number
+        - ByEverything: Creates unique key for each unique interaction property combination
+
+    Returns
+    -------
+    dict
+        A dictionary where keys are interaction descriptors based on the specified level
+        and values are the counts of those interactions. For example:
+        - ByTotalInteractions: {'TotalInteractions': 5}
+        - ByInteractionType: {'HydrogenBond': 2, 'SaltBridge': 3}
+        - ByInteractionTypeAndResidueType: {'HydrogenBond_ALA': 1, 'HydrogenBond_SER': 1}
+
+    Raises
+    ------
+    ValueError
+        If an invalid FingerprintLevel is provided.
     """
     fingerprint_dict = {}
     if level == FingerprintLevel.ByTotalInteractions:
@@ -418,31 +468,42 @@ def calculate_fingerprint(plint_report: PLIntReport, level: FingerprintLevel) ->
 
 class SimilarityScore(BaseModel):
     """
-    Class to store a similarity score between two fingerprints with some record of how it was calculated
+    Class to store a similarity score between two fingerprints with some record of how it was calculated.
     """
-    provenance: str
-    score: float
-    number_of_interactions_in_reference: int
-    number_of_interactions_in_query: int
-    number_of_interactions_in_intersection: int
-    number_of_interactions_in_union: int
+    provenance: str = Field(..., description="Method used to calculate the similarity score.")
+    score: float = Field(..., description="Similarity score between the two fingerprints, ranging from 0 to 1.")
+    number_of_interactions_in_reference: int = Field(..., description="Total number of interactions in the reference fingerprint.")
+    number_of_interactions_in_query: int = Field(..., description="Total number of interactions in the query fingerprint.")
+    number_of_interactions_in_intersection: int = Field(..., description="Number of interactions common to both fingerprints.")
+    number_of_interactions_in_union: int = Field(..., description="Total number of unique interactions across both fingerprints.")
 
 
 def calculate_tversky(fingerprint1: dict, fingerprint2: dict, alpha: float = 1, beta: float = 0) -> SimilarityScore:
     """
     Calculate the Tversky Index between two fingerprints.
+
+    The Tversky Index is an asymmetric similarity measure that generalizes several other similarity coefficients:
     Tversky Index = |A ∩ B| / (|A ∩ B| + α|A - B| + β|B - A|)
-    To calculate the Recall, set alpha=1, beta=0.
-    To calculate the Tanimoto Coefficient, set alpha=beta=1
-    To calculate the Dice Coefficient, set alpha=beta=0.5
+    - For Recall: α=1, β=0
+    - For Tanimoto Coefficient: α=β=1
+    - For Dice Coefficient: α=β=0.5
 
-    :param fingerprint1:
-    :param fingerprint2:
-    :param alpha:
-    :param beta:
-    :return:
+    Parameters
+    ----------
+    fingerprint1 : dict
+        Reference fingerprint dictionary with features as keys and counts as values.
+    fingerprint2 : dict
+        Query fingerprint dictionary with features as keys and counts as values.
+    alpha : float, optional
+        Weight for features unique to fingerprint1 (default=1).
+    beta : float, optional
+        Weight for features unique to fingerprint2 (default=0).
+
+    Returns
+    -------
+    SimilarityScore
+        Object containing the similarity score and additional metrics about the comparison.
     """
-
     # First get the union of the keys
     fp_types = set(fingerprint1.keys()).union(set(fingerprint2.keys()))
 
@@ -466,15 +527,15 @@ class InteractionScore(BaseModel):
     Class to store the results of comparing two PLIntReports.
     Automatically calculates the Tanimoto Coefficient (alpha=beta=1) and the Tversky Index (alpha=1, beta=0)
     """
-    provenance: str
-    number_of_interactions_in_query: int
-    number_of_interactions_in_reference: int
-    number_of_interactions_in_intersection: int
-    number_of_interactions_in_union: int
-    tanimoto_coefficient: float
-    tversky_index: float
-    reference_fingerprint: dict
-    query_fingerprint: dict
+    provenance: str = Field(..., description="Level of detail used for the fingerprint comparison (e.g., ByInteractionType).")
+    number_of_interactions_in_query: int = Field(..., description="Total number of interactions in the query structure.")
+    number_of_interactions_in_reference: int = Field(..., description="Total number of interactions in the reference structure.")
+    number_of_interactions_in_intersection: int = Field(..., description="Number of interactions common to both structures.")
+    number_of_interactions_in_union: int = Field(..., description="Total number of unique interactions across both structures.")
+    tanimoto_coefficient: float = Field(..., description="Tanimoto coefficient (α=β=1) measuring similarity between the structures, ranges from 0 to 1.")
+    tversky_index: float = Field(..., description="Tversky index (α=1, β=0) measuring how well the query matches the reference, ranges from 0 to 1.")
+    reference_fingerprint: dict = Field(..., description="Dictionary containing the interaction fingerprint of the reference structure.")
+    query_fingerprint: dict = Field(..., description="Dictionary containing the interaction fingerprint of the query structure.")
 
     @classmethod
     def from_fingerprints(cls, reference: PLIntReport, query: PLIntReport,
