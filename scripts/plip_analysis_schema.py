@@ -78,9 +78,9 @@ class ProteinLigandInteraction(BaseModel):
     protein_atom_type: AtomType = Field('none', description="Type of the protein atom involved in the interaction.")
     ligand_charge: FormalCharge = Field('neutral', description="Formal charge of the ligand involved in the interaction.")
     protein_charge: FormalCharge = Field('neutral', description="Formal charge of the protein involved in the interaction.")
-    protein_atom_number: int = Field(None,
-                                     description="Atom number of the protein involved in the interaction. Optional, can be None if not applicable.")
-    ligand_atom_number: int = Field(None, description= "Atom number of the ligand involved in the interaction. Optional, can be None if not applicable.")
+    protein_atom_number: int = Field(-1,
+                                     description="Atom number of the protein involved in the interaction. Optional, can be -1 if not applicable.")
+    ligand_atom_number: int = Field(-1, description= "Atom number of the ligand involved in the interaction. Optional, can be -1 if not applicable.")
 
     def to_json_dict(self) -> dict:
         return {k: v.value if k in [self.interaction_type, self.protein_residue_type] else v for k, v in self.dict().items()}
@@ -108,8 +108,8 @@ def plip_constructor(plip: PLInteraction) -> list[ProteinLigandInteraction]:
         ligand_atom_type = AtomType.NONE
         ligand_charge = FormalCharge.Neutral
         protein_charge = FormalCharge.Neutral
-        protein_atom_number = None
-        ligand_atom_number = None
+        protein_atom_number = -1
+        ligand_atom_number = -1
 
 
 
@@ -162,7 +162,9 @@ def plip_constructor(plip: PLInteraction) -> list[ProteinLigandInteraction]:
                                                      ligand_atom_type=ligand_atom_type,
                                                      protein_atom_type=protein_atom_type,
                                                      ligand_charge=ligand_charge,
-                                                     protein_charge=protein_charge
+                                                     protein_charge=protein_charge,
+                                                    protein_atom_number=protein_atom_number,
+                                                    ligand_atom_number=ligand_atom_number,
                                                      ))
     return interactions
 
@@ -204,7 +206,8 @@ class PLIntReport(BaseModel):
         A list of ProteinLigandInteraction objects representing the interactions found in the structure.
 
     """
-    structure: str = Field(None, description="Path to the PDB structure file.")
+    report_id: str = Field(..., description="Identifier for the structure, typically the input structure filename without extension.")
+    structure: str = Field(..., description="Path to the PDB structure file.")
     interactions: list[ProteinLigandInteraction] = Field( ..., description="List of Protein-Ligand Interaction objects found in the structure.")
 
     @classmethod
@@ -243,7 +246,7 @@ class PLIntReport(BaseModel):
         else:
             interactions = []
 
-        return cls(structure=str(complex_path), interactions=interactions)
+        return cls(report_id=complex_path.stem, structure=str(complex_path), interactions=interactions)
 
     def to_csv(self, path: str | Path):
         """
@@ -255,10 +258,12 @@ class PLIntReport(BaseModel):
             The path where the CSV file will be saved.
         """
         df = pd.DataFrame.from_records([json.loads(interaction.json()) for interaction in self.interactions])
+        df['report_id'] = self.report_id  # Add report_id to each row for reference
+        df['structure'] = self.structure  # Add structure path to each row for reference
         df.to_csv(path, index=False)
 
     @classmethod
-    def from_csv(cls, plint_report: str | Path, pdb_file: str | Path = None) -> "PLIntReport":
+    def from_csv(cls, plint_report: str | Path) -> "PLIntReport":
         """
         Create a PLIntReport from a CSV file.
 
@@ -273,8 +278,11 @@ class PLIntReport(BaseModel):
             An instance of PLIntReport containing the structure path and a list of ProteinLigandInteraction objects.
         """
         df = pd.read_csv(plint_report)
+        report_id = df['report_id'].iloc[0] if 'report_id' in df.columns else Path(plint_report).stem
+        pdb_file = df['structure'].iloc[0] if 'structure' in df.columns else str(plint_report)
+
         interactions = [ProteinLigandInteraction(**row) for _, row in df.iterrows()]
-        return PLIntReport(structure=pdb_file, interactions=interactions)
+        return PLIntReport(report_id=report_id, structure=pdb_file, interactions=interactions)
 
 
 class FingerprintLevel(Enum):
