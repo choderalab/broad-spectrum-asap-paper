@@ -116,12 +116,12 @@ def get_roc_curve(
     ax.set_ylim([0.0, 1.01])
     ax.set_xlabel("False Positive Rate", fontsize=14)
     ax.set_ylabel("True Positive Rate", fontsize=14)
-    ax.set_title(f"{title}, {pred_type}", fontsize=12)
+    ax.set_title(f"{title} {pred_type}", fontsize=14)
     if box:
         ax.text(
             0.62,
             0.1,
-            f"AUC={round(mean_auc,2)}+/-{round(stdev,3)}",
+            f"AUC={round(mean_auc,3)}+/-{round(stdev,3)}",
             bbox=dict(alpha=0.1, pad=5),
             fontsize=12,
             ha="center",
@@ -137,7 +137,7 @@ def calculate_classif_metrics(tn, fp, fn, tp):
     return sensitivity, specificity, precision
 
 
-def get_conf_mat(ax, pred, exp, pred_criteria, exp_criteria, pred_type):
+def get_conf_mat(ax, pred, exp, pred_criteria, exp_criteria, pred_type, box_pad=-0.48):
     plt.rcParams.update({"font.size": 12})
     plt.rc("xtick", labelsize=12)  # fontsize of the tick labels
     plt.rc("ytick", labelsize=12)  # fontsize of the tick labels
@@ -157,18 +157,18 @@ def get_conf_mat(ax, pred, exp, pred_criteria, exp_criteria, pred_type):
         xticklabels=["False", "True"],
         yticklabels=["False", "True"],
         ax=ax,
-        annot_kws={"size": 16},
+        annot_kws={"size": 24},
     )
-    ax.set_xlabel("Predicted inhibitors", fontsize=12, labelpad=2)
-    ax.set_ylabel("True inhibitors", fontsize=12)
+    ax.set_xlabel("Predicted inhibitors", fontsize=14, labelpad=2)
+    ax.set_ylabel("True inhibitors", fontsize=14)
     ax.set_title(
-        f"signal recov>{exp_criteria}, {pred_type}<{round(pred_criteria,1)}",
+        f"Experiment>{exp_criteria}, {pred_type}<{round(pred_criteria,1)}",
         fontsize=12,
     )
 
     ax.text(
         1,
-        -0.48,
+        box_pad,
         text,
         bbox=dict(alpha=0.1, pad=5),
         fontsize=12,
@@ -290,7 +290,7 @@ def plot_affinity_compare(
         label_pad,
         title,
         bbox=dict(alpha=0.1, pad=5),
-        fontsize=10,
+        fontsize=12,
         ha="center",
     )
     ax[0].set_title(f"{target}")  #: RMSE: {title}")
@@ -311,15 +311,16 @@ def plot_affinity_compare(
     if classif_plot == "conf-matrix":
         ax[1] = get_conf_mat(
             ax[1],
-            all_aff["is_binder_pred"],
-            all_aff["is_binder"],
+            all_aff["pred-pIC50"],
+            all_aff["pIC50"],
             binder_cond,
             binder_cond,
             "pIC50",
-            "pIC50",
+            box_pad=2.57,
         )
     elif classif_plot == "roc-curve":
-        ax[1] = get_roc_curve(ax[1], all_aff["pred-pIC50"], all_aff["is_binder"])
+        ax[1] = get_roc_curve(ax[1], all_aff["pred-pIC50"], all_aff["is_binder"], 
+                              title='"Good inhibitors" (IC50<10µM)',)
     else:
         raise NotImplementedError("wrong value for classif_plot")
     plt.xticks(fontsize=11)
@@ -524,6 +525,7 @@ def plot_score_correlation(
     xlabel: str,
     figsize: Tuple = (7, 5),
     type: str = "bars",
+    ax: plt.Axes = None,
 ):
     """Different plots to visualize the correlation between experimental and predicted scores
 
@@ -553,11 +555,12 @@ def plot_score_correlation(
     plt.Figure
         Figure object
     """
+    if ax is None:
+        fig, ax = plt.subplots(layout="constrained", figsize=figsize)
 
     if type == "scatter":
         markers = ["o", "s", "^", "D", "v", "*"]
         colors = sns.color_palette("tab10", len(df) - 1)
-        fig, ax = plt.subplots(layout="constrained", figsize=figsize)
 
         for i, col in enumerate(df.columns[:-3]):
             plt.scatter(
@@ -584,7 +587,6 @@ def plot_score_correlation(
         p.figure.suptitle(title, fontsize=18, y=1.02)
 
     elif type == "heatmap":
-        fig, ax = plt.subplots(layout="constrained", figsize=figsize)
         df_numeric = df.select_dtypes(include=["number"])
         corr = df_numeric.corr()
         matrix = np.triu(corr)
@@ -618,7 +620,6 @@ def plot_score_correlation(
         x_labels = list(sorted_corr.keys())  # Column names
         y_values = list(sorted_corr.values())  # Correlation values
 
-        fig, ax = plt.subplots(figsize=(6.0, 5))
         p = sns.barplot(x=x_labels, y=y_values, ax=ax)
         ax.xaxis.set_ticks(np.arange(len(x_labels)))
         ax.set_xticklabels(
@@ -633,4 +634,4 @@ def plot_score_correlation(
 
     else:
         raise NotImplementedError(f"Plot type {type} not implemented")
-    return p.figure
+    return p.figure, ax
