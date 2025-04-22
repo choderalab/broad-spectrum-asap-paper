@@ -324,6 +324,7 @@ def calculate_bsite_score(aligned_sequences,
     num_alignments = len(aligned_sequences)
     scores = []
     ids = []
+    matched_residues = []
     for s in range(num_alignments):
         id_comp = aligned_sequences[s].id.split("|")[1].split(".")
         label = f"{id_comp[0]}_{id_comp[1]}"
@@ -332,11 +333,22 @@ def calculate_bsite_score(aligned_sequences,
             continue
         seq_ref = "".join(bs_ref)
         seq_mob = "".join(bs_mob)
-        align_score = pairwise2.align.globalms(seq_ref, seq_mob, 2, -1, -1, -.5, score_only=True,)   
+        alignment = pairwise2.align.globalms(seq_ref, seq_mob, 2, -1, -1, -.5, )[0] 
+        seq_ref_aligned, seq_mob_aligned, align_score, _, _ = alignment
         if s == ref_idx:
             max_score = align_score
-        id_score = (align_score / max_score) * 100 
+        id_score = (align_score/ max_score) * 100 
         scores.append(id_score)
         ids.append(label)
 
-    return ids, scores
+        # Which residues match with the reference?
+        formatted_alignment = pairwise2.format_alignment(*alignment)
+        # Extract the alignment symbols
+        alignment_lines = formatted_alignment.split("\n")
+        alignment_symbols = alignment_lines[1]  
+        # Matched residues in reference
+        matched_residues.append([
+        res for res, sym in zip(seq_ref_aligned, alignment_symbols) if sym == "|" and res != '-'
+        ])
+
+    return ids, scores, matched_residues
