@@ -23,7 +23,7 @@ class ProcessingError(Exception):
     pass
 
 
-def analyze_structure(structure: Path, name: str, output_dir: Path) -> Path:
+def analyze_structure(structure: Path, name: str, output_dir: Path, ligand_id: str) -> Path:
     """
     Analyze a single structure using PLIP.
 
@@ -50,6 +50,7 @@ def analyze_structure(structure: Path, name: str, output_dir: Path) -> Path:
         outpath = output_dir / f"{name}_{structure.stem}_interactions.csv"
         interactions = PLIntReport.from_complex_path(
             complex_path=structure,
+            ligand_id=ligand_id,
         )
         interactions.to_csv(outpath)
         click.echo(f"Saved interactions to {outpath}")
@@ -60,7 +61,7 @@ def analyze_structure(structure: Path, name: str, output_dir: Path) -> Path:
         raise ProcessingError(error_msg)
 
 
-def process_structure_batch(structures: list[Path], name: str, output_dir: Path, ncpus: int) -> tuple[list[Path], list[str]]:
+def process_structure_batch(structures: list[Path], name: str, output_dir: Path, ncpus: int, ligand_id: str) -> tuple[list[Path], list[str]]:
     """
     Process a batch of structures in parallel.
 
@@ -76,6 +77,7 @@ def process_structure_batch(structures: list[Path], name: str, output_dir: Path,
         analyze_structure,
         name=name,
         output_dir=output_dir,
+        ligand_id=ligand_id,
     )
 
     with ProcessPool(max_workers=ncpus) as pool:
@@ -123,7 +125,13 @@ def process_structure_batch(structures: list[Path], name: str, output_dir: Path,
     help="Path to error log file",
     default="plip_errors.log"
 )
-def main(yaml_input: Path, output_dir: Path, ncpus: int, error_log: Path):
+@click.option(
+    "--ligand-id",
+    type=str,
+    help="Residue name of the ligand",
+    default="UNK"
+)
+def main(yaml_input: Path, output_dir: Path, ncpus: int, ligand_id: str, error_log: Path):
     """Get PLIP interactions"""
     output_dir.mkdir(exist_ok=True)
     all_errors = []
@@ -153,7 +161,7 @@ def main(yaml_input: Path, output_dir: Path, ncpus: int, error_log: Path):
             continue
 
         click.echo(f"Analyzing {len(structures)} structures")
-        successful, errors = process_structure_batch(structures, name, output_dir, ncpus)
+        successful, errors = process_structure_batch(structures, name, output_dir, ncpus, ligand_id)
 
         if errors:
             all_errors.extend(errors)
