@@ -72,6 +72,50 @@ def bootstrap_auc(
 
     return mean_auc, standard_error, ci_lower, ci_upper
 
+def bootstrap_corr(
+    x: Union[List, np.ndarray],
+    y: Union[List, np.ndarray],
+    n_bootstraps=500,
+):
+    """Function to perform bootstrap sampling and calculate correlation (Pearson)
+
+    Parameters
+    ----------
+    x : Union[List,np.ndarray]
+        Target variable
+    y : Union[List,np.ndarray]
+        Valuate to calculate correlation against
+    n_bootstraps : int, optional
+        Number of bootstrap samples, by default 500
+
+    Returns
+    -------
+    Tuple
+        Mean correlation, standard error, lower and upper bounds of the 95% confidence interval
+    """
+    bootstrapped_corrs = []
+    np.random.seed(42)
+
+    n_samples = len(x)
+
+    for i in range(n_bootstraps):
+        indices = np.random.choice(np.arange(n_samples), size=n_samples, replace=True)
+        x_sample = np.array(x)[indices]
+        y_sample = np.array(y)[indices]
+        corr = np.corrcoef(x_sample, y_sample)[0, 1]  # Pearson correlation
+        bootstrapped_corrs.append(corr)
+
+    bootstrapped_corrs = np.array(bootstrapped_corrs)
+    clean_corrs = bootstrapped_corrs[np.logical_not(np.isnan(bootstrapped_corrs))]
+
+    sorted_corrs = np.sort(clean_corrs)
+    ci_lower = np.percentile(sorted_corrs, 2.5)
+    ci_upper = np.percentile(sorted_corrs, 97.5)
+
+    mean_corr = np.mean(clean_corrs)
+    standard_error = np.std(clean_corrs) / np.sqrt(n_bootstraps)
+
+    return mean_corr, standard_error, ci_lower, ci_upper
 
 def get_roc_curve(
     ax,
@@ -93,7 +137,7 @@ def get_roc_curve(
             pred_labels, exp_labels, n_bootstraps
         )
         print(
-            f"AUC is {roc_auc}, with bootstrap-sampling is {round(mean_auc,2)}+/-{round(stdev,3)}"
+            f"AUC is {roc_auc}, with bootstrap-sampling is {round(mean_auc,3)}+/-{round(stdev,3)}"
         )
         print(f"95% Confidence Interval: [{ci_lower:.2f}, {ci_upper:.2f}]")
     else:
@@ -526,6 +570,8 @@ def plot_score_correlation(
     figsize: Tuple = (7, 5),
     type: str = "bars",
     ax: plt.Axes = None,
+    error_type: str = "CI",
+    color_palette: str = "coolwarm",
 ):
     """Different plots to visualize the correlation between experimental and predicted scores
 
@@ -549,6 +595,10 @@ def plot_score_correlation(
         Size of figure, by default (7,5)
     type : str, optional
         Type of plot {'scatter', 'pairplot', 'heatmap', 'bars'}, by default 'bars'
+    error_type : str, optional
+        Type of error to calculate with bootstrap {'CI, var}, by default 'CI'
+    color_palette: str, optiona;
+        Seaborn color palette for plotting, by default 'coolwarm'
 
     Returns
     -------
@@ -560,7 +610,7 @@ def plot_score_correlation(
 
     if type == "scatter":
         markers = ["o", "s", "^", "D", "v", "*"]
-        colors = sns.color_palette("tab10", len(df) - 1)
+        colors = sns.color_palette(color_palette, len(df) - 1)
 
         for i, col in enumerate(df.columns[:-3]):
             plt.scatter(
@@ -577,7 +627,6 @@ def plot_score_correlation(
         ax.set_xlabel(xlabel, fontsize=14)
         ax.set_title(title, fontsize=18)
         ax.legend(loc="best", ncols=1)
-        ax.set_ylim(yrange[0], yrange[1])
         p = fig
 
     elif type == "pairplot":
@@ -607,9 +656,9 @@ def plot_score_correlation(
 
     elif type == "bars":
         df_numeric = df.select_dtypes(include=["number"])
-        corr = df_numeric.corr()
+        corr = df_numeric.corr(method="pearson")
         exp_corr = {
-            col: corr.loc[col, exp_col]
+           col: corr.loc[col, exp_col]
             for col in df_numeric.columns
             if col in corr.index
         }
@@ -619,18 +668,39 @@ def plot_score_correlation(
         sorted_corr.pop(exp_col)
         x_labels = list(sorted_corr.keys())  # Column names
         y_values = list(sorted_corr.values())  # Correlation values
+        corr_btrap = {
+            col: bootstrap_corr(df_numeric[col], df_numeric[exp_col], n_bootstraps=1000)
+            for col in df_numeric.columns
+            if col != exp_col
+        }
+        x_labels = list(corr_btrap.keys())   # Scoring methods
+        y_values = [v[0] for v in corr_btrap.values()]  # Mean
+        lower_errors = [v[0] - v[2] for v in corr_btrap.values()]  # mean - ci_low
+        upper_errors = [v[3] - v[0] for v in corr_btrap.values()]  # ci_high - mean
+        asymmetric_errors = [ [low, up] for low, up in zip(lower_errors, upper_errors) ]
+        y_errors = [v[1] for v in corr_btrap.values()]  # Standard error
 
-        p = sns.barplot(x=x_labels, y=y_values, ax=ax)
+        colors = sns.color_palette(color_palette, n_colors=len(x_labels))
+        p = sns.barplot(x=x_labels, y=y_values, ax=ax, errorbar=None, palette=colors)
+        # Add manual error bars
+        print(y_errors)
+        for i, (y, as_errs, err) in enumerate(zip(y_values, asymmetric_errors, y_errors)):
+            if error_type == "CI":
+                error = np.array([[as_errs[0]], [as_errs[1]]])
+            elif error_type == "var":
+                error = err
+            ax.errorbar(i, y, yerr=error, fmt='none', color='black', capsize=5)
+        
         ax.xaxis.set_ticks(np.arange(len(x_labels)))
         ax.set_xticklabels(
             x_labels, rotation=45, ha="right", fontsize=14
         )  # Rotate x labels
         ax.axhline(0, color="gray", linestyle="dashed")  # Add reference line at 0
-        ax.set_ylim(-0.05, 1)
         # ax.set_xlabel("Scoring Functions", fontsize=14)
         ax.set_ylabel(f"Correlation with {exp_col}", fontsize=14)
+        ax.set_ylim(yrange[0], yrange[1])
         ax.set_title(title, fontsize=18)
-        # ax.grid(axis='y')
+        ax.grid(axis='y')
 
     else:
         raise NotImplementedError(f"Plot type {type} not implemented")
