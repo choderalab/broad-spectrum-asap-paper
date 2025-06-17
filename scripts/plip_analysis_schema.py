@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, root_validator
 from enum import Enum, auto
 from plip.structure.preparation import PDBComplex, PLInteraction
 import pandas as pd
@@ -368,6 +368,40 @@ class SimilarityScore(BaseModel):
     number_of_interactions_in_intersection: int = Field(..., description="Number of interactions common to both fingerprints.")
     number_of_interactions_in_union: int = Field(..., description="Total number of unique interactions across both fingerprints.")
 
+    @root_validator()
+    def check_score_range(cls, values):
+        """
+        Validate that the score is between 0 and 1.
+        """
+        score = values.get('score')
+        if not (0 <= score <= 1):
+            raise ValueError("Score must be between 0 and 1.")
+        return values
+
+    @root_validator()
+    def check_interaction_counts(cls, values):
+        """
+        Validate that the interaction counts are non-negative and make sense.
+        """
+        num_ref = values.get('number_of_interactions_in_reference')
+        num_query = values.get('number_of_interactions_in_query')
+        num_intersection = values.get('number_of_interactions_in_intersection')
+        num_union = values.get('number_of_interactions_in_union')
+
+        if num_ref < 0 or num_query < 0 or num_intersection < 0 or num_union < 0:
+            raise ValueError("Interaction counts must be non-negative.")
+
+        if not (num_intersection <= num_ref and num_intersection <= num_query):
+            raise ValueError(f"Number of interactions in intersection ({num_intersection}) cannot exceed those in reference ({num_ref}) or query ({num_query}).")
+
+        if not (num_union >= max(num_ref, num_query)):
+            raise ValueError(f"Number of interactions in union ({num_union}) must be at least as large as the larger of the two fingerprints (ref {num_ref}, query {num_query}).")
+
+        if not num_ref + num_query - num_intersection == num_union:
+            raise ValueError(f"Union {num_union} must equal the sum of both fingerprints (ref {num_ref}, query {num_query}) minus the intersection ({num_intersection}).")
+
+        return values
+
 
 def calculate_tversky(fingerprint1: dict, fingerprint2: dict, alpha: float = 1, beta: float = 0) -> SimilarityScore:
     """
@@ -402,7 +436,10 @@ def calculate_tversky(fingerprint1: dict, fingerprint2: dict, alpha: float = 1, 
     matched = sum([min(fingerprint1.get(a, 0), fingerprint2.get(a, 0)) for a in fp_types])
 
     # Calculate the number of interactions in the union
-    union = sum(fingerprint1.values()) + sum(fingerprint2.values()) - 2 * matched
+    union = sum(fingerprint1.values()) + sum(fingerprint2.values()) - matched
+    union_v2 = sum([max(fingerprint1.get(a, 0), fingerprint2.get(a, 0)) for a in fp_types])
+    if not union == union_v2:
+        raise ValueError(f"Union calculation mismatch: {union} != {union_v2}. Please check the input fingerprints.")
 
     # Calculate the Tversky Index
     score = matched / (matched + alpha * (sum(fingerprint1.values()) - matched) + beta * (
