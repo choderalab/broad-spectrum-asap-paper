@@ -626,6 +626,24 @@ def scatter_scores(
 
     return ax
 
+def extract_corr_stats(df: pd.DataFrame, exp_col: str, corr_fn: Callable, method: str):
+    df_num = df.select_dtypes(include=["number"])
+    stats = []
+    for col in df_num.columns:
+        if col != exp_col:
+            mean, stderr, ci_low, ci_high = bootstrap_statistics(
+                corr_fn, x=df_num[col], y=df_num[exp_col], n_bootstraps=2000
+            )
+            stats.append({
+                "feature": col.replace(" ", "\n"),
+                "correlation": mean,
+                "standard_error": stderr,
+                "ci_low": ci_low,
+                "ci_high": ci_high,
+                "method": method
+            })
+    return stats
+
 
 def plot_score_correlation(
     df: Union[pd.DataFrame, Dict[str, pd.DataFrame]],
@@ -641,6 +659,7 @@ def plot_score_correlation(
     error_type: str = "CI",
     color_palette: str = "coolwarm",
     grouped: bool = False,
+    correlation='Pearson'
 ):
     """Different plots to visualize the correlation between experimental and predicted scores
 
@@ -675,9 +694,17 @@ def plot_score_correlation(
         Figure object
     """
     from matplotlib.patches import Rectangle
+    from scipy.stats import kendalltau
     if ax is None:
         fig, ax = plt.subplots(layout="constrained", figsize=figsize)
+    else:
+        fig = None
 
+    if correlation == 'Pearson':
+        corr_fn = lambda a,b: np.corrcoef(a, b)[0, 1]
+    elif correlation == 'Kendall':
+         corr_fn = lambda a,b: kendalltau(a,b)[0]
+    else: raise ValueError("The correlation function is not implemented")
     if type == "scatter":
         markers = ["o", "s", "^", "D", "v", "*"]
         colors = sns.color_palette(color_palette, len(df) - 1)
@@ -725,29 +752,18 @@ def plot_score_correlation(
         ax.set_title(title, fontsize=18)
 
     elif type == "bars":
-        def extract_corr_stats(df, exp_col):
-            df_num = df.select_dtypes(include=["number"])
-            stats = {}
-            for col in df_num.columns:
-                if col != exp_col:
-                    mean, stderr, ci_low, ci_high = bootstrap_statistics(
-                        lambda a, b: np.corrcoef(a, b)[0, 1],
-                        x=df_num[col], y=df_num[exp_col], n_bootstraps=2000)
-                    stats[col] = {"mean": mean, "stderr": stderr,
-                                "ci_low": ci_low, "ci_high": ci_high}
-            return stats
-
         if grouped:
             corr_list = []
             for group, dfi in df.items():
-                stats = extract_corr_stats(dfi, exp_col)
-                for feature, vals in stats.items():
+                stats = extract_corr_stats(dfi, exp_col, corr_fn, "")
+                for entry in stats:
                     corr_list.append({
-                        "group": group, "feature": feature.replace(" ", "\n"),
-                        "correlation": vals["mean"],
-                        "yerr": vals["stderr"],
-                        "err_low": vals["mean"] - vals["ci_low"],
-                        "err_up": vals["ci_high"] - vals["mean"]
+                        "group": group,
+                        "feature": entry["feature"],
+                        "correlation": entry["correlation"],
+                        "yerr": entry["standard_error"],
+                        "err_low": entry["correlation"] - entry.get("ci_low", entry["correlation"] - entry["standard_error"]),
+                        "err_up": entry.get("ci_high", entry["correlation"] + entry["standard_error"]) - entry["correlation"],
                     })
 
             df_corr = pd.DataFrame(corr_list)
@@ -776,14 +792,14 @@ def plot_score_correlation(
                                     color="black", capsize=3)
         
         else:
-            stats = extract_corr_stats(df, exp_col)
+            stats = extract_corr_stats(df, exp_col, corr_fn, "")
             df_corr = pd.DataFrame([{
-            "feature": f.replace(" ", "\n"),
-            "correlation": v["mean"],
-            "yerr": v["stderr"],
-            "err_low": v["mean"] - v["ci_low"],
-            "err_up": v["ci_high"] - v["mean"]
-        } for f, v in stats.items()])
+                "feature": entry["feature"],
+                "correlation": entry["correlation"],
+                "yerr": entry["standard_error"],
+                "err_low": entry["correlation"] - entry.get("ci_low", entry["correlation"] - entry["standard_error"]),
+                "err_up": entry.get("ci_high", entry["correlation"] + entry["standard_error"]) - entry["correlation"],
+            } for entry in stats])
 
         
             p = sns.barplot(data=df_corr, x="feature", y="correlation",
@@ -812,3 +828,107 @@ def plot_score_correlation(
     else:
         raise NotImplementedError(f"Plot type {type} not implemented")
     return p.figure, ax
+
+
+def plot_stacked_correlations(df, 
+                              exp_col:str,
+                              yrange: List,
+                              ylabel: str,
+                              xlabel: str,
+                              ax: plt.Axes = None,
+                              title = None,
+                              figsize: Tuple = (7, 5),
+                              color_palette: str = "coolwarm",
+                              text_rotation=25):
+    ''' Function to plot correlation and kendall's tau as bar plot '''
+    
+    # Pearson correlation and kendall's tau
+    pearson = lambda x, y: np.corrcoef(x, y)[0, 1]
+    kendall = lambda x, y: pd.Series(x).corr(pd.Series(y), method="kendall")
+
+    # Extract stats
+    pearson_stats = extract_corr_stats(df, exp_col, pearson, "Pearson")
+    kendall_stats = extract_corr_stats(df, exp_col, kendall, "Kendall's Tau")
+
+    df_corr = pd.DataFrame(pearson_stats + kendall_stats)
+
+    # Plot
+    if ax is None:
+        fig, ax = plt.subplots(layout="constrained", figsize=figsize)
+    else:
+        fig = None
+    palette = sns.color_palette(color_palette, n_colors=2)
+
+    sns.barplot(
+        data=df_corr,
+        x="feature", y="correlation", hue="method",
+        ax=ax, palette=palette, errorbar=None, edgecolor="black", alpha=0.8
+    )
+
+    # Add manual error bars
+    for method, container in zip(df_corr["method"].unique(), ax.containers):
+        for bar in container:
+            x = bar.get_x() + bar.get_width() / 2
+            height = bar.get_height()
+            xtick_label = bar.axes.get_xticklabels()[int(round(x))].get_text()
+            row = df_corr[
+                (df_corr["feature"] == xtick_label) &
+                (df_corr["correlation"].round(6) == round(height, 6)) &
+                (df_corr["method"] == method)
+            ]
+            if not row.empty:
+                row = row.iloc[0]
+                ax.errorbar(x, height, yerr=row["standard_error"],
+                            fmt='none', ecolor='black', capsize=3)
+
+    ax.set_title(title or f"Correlation with {exp_col}", fontsize=14)
+    ax.set_ylabel(ylabel, fontsize=12)
+    ax.set_xlabel(xlabel)
+    ax.axhline(0, color='gray', linestyle='--')
+    ax.set_ylim(yrange[0], yrange[1])
+    ax.legend(title="Method", loc="best")
+    ax.grid(axis='y')
+    ax.set_xticklabels(
+            ax.get_xticklabels(), rotation=text_rotation, ha="right", fontsize=14
+        )
+    plt.tight_layout()
+    return fig, ax
+
+def plot_RMSD(bar_dict, xlabels, width=0.3,
+                 ylabel="Frequency",title="", grid=False, fsize=(4, 5),
+                 error_type: str = "CI",
+                 color_palette: str = "coolwarm",):
+
+    width = width
+    tick_loc = 0.5
+    colors = sns.color_palette(color_palette, len(bar_dict))
+    fig, ax = plt.subplots(nrows=1, ncols=1, figsize=fsize)
+    ax.set_ylabel(ylabel, fontsize=15)
+    i = 0
+    x = np.arange(len(xlabels))
+    for label, values in bar_dict.items():
+        counts = [np.sum((v < 2.0) & (v > 0.0)) for v in values]
+        total = [len(v) for v in values]
+        weights = [100*counts[i]/total[i] for i in range(len(counts))]
+        offset = width * tick_loc
+        p = ax.bar(x + offset, weights, width, label=label, 
+                   lw=1.0, edgecolor='black', 
+                   color = colors[i], alpha=0.9)
+        tick_loc += 1
+        i += 1
+
+    ax.set_title(title, pad=15)
+    plt.xticks(fontsize=14, rotation=0)
+    plt.yticks(fontsize=12)
+    ax.set_ylim(0,107)
+    ax.title.set_size(15)
+    ax.set_xticks(x + width, xlabels)
+    ax.tick_params(axis='x', colors='black', width=1.0)
+    ax.tick_params(axis='y', colors='black')
+    ax.spines[['right', 'top']].set_visible(False)
+    ax.legend(loc="best")
+
+    if grid:
+        ax.grid(which='major', axis='y', linestyle='--', c='black', alpha=0.5)
+
+    return fig
