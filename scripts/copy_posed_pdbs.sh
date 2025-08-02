@@ -6,7 +6,7 @@ if [ $# -eq 0 ];then
     exit 1
     fi
 
-main_dir="$1/docking_results" 
+main_dir="$1/md" 
 final_dir=$2
 pattern=$3
 
@@ -17,13 +17,13 @@ for dir in "$main_dir"/*; do
         subdir_name=$(basename "$dir")
 	file_name=$(echo "$subdir_name" | grep -o -E "$pattern")
         echo file ${file_name}
-        source_file="$dir/docked_complex_0.pdb"
+        source_file="$dir/minimized.pdb"
         if [ -f "$source_file" ]; then
-            destination_file="$final_dir/${file_name}_docked.pdb"
+            destination_file="$final_dir/${file_name}_min.pdb"
             cp "$source_file" "$destination_file"
             echo "Copied $source_file to $destination_file"
         else
-            echo "'docked_complex_0.pdb' not found in $dir"
+            echo "'minimized.pdb' not found in $dir"
         fi
     fi
 done
