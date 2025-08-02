@@ -35,7 +35,7 @@ cd drugforge
 3. Install drugforge-spectrum and all required individual packages (*e.g., `spectrum`*)
 ```
 mamba env create -f devtools/conda-envs/drugforge-spectrum.yml
-conda activate drugforge
+conda activate spectrum
 pip install drugforge-spectrum
 ```
 4. [OPTIONAL] Install AutoDock Vina dependencies ([Requirements](https://autodock-vina.readthedocs.io/en/latest/docking_requirements.html):
