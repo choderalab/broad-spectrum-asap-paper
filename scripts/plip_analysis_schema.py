@@ -227,6 +227,7 @@ class PLIntReport(BaseModel):
         PLIntReport
             An instance of PLIntReport containing the structure path and a list of ProteinLigandInteraction objects.
         """
+
         my_mol = PDBComplex()
         my_mol.load_pdb(str(complex_path))
         my_mol.analyze()

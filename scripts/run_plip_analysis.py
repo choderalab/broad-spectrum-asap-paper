@@ -7,7 +7,7 @@ python run_plip_analysis.py output_directory/crystal_8dz0_min_interactions.csv o
 Although the above will also compare the crystal structure against itself, it's nice to make sure things are working.
 """
 import pandas as pd
-import plip_analysis_schema as pa
+import scripts.plip_analysis_schema as pa
 from pathlib import Path
 import click
 
@@ -21,15 +21,21 @@ LABELS = {
     'ByInteractionTypeAndResidueTypeAndBBorSC': 'Interaction Type and Residue Type and Backbone vs Sidechain',
     'ByInteractionTypeAndResidueTypeAndNumber': 'Interaction Type and Residue Type and Number'
 }
+def get_plip_analysis(crystal_csv: Path, docked_path: Path, output_dir: Path) -> pd.DataFrame:
+    """
+    Analyze PLIP interaction data from crystal and docked structures and generate a DataFrame with scores.
 
-@click.command()
-@click.argument('crystal-csv', type=click.Path(exists=True, path_type=Path))
-@click.argument('docked-path', type=click.Path(exists=True, path_type=Path))
-@click.option('--output-dir', type=click.Path(path_type=Path), default=None, help="Output directory for analysis files. Defaults to ./analysis")
-def main(crystal_csv: Path, docked_path: Path, output_dir: Path):
-    """Analyze PLIP interaction data and generate comparison plots.
-    CRYSTAL_CSV: Path to the CSV file containing PLIP interaction data for the crystal structure.
-    DOCKED_PATH: Path to the directory containing CSV files for docked structures.
+    Parameters
+    ----------
+    crystal_csv : Path
+        Path to the CSV file containing PLIP interaction data for the crystal structure.
+    docked_path : Path
+        Path to the directory containing CSV files for docked structures.
+
+    Returns
+    -------
+    pd.DataFrame
+        DataFrame containing the PLIP analysis results.
     """
     # Setup output directory
     if output_dir is None:
@@ -72,6 +78,20 @@ def main(crystal_csv: Path, docked_path: Path, output_dir: Path):
 
     # Save result
     df.to_csv(output_dir / "results.csv")
+
+    return df
+
+@click.command()
+@click.argument('crystal-csv', type=click.Path(exists=True, path_type=Path))
+@click.argument('docked-path', type=click.Path(exists=True, path_type=Path))
+@click.option('--output-dir', type=click.Path(path_type=Path), default=None, help="Output directory for analysis files. Defaults to ./analysis")
+def main(crystal_csv: Path, docked_path: Path, output_dir: Path):
+    """Analyze PLIP interaction data and generate comparison plots.
+    CRYSTAL_CSV: Path to the CSV file containing PLIP interaction data for the crystal structure.
+    DOCKED_PATH: Path to the directory containing CSV files for docked structures.
+    """
+    df = get_plip_analysis(crystal_csv, docked_path, output_dir)
+
 
 if __name__ == '__main__':
     main()

@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn import metrics
-from typing import List, Union, Tuple
+from typing import List, Union, Tuple, Callable, Dict
 import pandas as pd
 
 
@@ -17,6 +17,60 @@ def calculate_correlation_stats(x, y):
     spearman = np.round(spearmanr(x, y)[0], 5)
     return a, ktau, pearson, spearman
 
+def bootstrap_statistics(
+    stat_func: Callable[[np.ndarray, np.ndarray], float],
+    x: Union[List, np.ndarray],
+    y: Union[List, np.ndarray],
+    n_bootstraps: int = 500,
+    random_seed: int = 42
+) -> Tuple[float, float, float, float]:
+    """
+    Perform bootstrap sampling and calculate statistics for a given function.
+
+    Parameters
+    ----------
+    x : array-like
+        First input array (e.g., predictions).
+    y : array-like
+        Second input array (e.g., ground truth).
+    stat_func : Callable
+        Function to calculate the desired statistic (e.g., correlation, AUC).
+    n_bootstraps : int, default=500
+        Number of bootstrap samples.
+    random_seed : int, default=42
+        Seed for reproducibility.
+
+    Returns
+    -------
+    Tuple
+        Mean statistic, standard error, lower and upper bounds of the 95% confidence interval.
+    """
+    np.random.seed(random_seed)
+    x = np.array(x)
+    y = np.array(y)
+    n_samples = len(x)
+
+    stats = []
+    for _ in range(n_bootstraps):
+        indices = np.random.choice(n_samples, size=n_samples, replace=True)
+        x_sample = x[indices]
+        y_sample = y[indices]
+        try:
+            value = stat_func(x_sample, y_sample)
+            if not np.isnan(value):
+                stats.append(value)
+            # print(f"Bootstrap sample = {value}")
+        except Exception:
+            continue
+
+    stats = np.array(stats)
+    sorted_stats = np.sort(stats)
+    ci_lower = np.percentile(sorted_stats, 2.5)
+    ci_upper = np.percentile(sorted_stats, 97.5)
+    mean_stat = np.mean(stats)
+    standard_error = np.std(stats) #/ np.sqrt(n_bootstraps)
+
+    return mean_stat, standard_error, ci_lower, ci_upper
 
 def bootstrap_auc(
     pred_labels: Union[List, np.ndarray],
@@ -68,10 +122,54 @@ def bootstrap_auc(
     ci_upper = np.percentile(sorted_aucs, 97.5)
     # Calculate mean AUC and standard error
     mean_auc = np.mean(bootstrap_aucs_clean)
-    standard_error = np.std(bootstrap_aucs_clean) / np.sqrt(n_bootstraps)
+    standard_error = np.std(bootstrap_aucs_clean) #/ np.sqrt(n_bootstraps)
 
     return mean_auc, standard_error, ci_lower, ci_upper
 
+def bootstrap_corr(
+    x: Union[List, np.ndarray],
+    y: Union[List, np.ndarray],
+    n_bootstraps=500,
+):
+    """Function to perform bootstrap sampling and calculate correlation (Pearson)
+
+    Parameters
+    ----------
+    x : Union[List,np.ndarray]
+        Target variable
+    y : Union[List,np.ndarray]
+        Valuate to calculate correlation against
+    n_bootstraps : int, optional
+        Number of bootstrap samples, by default 500
+
+    Returns
+    -------
+    Tuple
+        Mean correlation, standard error, lower and upper bounds of the 95% confidence interval
+    """
+    bootstrapped_corrs = []
+    np.random.seed(42)
+
+    n_samples = len(x)
+
+    for i in range(n_bootstraps):
+        indices = np.random.choice(np.arange(n_samples), size=n_samples, replace=True)
+        x_sample = np.array(x)[indices]
+        y_sample = np.array(y)[indices]
+        corr = np.corrcoef(x_sample, y_sample)[0, 1]  # Pearson correlation
+        bootstrapped_corrs.append(corr)
+
+    bootstrapped_corrs = np.array(bootstrapped_corrs)
+    clean_corrs = bootstrapped_corrs[np.logical_not(np.isnan(bootstrapped_corrs))]
+
+    sorted_corrs = np.sort(clean_corrs)
+    ci_lower = np.percentile(sorted_corrs, 2.5)
+    ci_upper = np.percentile(sorted_corrs, 97.5)
+
+    mean_corr = np.mean(clean_corrs)
+    standard_error = np.std(clean_corrs) #/ np.sqrt(n_bootstraps)
+
+    return mean_corr, standard_error, ci_lower, ci_upper
 
 def get_roc_curve(
     ax,
@@ -83,17 +181,26 @@ def get_roc_curve(
     pred_type="",
     title="",
     color="tab:blue",
+    lstyle='-',
     box=True,
 ):
-
     fpr, tpr, thresholds = metrics.roc_curve(exp_labels, pred_labels)
     roc_auc = round(metrics.auc(fpr, tpr), 2)
     if calc_std:
-        mean_auc, stdev, ci_lower, ci_upper = bootstrap_auc(
-            pred_labels, exp_labels, n_bootstraps
+        def auc_fn(x, y):
+            fpr, tpr, _ = metrics.roc_curve(y, x)
+            return metrics.auc(fpr, tpr)
+        #mean_auc, stdev, ci_lower, ci_upper = bootstrap_auc(
+        #    pred_labels, exp_labels, n_bootstraps
+        #) 
+        mean_auc, stdev, ci_lower, ci_upper = bootstrap_statistics(
+            stat_func=auc_fn,
+            x=pred_labels,
+            y=exp_labels,
+            n_bootstraps=n_bootstraps,
         )
         print(
-            f"AUC is {roc_auc}, with bootstrap-sampling is {round(mean_auc,2)}+/-{round(stdev,3)}"
+            f"AUC is {roc_auc}, with bootstrap-sampling is {round(mean_auc,3)}+/-{round(stdev,3)}"
         )
         print(f"95% Confidence Interval: [{ci_lower:.2f}, {ci_upper:.2f}]")
     else:
@@ -105,8 +212,8 @@ def get_roc_curve(
 
     label = ""
     if legend:
-        label = pred_type + f" AUC={roc_auc}"
-    ax.plot(fpr, tpr, label=label, color=color)
+        label = pred_type + f" ({round(mean_auc,3)}+/-{round(stdev,3)})"
+    ax.plot(fpr, tpr, label=label, color=color, linestyle=lstyle)
     ax.plot(
         [0, 1],
         [0, 1],
@@ -116,12 +223,12 @@ def get_roc_curve(
     ax.set_ylim([0.0, 1.01])
     ax.set_xlabel("False Positive Rate", fontsize=14)
     ax.set_ylabel("True Positive Rate", fontsize=14)
-    ax.set_title(f"{title}, {pred_type}", fontsize=12)
+    ax.set_title(f"{title} {pred_type}", fontsize=14)
     if box:
         ax.text(
             0.62,
             0.1,
-            f"AUC={round(mean_auc,2)}+/-{round(stdev,3)}",
+            f"AUC={round(mean_auc,3)}+/-{round(stdev,3)}",
             bbox=dict(alpha=0.1, pad=5),
             fontsize=12,
             ha="center",
@@ -137,7 +244,7 @@ def calculate_classif_metrics(tn, fp, fn, tp):
     return sensitivity, specificity, precision
 
 
-def get_conf_mat(ax, pred, exp, pred_criteria, exp_criteria, pred_type):
+def get_conf_mat(ax, pred, exp, pred_criteria, exp_criteria, pred_type, box_pad=-0.48):
     plt.rcParams.update({"font.size": 12})
     plt.rc("xtick", labelsize=12)  # fontsize of the tick labels
     plt.rc("ytick", labelsize=12)  # fontsize of the tick labels
@@ -157,18 +264,18 @@ def get_conf_mat(ax, pred, exp, pred_criteria, exp_criteria, pred_type):
         xticklabels=["False", "True"],
         yticklabels=["False", "True"],
         ax=ax,
-        annot_kws={"size": 16},
+        annot_kws={"size": 24},
     )
-    ax.set_xlabel("Predicted inhibitors", fontsize=12, labelpad=2)
-    ax.set_ylabel("True inhibitors", fontsize=12)
+    ax.set_xlabel("Predicted inhibitors", fontsize=14, labelpad=2)
+    ax.set_ylabel("True inhibitors", fontsize=14)
     ax.set_title(
-        f"signal recov>{exp_criteria}, {pred_type}<{round(pred_criteria,1)}",
+        f"Exp>{exp_criteria}, {pred_type}>{round(pred_criteria,1)}",
         fontsize=12,
     )
 
     ax.text(
         1,
-        -0.48,
+        box_pad,
         text,
         bbox=dict(alpha=0.1, pad=5),
         fontsize=12,
@@ -280,6 +387,7 @@ def plot_affinity_compare(
     ax[0].scatter(x, y, marker="o", linestyle="None", c="tab:blue")
     ax[0].plot(prange, prange, color="black")
     # calculate stats
+
     a, ktau, pearson, spearman = calculate_correlation_stats(x, y)
     if not label_pad:
         midpoint = (prange[0] + prange[1]) / 2
@@ -290,7 +398,7 @@ def plot_affinity_compare(
         label_pad,
         title,
         bbox=dict(alpha=0.1, pad=5),
-        fontsize=10,
+        fontsize=12,
         ha="center",
     )
     ax[0].set_title(f"{target}")  #: RMSE: {title}")
@@ -311,15 +419,16 @@ def plot_affinity_compare(
     if classif_plot == "conf-matrix":
         ax[1] = get_conf_mat(
             ax[1],
-            all_aff["is_binder_pred"],
-            all_aff["is_binder"],
+            all_aff["pred-pIC50"],
+            all_aff["pIC50"],
             binder_cond,
             binder_cond,
             "pIC50",
-            "pIC50",
+            box_pad=2.57,
         )
     elif classif_plot == "roc-curve":
-        ax[1] = get_roc_curve(ax[1], all_aff["pred-pIC50"], all_aff["is_binder"])
+        ax[1] = get_roc_curve(ax[1], all_aff["pred-pIC50"], all_aff["is_binder"], 
+                              title='"Good inhibitors" (IC50<10µM)',)
     else:
         raise NotImplementedError("wrong value for classif_plot")
     plt.xticks(fontsize=11)
@@ -455,6 +564,7 @@ def scatter_scores(
     title="",
     grid=False,
     hue=None,
+    linear=True,
 ):
 
     minx = np.min(varx)
@@ -463,14 +573,17 @@ def scatter_scores(
     maxy = np.max(vary)
 
     # calculate stats
-    try:
-        a, ktau, pearson, spearman = calculate_correlation_stats(varx, vary)
-        title2 = (
-            f"{title }Kendall's tau = {ktau:.3f}, Pearson's r = {pearson:.3f}, Spearman r = {spearman:.3f}"
-            + "\n"
-        )
-    except:
-        title2 = ""
+    if linear:     
+        ax.plot([minx, maxx], [miny, maxy], "k--")
+        try:
+            a, ktau, pearson, spearman = calculate_correlation_stats(varx, vary)
+            title2 = (
+                f"{title}\nKendall's tau = {ktau:.3f}, Pearson's r = {pearson:.3f}, Spearman r = {spearman:.3f}"
+            )
+        except:
+            title2 = title 
+    else:
+        title2 = title 
 
     colors = {
         "active": "maroon",
@@ -502,7 +615,7 @@ def scatter_scores(
     if xlim:
         ax.set_xlim(xlim)
     ax.set_title(title2, pad=5, fontsize=9)
-    ax.plot([minx, maxx], [miny, maxy], "k--")
+
     plt.xticks(fontsize=14)
     plt.yticks(fontsize=14)
     for i, txt in enumerate(point_labels):
@@ -513,17 +626,40 @@ def scatter_scores(
 
     return ax
 
+def extract_corr_stats(df: pd.DataFrame, exp_col: str, corr_fn: Callable, method: str):
+    df_num = df.select_dtypes(include=["number"])
+    stats = []
+    for col in df_num.columns:
+        if col != exp_col:
+            mean, stderr, ci_low, ci_high = bootstrap_statistics(
+                corr_fn, x=df_num[col], y=df_num[exp_col], n_bootstraps=2000
+            )
+            stats.append({
+                "feature": col.replace(" ", "\n"),
+                "correlation": mean,
+                "standard_error": stderr,
+                "ci_low": ci_low,
+                "ci_high": ci_high,
+                "method": method
+            })
+    return stats
+
 
 def plot_score_correlation(
-    df: pd.DataFrame,
+    df: Union[pd.DataFrame, Dict[str, pd.DataFrame]],
     labels: str,
     exp_col: str,
     title: str,
     yrange: List,
     ylabel: str,
     xlabel: str,
+    ax: plt.Axes = None,
     figsize: Tuple = (7, 5),
     type: str = "bars",
+    error_type: str = "CI",
+    color_palette: str = "coolwarm",
+    grouped: bool = False,
+    correlation='Pearson'
 ):
     """Different plots to visualize the correlation between experimental and predicted scores
 
@@ -547,17 +683,31 @@ def plot_score_correlation(
         Size of figure, by default (7,5)
     type : str, optional
         Type of plot {'scatter', 'pairplot', 'heatmap', 'bars'}, by default 'bars'
+    error_type : str, optional
+        Type of error to calculate with bootstrap {'CI, var}, by default 'CI'
+    color_palette: str, optiona;
+        Seaborn color palette for plotting, by default 'coolwarm'
 
     Returns
     -------
     plt.Figure
         Figure object
     """
+    from matplotlib.patches import Rectangle
+    from scipy.stats import kendalltau
+    if ax is None:
+        fig, ax = plt.subplots(layout="constrained", figsize=figsize)
+    else:
+        fig = None
 
+    if correlation == 'Pearson':
+        corr_fn = lambda a,b: np.corrcoef(a, b)[0, 1]
+    elif correlation == 'Kendall':
+         corr_fn = lambda a,b: kendalltau(a,b)[0]
+    else: raise ValueError("The correlation function is not implemented")
     if type == "scatter":
         markers = ["o", "s", "^", "D", "v", "*"]
-        colors = sns.color_palette("tab10", len(df) - 1)
-        fig, ax = plt.subplots(layout="constrained", figsize=figsize)
+        colors = sns.color_palette(color_palette, len(df) - 1)
 
         for i, col in enumerate(df.columns[:-3]):
             plt.scatter(
@@ -574,7 +724,6 @@ def plot_score_correlation(
         ax.set_xlabel(xlabel, fontsize=14)
         ax.set_title(title, fontsize=18)
         ax.legend(loc="best", ncols=1)
-        ax.set_ylim(yrange[0], yrange[1])
         p = fig
 
     elif type == "pairplot":
@@ -584,7 +733,6 @@ def plot_score_correlation(
         p.figure.suptitle(title, fontsize=18, y=1.02)
 
     elif type == "heatmap":
-        fig, ax = plt.subplots(layout="constrained", figsize=figsize)
         df_numeric = df.select_dtypes(include=["number"])
         corr = df_numeric.corr()
         matrix = np.triu(corr)
@@ -604,33 +752,183 @@ def plot_score_correlation(
         ax.set_title(title, fontsize=18)
 
     elif type == "bars":
-        df_numeric = df.select_dtypes(include=["number"])
-        corr = df_numeric.corr()
-        exp_corr = {
-            col: corr.loc[col, exp_col]
-            for col in df_numeric.columns
-            if col in corr.index
-        }
-        sorted_corr = dict(
-            sorted(exp_corr.items(), key=lambda item: item[1], reverse=True)
-        )
-        sorted_corr.pop(exp_col)
-        x_labels = list(sorted_corr.keys())  # Column names
-        y_values = list(sorted_corr.values())  # Correlation values
+        if grouped:
+            corr_list = []
+            for group, dfi in df.items():
+                stats = extract_corr_stats(dfi, exp_col, corr_fn, "")
+                for entry in stats:
+                    corr_list.append({
+                        "group": group,
+                        "feature": entry["feature"],
+                        "correlation": entry["correlation"],
+                        "yerr": entry["standard_error"],
+                        "err_low": entry["correlation"] - entry.get("ci_low", entry["correlation"] - entry["standard_error"]),
+                        "err_up": entry.get("ci_high", entry["correlation"] + entry["standard_error"]) - entry["correlation"],
+                    })
 
-        fig, ax = plt.subplots(figsize=(6.0, 5))
-        p = sns.barplot(x=x_labels, y=y_values, ax=ax)
-        ax.xaxis.set_ticks(np.arange(len(x_labels)))
+            df_corr = pd.DataFrame(corr_list)
+            p = sns.barplot(data=df_corr, x="feature", y="correlation", hue="group",
+                        palette=color_palette, errorbar=None, ax=ax)
+            for container in ax.containers:
+                for bar in container:
+                    if not isinstance(bar, Rectangle):
+                        continue
+                    x = bar.get_x() + bar.get_width() / 2
+                    height = bar.get_height()
+                    # Find the matching row in df_plot
+                    bar_feature = bar.get_label()  # fallback if needed
+                    xtick_label = bar.axes.get_xticklabels()[int(round(x))].get_text()
+                    row = df_corr[
+                        (df_corr["feature"] == xtick_label) &
+                        (df_corr["correlation"].round(6) == round(height, 6))
+                    ]
+                    if not row.empty:
+                        row = row.iloc[0]
+                        if error_type == "CI":
+                            err = np.array([[row["err_low"]], [row["err_up"]]])
+                        else:
+                            err = row["yerr"]
+                        ax.errorbar(x, height, yerr=err, fmt='none',
+                                    color="black", capsize=3)
+        
+        else:
+            stats = extract_corr_stats(df, exp_col, corr_fn, "")
+            df_corr = pd.DataFrame([{
+                "feature": entry["feature"],
+                "correlation": entry["correlation"],
+                "yerr": entry["standard_error"],
+                "err_low": entry["correlation"] - entry.get("ci_low", entry["correlation"] - entry["standard_error"]),
+                "err_up": entry.get("ci_high", entry["correlation"] + entry["standard_error"]) - entry["correlation"],
+            } for entry in stats])
+
+        
+            p = sns.barplot(data=df_corr, x="feature", y="correlation",
+                        palette=color_palette, errorbar=None, ax=ax)
+            # Add manual error bars
+            for i, row in df_corr.iterrows(): #i, (y, as_errs, err) in enumerate(zip(y_values, asymmetric_errors, y_errors)):
+                if error_type == "CI":
+                    error = [[row["err_low"]], [row["err_up"]]]
+                elif error_type == "var":
+                    error = row["yerr"]
+                else: 
+                    raise NotImplementedError(f"Error type {error_type} not implemented. Use 'CI' or 'var'") 
+                ax.errorbar(i, row["correlation"], yerr=error, fmt='none', color='black', capsize=5)
+        
+        # ax.xaxis.set_ticks(np.arange(len(x_labels)))
         ax.set_xticklabels(
-            x_labels, rotation=45, ha="right", fontsize=14
+            ax.get_xticklabels(), rotation=45, ha="right", fontsize=14
         )  # Rotate x labels
         ax.axhline(0, color="gray", linestyle="dashed")  # Add reference line at 0
-        ax.set_ylim(-0.05, 1)
-        # ax.set_xlabel("Scoring Functions", fontsize=14)
+        ax.set_xlabel(xlabel, fontsize=14)
         ax.set_ylabel(f"Correlation with {exp_col}", fontsize=14)
+        ax.set_ylim(yrange[0], yrange[1])
         ax.set_title(title, fontsize=18)
-        # ax.grid(axis='y')
+        ax.grid(axis='y')
 
     else:
         raise NotImplementedError(f"Plot type {type} not implemented")
-    return p.figure
+    return p.figure, ax
+
+
+def plot_stacked_correlations(df, 
+                              exp_col:str,
+                              yrange: List,
+                              ylabel: str,
+                              xlabel: str,
+                              ax: plt.Axes = None,
+                              title = None,
+                              figsize: Tuple = (7, 5),
+                              color_palette: str = "coolwarm",
+                              text_rotation=25):
+    ''' Function to plot correlation and kendall's tau as bar plot '''
+    
+    # Pearson correlation and kendall's tau
+    pearson = lambda x, y: np.corrcoef(x, y)[0, 1]
+    kendall = lambda x, y: pd.Series(x).corr(pd.Series(y), method="kendall")
+
+    # Extract stats
+    pearson_stats = extract_corr_stats(df, exp_col, pearson, "Pearson")
+    kendall_stats = extract_corr_stats(df, exp_col, kendall, "Kendall's Tau")
+
+    df_corr = pd.DataFrame(pearson_stats + kendall_stats)
+
+    # Plot
+    if ax is None:
+        fig, ax = plt.subplots(layout="constrained", figsize=figsize)
+    else:
+        fig = None
+    palette = sns.color_palette(color_palette, n_colors=2)
+
+    sns.barplot(
+        data=df_corr,
+        x="feature", y="correlation", hue="method",
+        ax=ax, palette=palette, errorbar=None, edgecolor="black", alpha=0.8
+    )
+
+    # Add manual error bars
+    for method, container in zip(df_corr["method"].unique(), ax.containers):
+        for bar in container:
+            x = bar.get_x() + bar.get_width() / 2
+            height = bar.get_height()
+            xtick_label = bar.axes.get_xticklabels()[int(round(x))].get_text()
+            row = df_corr[
+                (df_corr["feature"] == xtick_label) &
+                (df_corr["correlation"].round(6) == round(height, 6)) &
+                (df_corr["method"] == method)
+            ]
+            if not row.empty:
+                row = row.iloc[0]
+                ax.errorbar(x, height, yerr=row["standard_error"],
+                            fmt='none', ecolor='black', capsize=3)
+
+    ax.set_title(title or f"Correlation with {exp_col}", fontsize=14)
+    ax.set_ylabel(ylabel, fontsize=12)
+    ax.set_xlabel(xlabel)
+    ax.axhline(0, color='gray', linestyle='--')
+    ax.set_ylim(yrange[0], yrange[1])
+    ax.legend(title="Method", loc="best")
+    ax.grid(axis='y')
+    ax.set_xticklabels(
+            ax.get_xticklabels(), rotation=text_rotation, ha="right", fontsize=14
+        )
+    plt.tight_layout()
+    return fig, ax
+
+def plot_RMSD(bar_dict, xlabels, width=0.3,
+                 ylabel="Frequency",title="", grid=False, fsize=(4, 5),
+                 error_type: str = "CI",
+                 color_palette: str = "coolwarm",):
+
+    width = width
+    tick_loc = 0.5
+    colors = sns.color_palette(color_palette, len(bar_dict))
+    fig, ax = plt.subplots(nrows=1, ncols=1, figsize=fsize)
+    ax.set_ylabel(ylabel, fontsize=15)
+    i = 0
+    x = np.arange(len(xlabels))
+    for label, values in bar_dict.items():
+        counts = [np.sum((v < 2.0) & (v > 0.0)) for v in values]
+        total = [len(v) for v in values]
+        weights = [100*counts[i]/total[i] for i in range(len(counts))]
+        offset = width * tick_loc
+        p = ax.bar(x + offset, weights, width, label=label, 
+                   lw=1.0, edgecolor='black', 
+                   color = colors[i], alpha=0.9)
+        tick_loc += 1
+        i += 1
+
+    ax.set_title(title, pad=15)
+    plt.xticks(fontsize=14, rotation=0)
+    plt.yticks(fontsize=12)
+    ax.set_ylim(0,107)
+    ax.title.set_size(15)
+    ax.set_xticks(x + width, xlabels)
+    ax.tick_params(axis='x', colors='black', width=1.0)
+    ax.tick_params(axis='y', colors='black')
+    ax.spines[['right', 'top']].set_visible(False)
+    ax.legend(loc="best")
+
+    if grid:
+        ax.grid(which='major', axis='y', linestyle='--', c='black', alpha=0.5)
+
+    return fig
